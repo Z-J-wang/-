@@ -10,16 +10,36 @@ body{
 .FontColor:hover{
 	color: orange;
 }
-
-
-
+.pull_down_left{
+	background: url(../img/pull_down.png) no-repeat 85px 15px;
+}
+.pull_down_left:hover{
+	background:gainsboro url(../img/pull_down.png) no-repeat 85px 15px !important;
+}
+.pull_down_right{
+	background:url(../img/pull_down.png) no-repeat 58px 15px ;
+}
+.pull_down_right:hover{
+	background:gainsboro url(../img/pull_down.png) no-repeat 58px 15px !important;
+}
+.pull_down_ul{
+	text-align: center;
+	background: white;
+	color: black;
+}
+.pull_down_ul li{
+	width: 100% !important;
+	border: solid 1px orange;
+	border-top:none ;
+	line-height: 35px !important;
+}
 
 /*------------------------------------------------------------------详细样式*/
 
 header{
-	border-top:solid 5px orange;
-	background: ghostwhite;
-	height: 50px;
+	border-top:solid 4px orange;
+	background: #fcfcfc;
+	height: 45px;
 }
 .H_tool{
 	width: 1000px;
@@ -37,19 +57,20 @@ header{
 }
 .H_tool li{
 	float: left;
-	line-height:50px ;
+	line-height:45px ;
 	text-align: center;
 	cursor: pointer;
-	font-size: 14px;
+	font-size: 12px;
 }
 .H_tool ul:first-child li{
 	width: 100px;
 }
 .H_tool ul:nth-child(2) li{
-	width: 70px;
+	width: 80px;
 }
 .H_tool li:hover{
 	background: gainsboro;
+	color: orange;
 }
 
 
