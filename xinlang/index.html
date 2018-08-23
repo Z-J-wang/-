@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<title>新浪首页</title>
 		<link rel="stylesheet" type="text/css" href="css/xinlang.css"/>
+		<script type="text/javascript" src="js/xinlang.js" ></script>
 	</head>
 	<body>
 		<header>
@@ -11,7 +12,7 @@
 				<ul>
 					<li ><a class="FontColor">设为首页</a></li>
 					<li ><a class="FontColor">手机新浪网</a></li>
-					<li class="pull_down_left">
+					<li class="pull_down_left" onmouseover="_show(this);" onmouseout="_hidden(this);">
 						<a class="FontColor">移动客户端</a>
 						<ul class="pull_down_ul">
 							<li><a>新浪微博</a></li>
@@ -28,8 +29,28 @@
 					</li>
 				</ul>
 				<ul>
-					<li><a class="FontColor">登陆</a></li>
-					<li class="pull_down_right">
+					<li class="login_posi">
+						<a class="FontColor">登陆</a>
+						<div class="login">
+							<div class="login_left">
+								<p>用微博客户端扫描安全登陆</p>
+								<img src="img/QR_code.png" alt="二维码">
+							</div>
+							<div class="login_right">
+								<p>新浪微博、博客、邮箱帐号，请直接登录</p>
+								<div>
+									<p><input type="text" placeholder="微博/博客/邮箱/手机号" /></p>
+									<p><input type="password" placeholder="请输入密码" /></p>
+									<p><input type="button" value="登陆"/><input type="radio" /><span>下次自动登陆</span></p>
+									<p><a class="a" href="#">忘记密码</a><a class="a" href="#">立即注册</a></p>
+								</div>
+								<p>
+									<img src="" />
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="pull_down_right" onmouseover="_show(this);" onmouseout="_hidden(this);">
 						<a class="FontColor">微博</a>
 						<ul class="pull_down_ul">
 							<li><a>私信</a></li>
@@ -37,14 +58,14 @@
 							<li><a>@我</a></li>
 						</ul>
 					</li>
-					<li class="pull_down_right">
+					<li class="pull_down_right" onmouseover="_show(this);" onmouseout="_hidden(this);">
 						<a class="FontColor">博客</a>
 						<ul class="pull_down_ul">
 							<li><a>博客评论</a></li>
 							<li><a>未读提醒</a></li>
 						</ul>
 					</li>
-					<li class="pull_down_right">
+					<li class="pull_down_right" onmouseover="_show(this);" onmouseout="_hidden(this);">
 						<a class="FontColor">邮箱</a>
 						<ul class="pull_down_ul">
 							<li><a>免费邮箱</a></li>
@@ -56,5 +77,12 @@
 				</ul>
 			</div>
 		</header>
+		<div class="main">
+			<div class="main_top">
+				<div class="main_top_tool">
+					
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
