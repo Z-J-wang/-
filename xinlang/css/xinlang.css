@@ -108,7 +108,17 @@ header{
 }
 .login .login_left{
 	float: left;
+	position: relative;
 	width: 230px;
+}
+.img_weibo{
+	position: absolute;
+	top: 60px;
+	left: 200px;
+	z-index: 1;
+	box-sizing: border-box;
+	border: solid 1px gainsboro;
+	box-shadow:  2px 2px 2px 1px ;
 }
 .login .login_right{
 	float: left;
@@ -116,6 +126,14 @@ header{
 }
 .login_right > div{
 	border-left: solid 1px gainsboro;
+}
+.login_right{
+	position: relative;
+}
+.login_right > span{
+	position: absolute;
+	right: 12px;
+	top: -4px;
 }
 .login_right > div p{
 	margin: -4px 0px;
@@ -148,4 +166,15 @@ header{
 	margin-right: 20px;
 	color: burlywood;
 	text-decoration: underline;
+}
+._QQ{
+	background: url(../img/qq.png) no-repeat 10px 0px;
+	background-size: 20px;
+	margin-left: 25px;
+	line-height: 20px;
+	text-align: left;
 }	
+._QQ a{
+	padding-left: 40px;
+	color: black !important;
+}
