@@ -54,6 +54,7 @@ header{
 	border-top:solid 4px orange;
 	background: #fcfcfc;
 	height: 45px;
+	position: relative;
 }
 .H_tool{
 	width: 1000px;
@@ -101,24 +102,25 @@ header{
 	position: relative;
 }
 .login{
+	display: none;
 	position: absolute;
 	left: -150px;
 	width: 500px;
 	border: solid 1px orange;
 }
 .login .login_left{
-	float: left;
-	position: relative;
 	width: 230px;
+	float: left;
 }
 .img_weibo{
+	display: none;
 	position: absolute;
 	top: 60px;
 	left: 200px;
 	z-index: 1;
 	box-sizing: border-box;
 	border: solid 1px gainsboro;
-	box-shadow:  2px 2px 2px 1px ;
+	
 }
 .login .login_right{
 	float: left;
@@ -177,4 +179,16 @@ header{
 ._QQ a{
 	padding-left: 40px;
 	color: black !important;
+}
+._main{
+	margin: 0px auto;
+	width: 1000px;
+}
+.main_top_tool{
+	margin-top: 10px;
+}
+.main_top_tool_left{
+	/*z-index: 1;*/
+	/*position: absolute;*/
+	/*float: left;*/
 }
