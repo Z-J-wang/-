@@ -4,10 +4,6 @@
 }
 
 /*-------------------------------------------------------------------------通用样式*/
-body{
-	margin: 0px;
-	padding: 0px;
-}
 .a{
 	text-decoration: none;
 }
@@ -52,12 +48,18 @@ input:focus {
 }
 
 /*------------------------------------------------------------------详细样式*/
-
-header{
-	z-index: 1000;
+body{
+	margin: 0px;
+	padding: 0px;
 	border-top:solid 4px orange;
 	background: #fcfcfc;
 	height: 45px;
+}
+header{
+	width: 1000px;
+	margin: 0px auto;
+	height: 45px;
+	z-index: 1000;
 	position: relative;
 }
 .H_tool{
@@ -193,6 +195,9 @@ header{
 .main_top_tool{
 	margin-top: 10px;
 }
+.main_top_tool_left{
+	display: inline-block;
+}
 .main_top_tool_left a{
 	width: 180px;
 	float: left;
@@ -291,4 +296,35 @@ header{
 	vertical-align: bottom;
 	border: none;
 	border-left:solid 1px gainsboro ;
+}
+.weather_state{
+	display: inline-block;
+	margin-left: 20px;
+}
+.weather_state span{
+	position: relative;
+	top: -10px;
+}
+.main_top_tool_right{
+	float: right;display: inline-block;
+}
+.main_top_tool_right div{
+	float: right;
+	margin-left: 10px;
+}
+.lunbo_ad{
+	width: 150px;
+	height: 60px;	
+	border: solid 1px;
+	overflow: hidden;
+}
+.lunbo_ad ul , .lunbo_ad ul li,.lunbo_ad ul li a{
+	padding: 0px;
+	margin: 0px;
+}
+.lunbo_ad ul li a{
+	height: 0px;
+}
+.lunbo_ad ul li:first-child{
+	/*margin-top: -20px;*/
 }
