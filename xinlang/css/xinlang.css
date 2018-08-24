@@ -1,5 +1,6 @@
 *{
 	list-style: none;
+	color: gray;
 }
 
 /*-------------------------------------------------------------------------通用样式*/
@@ -10,7 +11,7 @@ body{
 .a{
 	text-decoration: none;
 }
-.a:hover
+.a:hover{
 	text-decoration: underline;
 }
 .FontColor:hover{
@@ -30,13 +31,15 @@ body{
 }
 .pull_down_ul{
 	text-align: center;
-	background: white;
+	background: white !important;
 	color: black;
 	display: none;
+	box-shadow:2px 2px 	2px gainsboro;
 }
 .pull_down_ul li{
 	box-sizing: border-box;
 	border: solid 1px orange;
+	background: white !important;
 	border-top:none ;
 	line-height: 35px !important;
 }
@@ -51,6 +54,7 @@ input:focus {
 /*------------------------------------------------------------------详细样式*/
 
 header{
+	z-index: 1000;
 	border-top:solid 4px orange;
 	background: #fcfcfc;
 	height: 45px;
@@ -107,6 +111,8 @@ header{
 	left: -150px;
 	width: 500px;
 	border: solid 1px orange;
+	background: white;
+	box-shadow:2px 2px 	2px gainsboro;
 }
 .login .login_left{
 	width: 230px;
@@ -187,8 +193,102 @@ header{
 .main_top_tool{
 	margin-top: 10px;
 }
-.main_top_tool_left{
-	/*z-index: 1;*/
-	/*position: absolute;*/
-	/*float: left;*/
+.main_top_tool_left a{
+	width: 180px;
+	float: left;
+}
+.main_top_tool_left .search{
+	/*width: 500px;*/
+	float: left;
+}
+.main_top_tool_left .search p{
+	border: solid 1px gainsboro;
+	border-right: none ;
+	border-radius:5px ;
+}
+.main_top_tool_left .search p> span{
+	display: inline-block;
+	padding: 0px 25px 0px 20px;
+	background:url(../img/pull_down.png) no-repeat 60px 5px ;
+	position: relative;
+	cursor: pointer;
+}
+.search_classify{
+	display: none;
+	width: 81.7px;
+	position: absolute;
+	background: white;
+	left: -1px;
+	top: 130%;
+	font-size: 14px;
+	border: solid 1px gainsboro;
+	border-top:none ;
+	cursor: pointer;
+	box-shadow:2px 2px 	2px gainsboro;
+}
+.search_classify span:first-child{
+	margin-top:6px ;
+}
+.search_classify span{
+	display: block;
+	width: 100%;
+	height: 40px;
+	border-bottom: solid 1px gainsboro;
+	overflow: hidden;
+}
+.search_classify span a{
+	width: 100%;
+	padding-left:20px ;
+	line-height: 40px;
+}
+.search_classify span:hover{
+	color: coral !important;
+	background: lightgoldenrodyellow !important;
+}
+.main_top_tool_left .search p > font{
+	position: relative;
+}
+.main_top_tool_left .search p > font input{
+	padding: 10px;
+	margin: 1px 0px;
+	width: 200px;
+	border: none;
+	border-left: solid 1px gainsboro;
+}
+.search_reco{
+	display: none;
+	position: absolute;
+	width: 225px;
+	background: white;
+	left: 0px;
+	top: 155%;
+	font-size: 14px;
+	border: solid 1px gainsboro;
+	border-top:none ;
+	cursor: pointer;
+	box-shadow:2px 2px 	2px gainsboro;
+}
+.search_reco span{
+	display: block;
+	width: 100%;
+	height: 30px;
+	overflow: hidden;
+}
+.search_reco span a{
+	padding:4px 0px 4px 20px;
+}
+.search_reco>span:first-child{
+	border-bottom: dashed 1px gainsboro;
+}
+.search_reco>span:last-child{
+	border-top: dashed 1px gainsboro;
+}
+.main_top_tool_left .search p>input:last-child{
+	width: 70px;
+	height: 39px;
+	background: orange url(../img/search.png) no-repeat 20px;
+	background-size: 28px;
+	vertical-align: bottom;
+	border: none;
+	border-left:solid 1px gainsboro ;
 }

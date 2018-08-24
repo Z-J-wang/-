@@ -90,14 +90,43 @@
 						<a href="#">
 							<img src="img/logo.png" width="150px"/>
 						</a>
-						<div class="">
+						<div class="search">
 							<p>
-								<span>新闻</span>
-								<input type="text" placeholder="请输入关键字" />
+								<span onclick="search_classify();">
+									新闻
+									<span class="search_classify">
+										<span><a>新闻</a></span>
+										<span><a>微博</a></span>
+										<span><a>图片</a></span>
+										<span><a>博客</a></span>
+										<span><a>视频</a></span>
+										<span><a>更多>></a></span>
+									</span>
+								</span>
+								<font>
+									<input type="text" placeholder="请输入关键字" onclick="search_reco();" />
+									<span class="search_reco">
+										<span><a>大家正在搜索：</a></span>
+										<span><a>收入最高男演员</a></span>
+										<span><a>强生致癌案宣判</a></span>
+										<span><a>KPL转会</a></span>
+										<span><a>蔬菜价格上涨</a></span>
+										<span><a>希腊退出救助计划</a></span>
+										<span><a>英国发布退欧计划</a></span>
+										<span><a>完整热搜版>></a></span>
+									</span>
+								</font>
+								<input type="button" />
 							</p>
+						</div>
+						<div class="weather_state">
+							<span class="address">广州</span>
+							<img src="img/weatcher.png" width="50px"/>
+							<span class="weather">33℃</span>
 						</div>
 					</div>
 					<div class="main_top_tool_right">
+						
 					</div>
 				</div>
 			</div>
