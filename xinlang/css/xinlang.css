@@ -4,6 +4,10 @@
 }
 
 /*-------------------------------------------------------------------------通用样式*/
+.F{
+	font-weight: bold ;
+	color: black;
+}
 .a{
 	text-decoration: none;
 }
@@ -315,7 +319,6 @@ header{
 .lunbo_ad{
 	width: 150px;
 	height: 60px;	
-	border: solid 1px;
 	overflow: hidden;
 }
 .lunbo_ad ul , .lunbo_ad ul li,.lunbo_ad ul li a{
@@ -325,6 +328,118 @@ header{
 .lunbo_ad ul li a{
 	height: 0px;
 }
-.lunbo_ad ul li:first-child{
-	/*margin-top: -20px;*/
+nav{
+	width: 100%;
 }
+nav ul{
+	float: left;
+	width: 185px;
+	padding: 0px;
+	border-right: solid 1px gray;
+}
+nav ul li{
+	padding-left: 20px;
+	font-size: 14px;
+}
+nav ul li:not(:first-child){
+	padding-top: 10px;
+}
+nav ul li a{
+	padding: 5px 5px;
+	text-decoration: none;
+}
+nav ul li a:hover{
+	color: orange;
+	text-decoration: underline;
+}
+nav ul:last-child{
+	width: 70px;
+	border: none;
+}
+nav > ul:last-child > li:last-child{
+	background: url(../img/pull_down.png) no-repeat 52px 12px;
+	padding-left: 0px;
+	padding-bottom: 6px;
+}
+nav > ul:last-child > li:last-child:hover{
+	background: gainsboro;
+}
+nav ul:last-child > li:last-child > a{
+	padding-left: 25px;
+}
+.nav_pulldown{
+	border: solid 1px orange !important;
+	border-top:none !important;
+	padding: 0px;
+	margin-top: 5px;
+	text-align: center;
+	display: none;
+}
+.nav_pulldown li{
+	padding: 5px 0px;
+	height: 20px;
+	border-bottom: solid 1px orange;
+	cursor: pointer;
+}
+.nav_pulldown li a{
+	padding: 10px 15px;
+}
+.nav_pulldown li:hover{
+	background: antiquewhite;
+	color: orange;
+}
+.nav_pulldown li:last-child > a{
+	padding: 10px 15px !important;
+}
+.ad_bar_head{
+	font-size: 12px;
+	margin: 0px auto;
+	clear: both;
+	width:100%;
+	background: gainsboro;
+	height: 90px;
+	text-align: center;
+}
+.ad_bar_head ul{
+	float: left;
+	padding: 0px 5px;
+}
+.ad_bar_head ul li{
+	width: 115px;
+	padding: 10px 0px;
+	overflow: hidden;
+	text-align: center;
+}
+.ad_bar_head ul li a{
+	text-decoration: none;
+}
+.ad_bar_head ul li a:hover{
+	text-decoration:underline;
+	color: orange;
+}
+.context_1{
+	clear: both;
+	width: 100%;
+	/*background: aquamarine;*/
+}
+.context_ad{
+	display: inline-block;
+	width: 210px;
+	margin-right: 10px;
+	height: 200px;
+	background: antiquewhite;
+}
+.details_left{
+	display: inline-block;
+	width: 380px;
+	height: 200px;
+	background: aqua;
+}
+.details_right{
+	display: inline-block;
+	width: 380px;
+	height: 200px;
+	margin-left: 10px;
+	background: mediumturquoise;
+}
+
