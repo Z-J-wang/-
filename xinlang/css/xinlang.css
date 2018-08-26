@@ -55,20 +55,25 @@
 		background-size:30px;
 		padding-left: 15px;
 	}
+	.dot_li_2{
+		background:url(../img/dot_li.png) no-repeat -6px 4px;
+		background-size:30px;
+		padding-left: 12px !important;
+	}
 	.pic_li{
 		background:url(../img/pic_li.png) no-repeat -1px -7px;
 		background-size:30px;
 		padding-left: 35px;
 	}
 	.video_li{
-		background:url(../img/video_li.png) no-repeat -1px -7px;
+		background:url(../img/video_li.png) no-repeat 1px -7px;
 		background-size:30px;
 		padding-left: 35px;
 	}
-	.a_style_org li a{
+	.a_style_org  a{
 		text-decoration: none;
 	}
-	.a_style_org li a:hover{
+	.a_style_org  a:hover{
 		text-decoration: underline;
 		color: orange;
 	}
@@ -88,11 +93,28 @@
 	}
 	.hover_first{
 		border-top:solid 3px orange;
+		border-right:solid 1px gainsboro;
 		margin-left: -1px;
 		margin-top: -1px;
 		background: white;
 	}
-	
+	._sel{
+		background: orange;
+		border: solid 1px orange !important;
+	}
+	.litte_ad{
+		margin: 0px;
+	}
+	.litte_ad a{
+		margin-right: 10px;
+	}
+	.sp{
+		margin: 0px 2px;
+		color: orangered;
+	}
+	.sp a{
+		color: orangered;
+	}
 	/*------------------------------------------------------------------详细样式*/
 	body{
 		margin: 0px;
@@ -483,11 +505,17 @@
 		width: 380px;
 		height: 200px;
 		margin-left: 10px;
-		background: mediumturquoise;
+	}
+	.module{
+		width: 382px;
+		overflow: hidden;
+		font-size: 14px;
+		margin-bottom: 14px;
 	}
 	.module_nav{
 		width: 380px;
 		height: 40px;
+		clear: both;
 		margin: 0px;
 		padding: 0px;
 		background: #f6f8f9;
@@ -502,9 +530,14 @@
 		padding:0px 15px ;
 		text-decoration: none;
 	}
-	.module{
-		font-size: 14px;
-		margin-bottom: 20px;
+	.module_nav_2{
+		width: 380px;
+		height: 40px;
+		clear: both;
+		margin: 0px;
+		padding: 0px;
+		background: #f6f8f9;
+		border: solid 1px gainsboro;
 	}
 	.module p{
 		margin-bottom: 0px;
@@ -526,6 +559,8 @@
 	}
 	.module_Col_vedio > div div{
 		float: left;
+		clear: both;
+		margin-top: 10px;
 		padding: 0px;
 		width: 120px;
 	}
@@ -538,4 +573,148 @@
 	}
 	.module_Col_vedio > div ul li{
 		padding: 0px 0px 3px 0px;
+	}
+	.module_nav_2{
+		width: 380px;
+		height: 40px;
+		clear: both;
+		margin: 0px;
+		padding: 0px;
+		background: #f6f8f9;
+		border: solid 1px gainsboro;
+	}
+	.module_nav_2 span{
+		display: inline-block;
+		float: left;
+		line-height: 40px;
+		padding:0px 15px ;
+		border-top:solid 3px orange;
+		margin-left: -1px;
+		margin-top: -1px;
+		background: white;
+	}
+	.module_nav_2 ul{
+		float: left;
+	}
+	.module_nav_2 li{
+		float: left;
+	}
+	.module_nav_2 li a{
+		display: inline-block;	
+		line-height: 40px;
+		padding:0px 4px ;
+		text-decoration: none;
+		border-top:solid 3px orange;
+		margin-left: -1px;
+		margin-top: -1px;
+		background: white;
+	}
+	.module_nav_2 li a div{
+		margin: 16.4px auto;
+		height: 4px;
+		width: 5px;
+		padding: 0px;
+		border: solid 1px;
+	}
+	.btn{
+		border-top:solid 3px orange;
+		margin-left: -1px;
+		margin-top: -1px;
+		background: white;
+	}
+	.btn > div{
+		width: 18px;
+		height:18px;
+		line-height: 18px;
+		padding: 0px;
+		font-size: 16px;
+		font-weight: bold;
+		text-align: center;
+		margin: 10px 1px;
+		border: solid 1px gainsboro;
+		border-radius: 11px;
+		box-shadow: none;
+		cursor: pointer;
+	}
+	.module_Col_like > div ul li{
+		width: 380px;
+	}
+	.module_Col_like > ul:last-child{
+		clear: both;
+		border-top: solid 1px gainsboro;
+		margin-top: 10px;
+		padding-top: 4px;
+	}
+	.module_Col_like > ul:last-child li{
+		padding-bottom: 6px;
+	}
+	.module_Col_like > ul:last-child li a{
+		margin-right: 10px;
+	}
+	.module_Col_like > ul:last-child li:last-child{
+		padding-left: 14px;
+	}
+	.like_details{
+		width: 2000px;
+	}
+	.like_details ul{
+		float: left;
+		width: 380px;
+		margin-bottom: 10px;
+	}
+	.like_details li{
+		padding: 3px 0px;
+	}
+	.module_Col_gym > div > p{
+		text-align: left;
+	}
+	.module_Col_gym > div > p a{
+		font-size: 13px;
+		padding: 0px 3.5px !important;
+	}
+	.module_Col_gym > div > div img{
+		float: left;
+		width: 110px;
+	}
+	.module_Col_gym > div > div ul{
+		float: left;
+		width: 270px;
+	}
+	.module_Col_gym > div > ul{
+		clear: both;
+		padding-top: 10px;
+		border-bottom: solid 1px gainsboro;
+	}
+	.module_Col_gym > div > ul li{
+		margin-bottom: 5px;
+	}
+	.module_Col_news > div >ul {
+		clear: both;
+		margin: 7px auto;
+	}
+	.module_Col_news > div >ul li{
+		padding: 3px 0px;
+	}
+	.module_Col_car > div > p{
+		text-align: left;
+	}
+	.module_Col_car > div > p a{
+		font-size: 13px;
+		padding: 0px 1px !important;
+	}
+	.module_Col_car > div > div img{
+		float: left;
+		width: 110px;
+	}
+	.module_Col_car > div > div ul{
+		float: left;
+		width: 270px;
+	}
+	.module_Col_car > div > ul{
+		clear: both;
+		padding-top: 10px;
+		border-bottom: solid 1px gainsboro;
+	}
+	.module_Col_car > div > ul li{
+		margin-bottom: 5px;
 	}

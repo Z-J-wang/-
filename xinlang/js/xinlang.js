@@ -83,3 +83,14 @@ function TabContral_show(obj,order,index){
 		}
 	}
 }
+function TabContral_like(obj,index){
+	var div = document.querySelector('.like_details');
+	var divs =document.querySelectorAll('.module_nav_2 ul a div')
+	for(var i=0;i<divs.length;i++){
+		divs[i].className ='';
+		if(index == i){
+			divs[i].className ='_sel';
+		}
+	}
+	div.style.marginLeft = -380*index+'px';
+}
