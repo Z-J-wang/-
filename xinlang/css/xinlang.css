@@ -702,6 +702,10 @@
 		font-size: 13px;
 		padding: 0px 1px !important;
 	}
+	.module_Col_car > div > div{
+		clear: both;
+		margin-bottom: 5px;
+	}
 	.module_Col_car > div > div img{
 		float: left;
 		width: 110px;
@@ -717,4 +721,14 @@
 	}
 	.module_Col_car > div > ul li{
 		margin-bottom: 5px;
+		width: 400px;
+	}
+	#Col_car_pic > ul{
+		margin: 0px auto;
+		border: none;
+	}
+	#Col_car_pic > ul li{
+		width: 180px;
+		float: left;
+		margin: 5px 5px;
 	}
