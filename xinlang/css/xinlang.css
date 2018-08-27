@@ -130,6 +130,9 @@
 		z-index: 1000;
 		position: relative;
 	}
+	.main_context{
+		clear: both;
+	}
 	.H_tool{
 		width: 1000px;
 		margin: 0px auto;
@@ -259,6 +262,9 @@
 	._main{
 		margin: 0px auto;
 		width: 1000px;
+	}
+	.main_top{
+		clear: both;
 	}
 	.main_top_tool{
 		margin-top: 10px;
@@ -393,6 +399,7 @@
 		height: 0px;
 	}
 	nav{
+		clear: both;
 		width: 100%;
 	}
 	nav ul{
@@ -489,21 +496,19 @@
 		float: left;
 		box-sizing: border-box;
 		width: 210px;
-		margin-right: 10px;
 		height: 200px;
+		margin-right: 10px;
 		background: antiquewhite;
 	}
 	.details_left{
 		float: left;
 		box-sizing: border-box;
 		width: 380px;
-		height: 200px;
 	}
 	.details_right{
 		float: left;
 		box-sizing: border-box;
 		width: 380px;
-		height: 200px;
 		margin-left: 10px;
 	}
 	.module{
@@ -731,4 +736,65 @@
 		width: 180px;
 		float: left;
 		margin: 5px 5px;
+	}
+	.find_car span{
+		float: left;
+		line-height: 25px;
+		margin: 0px 10px;
+	}
+	.find_car form{
+		float: left;
+	}
+	.find_car select{
+		padding: 2px 30px;
+		text-align: left;
+		height: 25px;
+		line-height: 25px;
+		vertical-align: middle;
+	}
+	.find_car input{
+		float: left;	
+		border: none;
+		background: orange ;
+		color: white;
+		margin-left: 10px;
+		height: 25px;
+		
+		width: 60px;
+	}
+/*--------------------------------------------------footer-----------------------------*/
+	footer{
+		clear: both;
+		width: 1100px;
+		height: 300px;
+		margin: 0px auto;
+		text-align: center;
+		/*background: dodgerblue;*/
+	}
+	footer > ul {
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+		font-size: 15px;
+		background:#f7f7f7 ;
+	}
+	footer  ul{
+		padding: 0px;
+	} 
+	footer ul li{
+		display: inline-block;
+		/*width: 90px;*/
+		padding: 0px 10px;
+	}
+	.footer_info{
+		font-size: 14px;
+	}
+	.footer_info li{
+		padding: 0px 6px;
+	}
+	.footer_info p{
+		margin: 2px auto;
+	}
+	.footer_info > p >a{
+		margin: 0px 4px;
 	}
