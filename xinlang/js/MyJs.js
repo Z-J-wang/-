@@ -1,4 +1,4 @@
-//获取详细事件
+//获取详细时间
 function time_Long(){
 	var mydate = new Date();
 	var t=mydate.toLocaleString();
@@ -15,4 +15,16 @@ function ad_fix(obj){
 		$(obj).offset({top:adTop+scTop});				//根据adTop和scTop换算出应定位的位置的top
 		$(obj).offset({left:adLeft+scLeft});			//根据adLeft和scLeft换算出应定位的位置的left
 	})
+}
+
+
+//该函数实现input输入框获取焦点时，placeholder文字消失，实去焦点时文字出现
+//第一个参数是需要实现该效果的input,第二个参数是在该文本框中显示是文字
+function input_placeholder_focus(obj,str){
+	$(obj).val(str);
+	$(obj).focus(function(){
+			$(this).val("");
+		}).blur(function(){
+			$(this).val(str);
+		})	
 }
