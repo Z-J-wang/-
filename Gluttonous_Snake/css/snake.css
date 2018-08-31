@@ -1,0 +1,38 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.background{
+	position: relative;
+	z-index: -1;
+	margin: 20px auto;
+	width: 1000px;
+	height: 600px;
+	/*line-height: 600px;*/
+	border: solid 2px ;
+	background-color: lightskyblue;
+}
+.snake{
+	display: inline-block;
+	border: solid 1px;
+	width: 20px;
+	height: 20px;
+	background-color: gray;
+	position: absolute;
+	z-index: 10px;
+}
+.start{
+	top:300px;
+	left: 100px;
+}
+.snake_boby{
+	display: inline-block;
+	border: solid 1px;
+	width: 20px;
+	height: 20px;
+	background-color: ghostwhite;
+	position: absolute;
+	border-radius: 40%;
+	z-index: 10px;
+}
