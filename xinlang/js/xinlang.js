@@ -6,7 +6,7 @@ window.onload = function(){
 
 }
 
-var value = 0;				//定义全局变量 value 用来统计marginTop移动的距离
+//var value = 0;				//定义全局变量 value 用来统计marginTop移动的距离
 var Time_1 ;
 var Time_2 ;//定义全局变量用来保存setInterval，
 var Time_3;
@@ -58,6 +58,7 @@ function TabContral_like(obj,index){
 
 //---------------------------------------------------------------左右轮播函数
 											//定义全局变量用于存放第几个divs（是导航条中的红点）的值
+var left_value = 0;
 function left_lunbo(){
 	clearInterval(Time_2);											//在每次5秒调用前先把原本存在的Interval清除掉
 	Time_4 = setInterval(move_left_right,50);
@@ -69,7 +70,6 @@ function move_left_right(){
 	
 	var $elem = $('.like_details');
 	var $uls = 	$('.like_details > div');
-//	this.left_value;
 	if((left_value >= -380*(uls.length-1))&&(left_statis == 0)){	//判断往左移动是否到头
 		left_value = left_value -3;									//函数每执行一次，marginLeft就左移动5px
 //		$elem.animate({marginLeft:'380px'},2000);
@@ -110,16 +110,15 @@ function btn_left(){
 		left_value = left_value+380;
 	}
 }
-//
-//function btn_right(){
-//	var	 uls = document.querySelectorAll('.like_details > ul');		//获取全部的ul
-//	if(left_value <= -(uls.length-2)*380)
-//	{
-//		left_value = -(uls.length-2)*380;
-//	}else{
-//		left_value = left_value-380;
-//	}
-//}
+function btn_right(){
+	var	 uls = document.querySelectorAll('.like_details ul');		//获取全部的ul
+	if(left_value <= -(uls.length-2)*380)
+	{
+		left_value = -(uls.length-2)*380;
+	}else{
+		left_value = left_value-380;
+	}
+}
 //var li_num = 0;
 //var left_value_2 = 0;
 //function left_lunbo_2(){
@@ -183,6 +182,7 @@ $(document).ready(function(){
 		setInterval(function(){
 			carousel(".ad_product_frame",210,10,2500);
 		},1000);	
+		
 		setInterval(function(){
 			carousel(".carousel_frame_1",210,0,3000);
 		},1000);
@@ -190,15 +190,23 @@ $(document).ready(function(){
 		setInterval(function(){
 			carousel_dot(".carousel_frame_1",".dot_div",200);
 		},1000);
+		
 		setInterval(function(){
 		carousel_top(".carousel_top",150,0,3000);
-	})
+	},3000)
 })
 //-----------------------------------------------------------------该函数是用来轮播的
-//第一个参数是包裹所有轮播div的的大的dav，轮播的div必须的它的子类；
+//第一个参数是包裹所有轮播div的的大的div，轮播的div必须的它的子类；
 //第二个参数是每个轮播div的宽度
 //第三个参数是预留的左外边距
-//第三的是一个轮播div的显示需要的时间
+//第四的是一个轮播div的显示需要的时间
+//使用该函数必须有一个大的块级元素包裹者需要轮播的div,轮播的必须是div元素，而且obj必须是轮播div的父类，结构如下：
+//<div class="obj">
+//	<div>轮播的第一 个内容</div>
+//	<div>轮播的第二个内容</div>
+//	<div>轮播的第三 个内容</div>
+//	<div>轮播的第四 个内容</div>
+//</div>
 function  carousel(obj,size_pic,MarginLeft,time_horizon){
 		var $elem = $(obj+'> div:first-child');					//获取轮播框架里的第一个需要轮播的子类
 		var $parent_Node = $(obj);								//获取轮播框架
@@ -211,6 +219,17 @@ function  carousel(obj,size_pic,MarginLeft,time_horizon){
 			$parent_Node.append(NewnNode);
 		}	
 }
+//第一个参数是包裹所有轮播div的的大的div，轮播的div必须的它的子类；
+//第二个参数是每个轮播div的宽度
+//第三个参数是预留的左外边距
+//第四的是一个轮播div的显示需要的时间
+//使用该函数必须有一个大的块级元素包裹者需要轮播的div,轮播的必须是div元素，而且obj必须是轮播div的父类，结构如下：
+//<div class="obj">
+//	<div>轮播的第一 个内容</div>
+//	<div>轮播的第二个内容</div>
+//	<div>轮播的第三 个内容</div>
+//	<div>轮播的第四 个内容</div>
+//</div>
 
 function  carousel_top(obj,size_pic,Margintop,time_horizon){
 		var $elem = $(obj+'>div:first-child');					//获取轮播框架里的第一个需要轮播的子类
@@ -229,6 +248,13 @@ function  carousel_top(obj,size_pic,Margintop,time_horizon){
 //第一个参数是包裹所有轮播div的的大的dav，轮播的div必须的它的子类；
 //第二个参数是包裹所有的点的父类div,用来设置为点的div必须是它的子类
 //第二个参数是每个轮播div的宽度
+//使用该函数必须有一个大的块级元素包裹者需要轮播的div,轮播的必须是div元素，而且obj必须是轮播div的父类，结构如下：
+//<div class="obj">
+//	<div>轮播的第一 个内容</div>
+//	<div>轮播的第二个内容</div>
+//	<div>轮播的第三 个内容</div>
+//	<div>轮播的第四 个内容</div>
+//</div>
 function carousel_dot(obj,dot_obj,size_pic){
 		var $elem = $(obj+'> div:first-child');					//获取轮播框架里的第一个需要轮播的子类
 		this.li_num2 = 0;
