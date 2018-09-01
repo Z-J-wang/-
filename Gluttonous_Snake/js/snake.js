@@ -25,7 +25,6 @@ $(document).ready(function(){
 	
 	$("#btn_restart").click(function(){
 		window.location.reload();
-//		alert(1)
 	})
 	
 })
@@ -47,25 +46,34 @@ $(document).ready(function(){
 			case 38:{
 				move_top();
 				eat();
-				status = "Top";
+				if(status != "Bottom"){
+					status = "Top";
+				}
+				
 			}
 				break;
 			case 40:{
 				move_bottom();
 				eat();
-				status = "Bottom";
+				if(status != "Top"){
+					status = "Bottom";
+				}
 			}
 				break;
 			case 37:{
 				move_left();
 				eat();
-				status = "Left";
+				if(status != "Right"){
+					status = "Left";
+				}
 			}
 				break;
 			case 39:{
 				move_right();
 				eat();
-				status = "Right";
+				if(status != "Left"){
+					status = "Right";
+				}
 			}
 				break;
 		}
@@ -83,7 +91,6 @@ $(document).ready(function(){
 
 //创建一节蛇身
 function Crate_start_snake_boby(){
-//	var $background = $('.background');
 	var $newSnake_boby = $("<div class='snake_boby'></div>");
 	var $snakes = $(".background>div");
 	var L_left = parseInt($snakes.eq($snakes.length-1).css("left"))-20+'px';
@@ -94,7 +101,7 @@ function Crate_start_snake_boby(){
 }
 
 function Crate_snake_boby(){
-var $newSnake_boby = $("<div class='snake_boby'></div>");
+	var $newSnake_boby = $("<div class='snake_boby'></div>");
 	var $snakes = $(".background>div");
 	var Last_boby_x = parseInt($snakes.eq($snakes.length-1).css("left"));
 	var LastButOne_boby_x = parseInt($snakes.eq($snakes.length-2).css("left"));
@@ -123,7 +130,6 @@ var $newSnake_boby = $("<div class='snake_boby'></div>");
 }
 
 function create_foot(){
-	
 	this.foot_x = Math.floor(Math.random()*50)*20;
 	this.foot_y = Math.floor(Math.random()*30)*20;
 	var $foot = $("<span class='foot'></span>");
