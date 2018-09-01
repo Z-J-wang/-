@@ -1,38 +1,71 @@
+
+var $background = $('.background');
+var coordinate_x = new Array();
+var coordinate_y = new Array();
+var status = "Right";
+var Time;
+var $grade;
+
 $(document).ready(function(){
-//	var $span = 20;
-//	var $snakes = $(".background>div");
-//	var $snake_head = $(".snake");
-//	var $H_Top = $snake_head.css("top");
-//	var $H_Left = $snake_head.css("left");
-//	var coordinate_x = new Array();
-//	var coordinate_y = new Array();
-//	for(var i=0;i < $snakes.length;i++){
-//		coordinate_x[i] = $snakes.eq(i).css("top");
-//		coordinate_y[i] = $snakes.eq(i).css("left");
-//	}
-	Crate_start_snake_boby();
-	Crate_start_snake_boby();
-	create_foot();
+	$(".begin select").click(function(){
+		Grade();
+	})
+	Grade();
+	$("#btn_begin").click(function(){
+		$(".start").show();
+		Crate_start_snake_boby();
+		Crate_start_snake_boby();
+		create_foot();
+		Time = setInterval(Auto_walk,$grade);
+		$(".begin").hide();
+	})
+	$("#btn_exit").click(function(){
+		window.close();	
+	})
+	
+	$("#btn_restart").click(function(){
+		window.location.reload();
+//		alert(1)
+	})
+	
+})
+function Grade(){
+	var value = $(".begin select").val();
+	switch (parseFloat(value)){
+		case 1: $grade = 500;
+			break;
+		case 2: $grade = 200;
+			break;
+		case 3: $grade = 50;
+			break;
+	}
+}
+$(document).ready(function(){
+	$(".start").hide();
 	$(window).keydown(function(event){
 		switch (event.keyCode){
 			case 38:{
 				move_top();
 				eat();
+				status = "Top";
 			}
 				break;
 			case 40:{
 				move_bottom();
 				eat();
+				status = "Bottom";
 			}
 				break;
 			case 37:{
 				move_left();
 				eat();
+				status = "Left";
 			}
 				break;
 			case 39:{
 				move_right();
 				eat();
+				status = "Right";
 			}
 				break;
 		}
@@ -40,18 +73,13 @@ $(document).ready(function(){
 	
 
 	$("#btn").click(function(){
-		Crate_start_snake_boby();
-//		create_foot();
-		
+//		Crate_start_snake_boby();
+//		Grade();
+	alert($(".begin select").val())
 	})
 	
 	
 })
-
-var $background = $('.background');
-var coordinate_x = new Array();
-var coordinate_y = new Array();
-var status = "Right";
 
 //创建一节蛇身
 function Crate_start_snake_boby(){
@@ -130,7 +158,7 @@ function move_right(){
 			$snakes.eq(i).css("top",coordinate_y[i-1]);
 			$snakes.eq(i).css("left",coordinate_x[i-1]);
 		}
-		collide_boby();
+		collide_dead();  
 	}else{
 		return false;
 	}
@@ -150,7 +178,7 @@ function move_left(){
 			$snakes.eq(i).css("top",coordinate_y[i-1]);
 			$snakes.eq(i).css("left",coordinate_x[i-1]);
 		}
-	collide_boby();
+	collide_dead();
 	}else{
 		return false;
 	}
@@ -169,7 +197,7 @@ function move_top(){
 			$snakes.eq(i).css("top",coordinate_y[i-1]);
 			$snakes.eq(i).css("left",coordinate_x[i-1]);
 		}
-	collide_boby();
+	collide_dead();
 	}else{
 		return false;
 	}
@@ -188,12 +216,13 @@ function move_bottom(){
 			$snakes.eq(i).css("top",coordinate_y[i-1]);
 			$snakes.eq(i).css("left",coordinate_x[i-1]);
 		}
-collide_boby();
+		collide_dead();
 	}else{
 		return false;
 	}
 }
-function collide_boby(){
+
+function collide_dead(){
 		var $snakes = $(".background>div");
 		var $H_Top1 = parseInt($snakes.eq(0).css("top"));;
 		var $H_Left1 = parseInt($snakes.eq(0).css("left"));
@@ -206,7 +235,33 @@ function collide_boby(){
 //			console.log(parseInt(coordinate_x[j]),parseInt(coordinate_y[j]));
 			if($H_Top1 == parseInt(coordinate_y[j]) && $H_Left1 == parseInt(coordinate_x[j])){
 				alert("Game Over");
+				clearTimeout(Time);
+				$(".GameOver").show();
+//				$("#btn_begin").focus();
+				return false;
+			}
+			if($H_Top1 > 580 || $H_Top1 < 0|| $H_Left1 > 980 || $H_Left1 < 0){
+				alert("Game Over");
+				clearTimeout(Time);
+				$(".GameOver").show();
 				return false;
 			}
 		}
+}
+
+
+function Auto_walk(){
+	if(status == "Right"){
+		move_right();
+		eat();
+	}else if(status == "Left"){
+		move_left();
+		eat();
+	}else if(status == "Top"){
+		move_top();
+		eat();
+	}else if(status == "Bottom"){
+		move_bottom();
+		eat();
+	}
 }
