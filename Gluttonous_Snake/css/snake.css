@@ -36,3 +36,13 @@
 	border-radius: 40%;
 	z-index: 10px;
 }
+.foot{
+	display: inline-block;
+	/*border: solid 1px;*/
+	width: 20px;
+	height: 20px;
+	background-color: green;
+	position: absolute;
+	border-radius: 40%;
+	z-index: 10px;
+}
