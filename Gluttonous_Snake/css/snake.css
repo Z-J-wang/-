@@ -129,3 +129,15 @@ body{
     top: 220px;
 	left:400px;
 }
+.score{
+	position: absolute;
+	font-size: 20px;
+	top: -30px;
+	left: 0px;
+}
+.grade{
+	position: absolute;
+	font-size: 20px;
+	top: -30px;
+	left: 800px;
+}
