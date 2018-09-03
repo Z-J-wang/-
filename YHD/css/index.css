@@ -1,0 +1,139 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	font-size: 13px;
+}
+* a{
+	text-decoration: none;
+}
+body{
+	width: 100%;
+	background: #fcfcfc;
+}
+header{
+	border-bottom:solid 1px gainsboro ;
+	box-shadow: 1px 0px 3px gainsboro;
+}
+footer{
+	width: 1200px;
+	margin: 20px auto;
+	text-align: center;
+}
+footer li{
+	display: inline-block;
+	margin: 4px 6px;
+}
+footer li a{
+	font-size: 12px;
+	color: black;
+}
+footer li a:hover{
+	color: orange;
+}
+footer p{
+	font-size: 12px;
+	margin: 10px 0px;
+}
+/*-----------------------------------------------------------------通用样式*/
+
+/*checkbox样式自定义*/
+label {
+	font-size:12px;
+	cursor:pointer;
+	}
+label i{
+	font-size:12px;
+	font-style:normal;
+	display:inline-block;
+	width:12px;
+	height:12px;
+	text-align:center;
+	line-height:12px;
+	color:#fff;
+	vertical-align:middle;
+	margin:-2px 2px 1px 0px;
+	border:orange 1px solid;
+}
+input[type="checkbox"]{display:none;}
+input[type="checkbox"]:checked + i{background:orange;}
+
+.clear{
+	clear: both;
+	border: none !important;
+}
+/*----------------------------------------------------------------------登陆界面样式*/
+.head_container{
+	width: 1200px;
+	margin: 0px auto;
+	/*background: antiquewhite;*/
+}
+.head_container a:hover{
+	color: orange;
+}
+.login_logo {
+	float: left;
+}
+.login_logo img{
+	padding: 15px 0px;
+}
+.login_head_right{
+	float: right;
+	padding: 10px 0px;
+}
+.login_head_right p{
+	display: inline-block;
+	float: left;
+	margin: 0px 15px;
+	color: gray;
+}
+.login_head_right>p>a{
+	color: cornflowerblue;
+}
+.hd{
+	float: left;
+	display: block;
+	width: 100px;
+	text-align: center;
+	position: relative;
+	margin-left:25px ;
+	z-index: 1001;
+	border: solid 1px gainsboro;
+}
+.hd a{
+	color: black;
+}
+.hd>a{
+	line-height: 25px;
+	padding-right:22px;
+	padding-left:4px ;
+	background: url(../img/turnb.png) no-repeat 80px;
+}
+.hd>a>span{
+	width: 20px;
+	height: 18px;
+	padding: 0px 1px;
+	vertical-align: middle;
+	display: inline-block;
+	background: url(../img/runbun.png) no-repeat 0px ;
+}
+.Hd_menu_list{
+	width: 100px;
+	text-align: left;
+	display: none;
+	position: absolute;
+	z-index: 100;
+	left: -1px;
+	background: white;
+	border: solid 1px gainsboro;
+	border-top: none;
+}
+.Hd_menu_list li{
+	padding-left:26px ;
+	line-height: 25px;
+	height: 25px;
+	border-bottom: dotted 1px gainsboro;
+}
+
+
+/*--------------------------------------------------注册界面样式*/
