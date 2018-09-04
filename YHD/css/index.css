@@ -7,6 +7,12 @@
 * a{
 	text-decoration: none;
 }
+.a_col_R a{
+	color: grey;
+}
+.a_col_R a:hover{
+	color: #ff3c3c;
+}
 body{
 	width: 100%;
 	background: #fcfcfc;
@@ -14,11 +20,13 @@ body{
 header{
 	border-bottom:solid 1px gainsboro ;
 	box-shadow: 1px 0px 3px gainsboro;
+	background: #f4f4f4;;
 }
 footer{
 	width: 1200px;
 	margin: 20px auto;
 	text-align: center;
+	background: white;
 }
 footer li{
 	display: inline-block;
@@ -34,6 +42,57 @@ footer li a:hover{
 footer p{
 	font-size: 12px;
 	margin: 10px 0px;
+}
+.safe_info{
+	width: 1200px;
+	margin: 0px auto;
+	border-bottom: solid 1px gainsboro;
+}
+.safe_info>ul>li{
+	width: 280px;
+}
+.safe_info>ul>li>img{
+	float: left;
+	margin:20px 10px 20px 40px;
+}
+.safe_info>ul>li>div{
+	float: left;
+	margin-top: 30px;
+}
+.safe_info>ul>li>div>h6{
+	font-size: 16px;
+	text-align: left;
+}
+.safe_info>ul>li>div>p{
+	font-size: 15px;
+	text-align: left;
+	color: gray;
+}
+.help_way{
+	width: 1200px;
+	margin: 40px auto;
+}
+.help_way>div{
+	float: left;
+	text-align: left;
+	padding-left: 40px;
+	width: 150px;
+	margin: 0px auto;
+}
+.help_way h2{
+	font-size: 15px;
+}
+.help_way img{
+	margin-top: 10px;
+}
+.safe_img{
+	padding-top: 20px;
+}
+.safe_img a{
+	margin: 0px 4px;
+}
+.safe_img img{
+	height: 35px;
 }
 /*-----------------------------------------------------------------通用样式*/
 
@@ -62,78 +121,116 @@ input[type="checkbox"]:checked + i{background:orange;}
 	clear: both;
 	border: none !important;
 }
-/*----------------------------------------------------------------------登陆界面样式*/
+/*图片旋转效果*/
+._tran_r{
+	transform: rotateZ(180deg);
+	-webkit-transform: rotateZ(180deg);
+	-moz-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+}
+/*----------------------------------------------------------------------购物车界面样式*/
+/*头部工具栏*/
 .head_container{
 	width: 1200px;
 	margin: 0px auto;
-	/*background: antiquewhite;*/
 }
-.head_container a:hover{
-	color: orange;
-}
-.login_logo {
+/*头部工具栏-左侧*/
+.head_left{
 	float: left;
 }
-.login_logo img{
-	padding: 15px 0px;
+.head_left a{
+	background: url(../img/home.png) no-repeat 0px;
+	padding-left:20px;
+	line-height: 30px;
+	height: 30px;
 }
-.login_head_right{
+/*头部工具栏-右侧*/
+.head_right{
 	float: right;
-	padding: 10px 0px;
 }
-.login_head_right p{
-	display: inline-block;
+.head_right>ul>li{
 	float: left;
-	margin: 0px 15px;
-	color: gray;
+	margin-left: 25px;
 }
-.login_head_right>p>a{
-	color: cornflowerblue;
+.head_right>ul>li>a{
+	line-height: 30px;
+	height: 30px;
 }
-.hd{
-	float: left;
-	display: block;
-	width: 100px;
-	text-align: center;
-	position: relative;
-	margin-left:25px ;
-	z-index: 1001;
-	border: solid 1px gainsboro;
+.head_right>ul>li:first-child{
+	color: #ff4040;
 }
-.hd a{
-	color: black;
+.head_right>ul>li:first-child>a:first-child{
+	color: #ff4040;
 }
-.hd>a{
-	line-height: 25px;
-	padding-right:22px;
-	padding-left:4px ;
-	background: url(../img/turnb.png) no-repeat 80px;
+.head_right>ul>li:first-child>a{
+	margin-left: 5px;
 }
-.hd>a>span{
-	width: 20px;
-	height: 18px;
-	padding: 0px 1px;
+.head_right>ul>li:nth-child(2)>a{
+	background: url(../img/my_indent_b.png) no-repeat;
+	padding-left: 18px;
+}
+.head_right>ul>li:nth-child(2)>a:hover{
+	background: url(../img/my_indent_r.png) no-repeat;
+	padding-left: 18px;
+}
+.head_right>ul>li:nth-child(3)>a>img{
+	padding-left: 5px;
+	margin-top: -2px;
 	vertical-align: middle;
-	display: inline-block;
-	background: url(../img/runbun.png) no-repeat 0px ;
 }
-.Hd_menu_list{
-	width: 100px;
-	text-align: left;
+.head_right>ul>li:nth-child(3){
+	padding: 0px 11px;
+	margin:0px 10px;
+	position: relative;
+}
+.head_right>ul>li:nth-child(3):hover{
+	width: 66px;
+	position: relative;
+	background-color: white;
+	border: solid 1px gainsboro;
+	border-bottom:none;
+	padding: 0px 10px;
+}
+.customer_service_menu{
+	position: absolute;
+	left: -1px;
+	top: 30px;
+	width: 66px;
+	background-color: white;
+	border: solid 1px gainsboro;
+	border-top:none;
+	padding: 0px 10px;
+	display: none;
+}
+.customer_service_menu p{
+	height: 39px;
+	line-height: 29px;
+}
+.head_right>ul>li:nth-child(4){
+	position: relative;
+	background: url(../img/phone_g.png) no-repeat 0px 6px;
+	padding-left: 18px;
+}
+.head_right>ul>li:nth-child(4):hover{
+	position: relative;
+	background: url(../img/phone_r.png) no-repeat 0px 6px;
+	padding-left: 18px;
+}
+.QR_code{
 	display: none;
 	position: absolute;
-	z-index: 100;
-	left: -1px;
-	background: white;
-	border: solid 1px gainsboro;
-	border-top: none;
+	top: 28px;
+	left: -30px;
+	box-shadow: 1px 1px 1px 1px gainsboro;
+	text-align: center;
+	width: 120px;
+	padding: 20px 0px 10px 0px;
+	background: url(../img/back_QR_code.png) no-repeat;
+	background-size:120px ;
 }
-.Hd_menu_list li{
-	padding-left:26px ;
-	line-height: 25px;
-	height: 25px;
-	border-bottom: dotted 1px gainsboro;
+.main_container{
+	background: #f8f8f8;
+	height: 500px;
 }
-
-
 /*--------------------------------------------------注册界面样式*/

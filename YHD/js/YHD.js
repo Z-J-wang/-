@@ -1,7 +1,7 @@
 //登陆界面脚本
 $(document).ready(function(){
 	//显示隐藏帮助中心
-	$(".hd>a").hover(function(){
+	$(".hd,.Hd_menu_list").hover(function(){
 		$(".Hd_menu_list").show();
 		$(".Hd_menu_list li").css("border-top","dotted 1px gainsboro")
 	},function(){
@@ -107,5 +107,22 @@ $(document).ready(function(){
 			$(this).parent().find("._warning").show(1000);
 			$(this).parent().find("._info2").slideUp(100);
 		}
+	})
+})
+//购物车页面脚本
+$(document).ready(function(){
+	//头部-客户服务效果
+	$(".head_right>ul>li:nth-child(3)").hover(function(){
+		$("#tran_img").addClass("_tran_r");
+		$(".customer_service_menu").show();
+	},function(){
+		$("#tran_img").removeClass("_tran_r");
+		$(".customer_service_menu").hide();
+	})
+	//APP下载效果
+		$(".head_right>ul>li:nth-child(4)").hover(function(){
+		$(".QR_code").show();
+	},function(){
+		$(".QR_code").hide();
 	})
 })
