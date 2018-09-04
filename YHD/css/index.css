@@ -15,7 +15,7 @@
 }
 body{
 	width: 100%;
-	background: #fcfcfc;
+	background: #f8f8f8;
 }
 header{
 	border-bottom:solid 1px gainsboro ;
@@ -23,8 +23,7 @@ header{
 	background: #f4f4f4;;
 }
 footer{
-	width: 1200px;
-	margin: 20px auto;
+	margin: 0px auto;
 	text-align: center;
 	background: white;
 }
@@ -93,6 +92,11 @@ footer p{
 }
 .safe_img img{
 	height: 35px;
+}
+._price{
+	font-size: 16px;
+	font-weight: bold;
+	color: #ff4040;
 }
 /*-----------------------------------------------------------------通用样式*/
 
@@ -231,6 +235,313 @@ input[type="checkbox"]:checked + i{background:orange;}
 }
 .main_container{
 	background: #f8f8f8;
-	height: 500px;
 }
-/*--------------------------------------------------注册界面样式*/
+.my_commodity{
+	width: 1200px;
+	margin: 0px  auto;
+}
+/*购物车推荐栏样式*/
+.reco_ad{
+	width: 1000px;
+	margin: 40px  auto;
+	text-align: center;
+}
+.reco_ad>h2{
+	color: #ff9841;
+	font-size: 16px;
+}
+.reco_ad>p{
+	color: gray;
+	font-size: 12px;
+	margin: 6px 0px;
+}
+.reco_ad_carousel_frame{
+	width: 1000px;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 10px;
+	background: white;
+}
+.carousel_content{
+	width: 4500px;
+}
+.carousel_content>div{
+	width: 1000px;
+	float: left;
+}
+.carousel_content>div>ul{
+	margin: 0px auto;
+}
+.carousel_content li{
+	width: 230px;
+	display: inline-block;
+	margin-top: 20px;
+}
+.carousel_list{
+	margin-top: 30px;
+}
+.carousel_list>div{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin:0px 4px ;
+	border-radius: 50%;
+	cursor: pointer;
+	background: gainsboro;
+}
+.dot_hot{
+	width: 20px !important;
+	background: #ff4040 !important;
+	border-radius: 40% !important;
+}
+.carousel_btn_left span{
+	font-size:50px ;
+	font-weight: bold;
+	color: gainsboro;
+}
+.carousel_btn_left{
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	cursor: pointer;
+}
+.btn_hover:hover{
+	background-color:darkgrey ;
+}
+.carousel_btn_right{
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	cursor: pointer;
+}
+.my_commodity_head{
+	margin-top: 20px;
+}
+
+.my_commodity_head_left{
+	display: inline-block;
+	position: relative;
+}
+.my_commodity_head_left>span{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: top;
+	padding-left: 20px;
+}
+.my_commodity_head_right{
+	float: right;
+}
+._address{
+	display: inline-block;
+	vertical-align: top;
+	padding: 6px;
+	cursor: pointer;
+	position: relative;
+}
+._address_exit{
+	position: absolute;
+	font-size:16px ;
+	color: gray;
+	top: 10px;
+	left: 370px;
+	cursor: pointer;
+	display: none;
+	
+}
+._address_hover{
+	background-color: white;
+	border: solid 1px gainsboro;
+}
+._nav_cur{
+	width: 260px !important;
+	padding: 4px 0px !important;
+	background: white !important;
+	border: solid 1px gainsboro !important;
+	border-radius: 4px !important;
+}
+._nav_hover a{
+	background: #f7f7f7;
+	border: solid 1px gainsboro !important;
+	margin: 0px !important;
+	padding: 6px 8px !important;
+}
+._nav_hover span{
+	display: none;
+}
+#_nav_hover_a{
+	border-bottom: none !important;
+	background: white;
+}
+._nav a{
+	display: inline-block;
+	padding: 4px 7px;
+	font-size: 12px;
+	color: gray;
+}
+._nav>span{
+	padding-right:10px ;
+}
+.addres_list{
+	width: 400px;
+}
+
+.addres_list p{
+	padding: 6px 4px;
+	text-align: left;
+}
+._city>p>span{
+	border-right:solid 1px gainsboro;
+	color: darkgray;
+}
+.addres_list a{
+	width: 40px;
+	display: inline-block;
+	padding: 4px 6px;
+	color: gray;
+}
+.addres_list a:hover{
+	background: #ff6c6c;
+	color: white;
+}
+.address_hot{
+	background: #ff6c6c;
+	color: white;
+}
+._city{
+	display: none;
+}
+.area{
+	display: none;
+}
+.town{
+	display: none;
+}
+.my_commodity_head_right{
+	float: right;
+	
+}
+.my_commodity_head_right>div{
+	border: solid 1px gainsboro;
+	height: 30px;
+	line-height: 30px;
+	width: 250px;
+	background: white;
+}
+.my_commodity_head_right>div>input{
+	border: none;
+	width: 220px;
+	height: 22px;
+	margin-left: 6px;
+	line-height: 22px;
+	outline: none;
+}
+.my_commodity_head_right>div>img{
+	cursor: pointer;
+}
+.my_commodity_nothing{
+	width: 1200px;
+	height: 400px;
+	text-align: center;
+	margin-top: 60px;
+}
+.my_commodity_nothing img{
+	display: inline-block;
+}
+.my_commodity_nothing>div{
+	display: inline-block;
+	width: 250px;
+	margin-top: 100px;
+	vertical-align: top;
+}
+.my_commodity_nothing>div>p{
+	line-height: 20px;
+	font-size: 14px;
+}
+.my_commodity_nothing>div>input:nth-child(3){
+	width: 80px;
+	height: 30px;
+	border: none;
+	background: #ff6c6c;
+	color: white;
+	margin-right: 20px;
+	margin-top: 30px;
+	/*margin-bottom: 100px;*/
+	cursor: pointer;
+}
+.my_commodity_nothing>div>input:nth-child(3):hover{
+	background: #fb5c5c;
+}
+.my_commodity_nothing>div>input:nth-child(4){
+	width: 80px;
+	height: 30px;
+	border: solid 1px gainsboro;
+	background: #F7F7F7;
+	/*color: white;*/
+	margin-right: 20px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+.my_commodity_nothing>div>input:nth-child(4):hover{
+	background: gainsboro;
+}
+/*--------------------------------------------------详情页样式*/
+.current_head{
+	width: 1200px;
+	margin: 0px auto;
+}
+.current_head_left{
+	float: left;
+}
+._logo{
+	display: inline-block;
+}
+.current_head_middle{
+	float: left;
+	width: 800px;
+	height: 110px;
+	margin: 0px auto;
+}
+.current_head_middle_search{
+	width: 780px;
+	height: 35px;
+	line-height: 35px;
+	border: solid 2px #ff4040;
+	margin-top: 40px;
+	background: white;
+}
+.current_head_middle_search input{
+	width: 725px;
+	height: 28px;
+	margin-left: 10px;
+	border: none;
+	outline: none;
+}
+.current_head_middle_search span{
+	float: right;
+	width: 42px;
+	height: 35px;
+	background: #ff4040 url(../img/search_w.png) no-repeat 8px 4px;
+	background-size:25px ;
+	cursor: pointer;
+}
+.current_head_right{
+	float: right;
+	margin-top: 40px;
+}
+.current_head_right span{
+	display: inline-block;
+	border: solid 1px gainsboro;
+	width: 130px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: url(../img/gwc.png) no-repeat 10px 10px;
+	background-size: 20px;
+}
+.current_head_right a{
+	padding-left: 30px;
+	font-size: 16px;
+	color: gray;
+}

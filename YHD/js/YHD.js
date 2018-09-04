@@ -125,4 +125,47 @@ $(document).ready(function(){
 	},function(){
 		$(".QR_code").hide();
 	})
+		
+	//轮播图效果
+	$(".carousel_btn_left").click(function(){
+		carousel_left(".carousel_content",1000,4,1000);
+		carousel_dot2(".carousel_content",".carousel_list",1000);
+	})
+	$(".carousel_btn_right").click(function(){
+		carousel_right(".carousel_content",1000,4,1000);
+		carousel_dot2(".carousel_content",".carousel_list",1000);
+	})
+	
+	//地区选项卡
+	$("._address ._nav a").click(function(){
+		$ali = $("._address ._nav a")
+		for (var i=0; i < $ali.length;i++) {
+			$ali.eq(i).removeAttr("id");
+		}
+		$(this).attr("id","_nav_hover_a");
+		$(this).parent().addClass("_nav_hover");
+		$(this).parent().removeClass("_nav_cur");
+		$("._address").addClass("_address_hover");
+		$index = $(this).index()/2;
+		$divs = $(".addres_list>div");
+		for (var i=0; i < $divs.length;i++) {
+			$divs.eq(i).hide();
+		}
+		$divs.eq($index).show();
+		$("._address_exit").show();
+	})
+	$("._address_exit").click(function(){
+		$(this).hide();
+		$divs = $(".addres_list>div");
+		for (var i=0; i < $divs.length;i++) {
+			$divs.eq(i).hide();
+		}
+		$ali = $("._address ._nav a")
+		for (var i=0; i < $ali.length;i++) {
+			$ali.eq(i).removeAttr("id");
+		}
+		$("._nav").removeClass("_nav_hover");
+		$("._nav").addClass("_nav_cur");
+		$("._address").removeClass("_address_hover");
+	})
 })

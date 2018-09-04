@@ -124,20 +124,51 @@ function carousel_dot(obj,dot_obj,size_pic){
 		}	
 	}
 
-//选项卡函数
-function TabContral_show(obj,order,index){
-	var $divs = $('#TabControl_'+order+'> div');	//获取选项卡内容区的每个块
-	var $a_s = $('#TabControl_'+order + '> .module_nav a');				//获取选项卡导航栏的每个a标签
-	for(var i = 0;i < $divs.length; i++ ){
-		$a_s[i].className = "";
-		$divs[i].className = "display_hidden";
-		if(index == i){
-			if(index == 0){
-				obj.className = "hover_first";
-			} else{
-				obj.className = "hover";
-			}
-			$divs[index].className = "display_show";
-		}
+function carousel_dot2(obj,dot_obj,size_pic){
+	var $elem = $(obj);					//获取轮播框架里的第一个需要轮播的子类
+	var $dot = $(dot_obj+">div");
+	var li_num = Math.floor(Math.abs(parseInt($elem.css("margin-left")))/size_pic) ;
+	console.log($dot);
+	for(var i=0;i<$dot.length;i++){
+			$dot[i].className = '';							//赋值前先清空所有点的class
 	}
+	$dot[li_num].className = 'dot_hot';				//对应点设置class	
 }
+
+function  carousel_left(obj,size_pic,num,time_horizon){
+		var $elem = $(obj);	
+		var ml = parseInt($elem.css("margin-left"))-size_pic;
+		if( ml >= -size_pic*(num-1)){					//判断一个轮播div是否已近显示完了
+				$elem.animate({marginLeft: ml+'px'},time_horizon); //使用Jquery的动画方法，实现当前的div的滑动
+				$elem.css("margin-left",ml+'px');
+		}	
+}
+
+
+function  carousel_right(obj,size_pic,num,time_horizon){
+		var $elem = $(obj);					//获取轮播框架里的第一个需要轮播的子类		
+		var ml = parseInt($elem.css("margin-left"))+size_pic;
+		if( ml <= 0){		//判断一个轮播div是否已近显示完了
+			$elem.animate({marginLeft: ml+'px'},time_horizon); //使用Jquery的动画方法，实现当前的div的滑动
+			$elem.css("margin-left",ml+'px')
+		}	
+}
+
+
+//选项卡函数
+//function TabContral_show(obj,order,index){
+//	var $divs = $('#TabControl_'+order+'> div');	//获取选项卡内容区的每个块
+//	var $a_s = $('#TabControl_'+order + '> .module_nav a');				//获取选项卡导航栏的每个a标签
+//	for(var i = 0;i < $divs.length; i++ ){
+//		$a_s[i].className = "";
+//		$divs[i].className = "display_hidden";
+//		if(index == i){
+//			if(index == 0){
+//				obj.className = "hover_first";
+//			} else{
+//				obj.className = "hover";
+//			}
+//			$divs[index].className = "display_show";
+//		}
+//	}
+//}
