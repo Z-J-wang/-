@@ -113,10 +113,24 @@ $(document).ready(function(){
 $(document).ready(function(){
 	//头部-客户服务效果
 	$(".head_right>ul>li:nth-child(3)").hover(function(){
-		$("#tran_img").addClass("_tran_r");
+//		$("#tran_img").addClass("_tran_r");
+		$("#tran_img").animate({
+			aa:"180"
+		},{
+			step:function(now,fx){
+				$("#tran_img").css({"transform":"rotate("+now+"deg)"})
+			}
+		});
 		$(".customer_service_menu").show();
 	},function(){
-		$("#tran_img").removeClass("_tran_r");
+//		$("#tran_img").removeClass("_tran_r");
+		$("#tran_img").animate({
+			aa:"0"
+		},{
+			step:function(now,fx){
+				$("#tran_img").css({"transform":"rotate("+now+"deg)"})
+			}
+		});
 		$(".customer_service_menu").hide();
 	})
 	//APP下载效果
@@ -170,8 +184,32 @@ $(document).ready(function(){
 	})
 	
 	$("._nav_classify").hover(function(){
-		$("._nav_classify>img").addClass("_tran_r");
+		$("._nav_classify>img").animate({
+			aa:"180"
+		},{
+			step:function(now,fx){
+				$("._nav_classify>img").css({"transform":"rotate("+now+"deg)"})
+			}
+		});
 	},function(){
-		$("._nav_classify>img").removeClass("_tran_r");
+		$("._nav_classify>img").animate({
+			aa:"0"
+		},{
+			step:function(now,fx){
+				$("._nav_classify>img").css({"transform":"rotate("+now+"deg)"})
+			}
+		});
+	})
+	
+	$("._nav_classify").hover(function(){
+		$("._nav_classify_list").show();
+	},function(){
+		$("._nav_classify_list").hide();
+	})
+	
+	$(".product_number>div").hover(function(){
+		$(".product_number div>img:first-child").animate({"margin-top":"-20px"},50)
+	},function(){
+		$(".product_number div>img:first-child").animate({"margin-top":"0px"},50)
 	})
 })
