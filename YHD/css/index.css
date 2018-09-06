@@ -489,6 +489,7 @@ input[type="checkbox"]:checked + i{background:orange;}
 /*--------------------------------------------------详情页样式*/
 .current_head{
 	width: 1200px;
+	display: block;
 	margin: 0px auto;
 }
 .current_head_left{
@@ -545,3 +546,43 @@ input[type="checkbox"]:checked + i{background:orange;}
 	font-size: 16px;
 	color: gray;
 }
+.search_intor{
+	margin:6px 4px;
+}
+.search_intor>a{
+	font-size: 16px;
+	color: darkgray;
+	margin:4px 10px 4px 2px;
+}
+.Current_mian_nav{
+	border-bottom: solid 2px #ff4040;
+}
+.Current_mian_nav>div{
+	width: 1200px;
+	margin: 0px auto;
+}
+._nav_classify{
+	float: left;
+	width: 200px;
+	position: relative;
+	background-color: #ff4040;
+	text-align: center;
+}
+._nav_classify>span{
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	font-size: 14px;
+	color: white;
+}
+._nav_classify>img{
+	margin-left: 6px;
+	color: white;
+}
+._nav_classify_list{
+	position: absolute;
+}
+._nav_intro li{
+	float: left;
+}
+

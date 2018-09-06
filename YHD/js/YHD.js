@@ -168,4 +168,10 @@ $(document).ready(function(){
 		$("._nav").addClass("_nav_cur");
 		$("._address").removeClass("_address_hover");
 	})
+	
+	$("._nav_classify").hover(function(){
+		$("._nav_classify>img").addClass("_tran_r");
+	},function(){
+		$("._nav_classify>img").removeClass("_tran_r");
+	})
 })
