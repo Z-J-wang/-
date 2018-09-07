@@ -168,6 +168,22 @@ $(document).ready(function(){
 		$divs.eq($index).show();
 		$("._address_exit").show();
 	})
+	//选择城市脚本
+	$(".province a").click(function(){
+		$("._nav a:first-child").html($(this).html());
+		$("._nav a:nth-child(3)").focus()
+//		$(".province").hide();
+//		$(".city").show();
+	})
+	$(".city a").click(function(){
+		$("._nav a:nth-child(3)").html($(this).html());
+//		$(".city").hide();
+//		$(".town").show();
+	})
+	$(".town a").click(function(){
+		$("._nav a:nth-child(5)").html($(this).html());
+//		$(".addres_list").hide()
+	})
 	$("._address_exit").click(function(){
 		$(this).hide();
 		$divs = $(".addres_list>div");
@@ -211,5 +227,17 @@ $(document).ready(function(){
 		$(".product_number div>img:first-child").animate({"margin-top":"-20px"},50)
 	},function(){
 		$(".product_number div>img:first-child").animate({"margin-top":"0px"},50)
+	})
+	
+	//添加购物车
+	$(".add").click(function(){
+		var $val = $(".The_shipping_address input[type=number]").val();
+		$(".The_shipping_address input[type=number]").val(parseInt($val)+1);
+	})
+	$(".sup").click(function(){
+		var $val = $(".The_shipping_address input[type=number]").val();
+		if($val >= 1){
+			$(".The_shipping_address input[type=number]").val(parseInt($val)-1);
+		}
 	})
 })
