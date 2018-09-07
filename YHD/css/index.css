@@ -13,9 +13,15 @@
 .a_col_R a:hover{
 	color: #ff3c3c;
 }
+._show{
+	display: block !important;
+}
+._hidden{
+	display: none;
+}
 body{
 	width: 100%;
-	background: #f8f8f8;
+	background: white;
 }
 header{
 	border-bottom:solid 1px gainsboro ;
@@ -239,7 +245,7 @@ input[type="checkbox"]:checked + i{background:orange;}
 	background-size:120px ;
 }
 .main_container{
-	background: #f8f8f8;
+	background: white;
 }
 .my_commodity{
 	width: 1200px;
@@ -899,12 +905,15 @@ input::-webkit-inner-spin-button {
 	width: 150px;
 	height: 45px;
 	border: none;
-	background: #FF3C3C;
+	background: #FF3C3C url(../img/gwc_2.png) no-repeat 10px 14px;
+	background-size:20px ;
 	cursor: pointer;
 	outline: none;
+	
 }
-.shopping:active{
-	background: #FF0000;
+.shopping:hover{
+	background: #FF0000 url(../img/gwc_2.png) no-repeat 10px 14px;
+	background-size:20px ;
 }
 .buy>a{
 	float: left;
@@ -926,4 +935,385 @@ input::-webkit-inner-spin-button {
 	padding-left: 20px;
 	background: url(../img/safe.png) no-repeat 0px 2px;
 	background-size:15px ;
+	cursor: pointer;
+}
+._show_intro_others{
+	float: left;
+	width: 165px;
+	border: solid 1px gainsboro;
+}
+._show_intro_others p{
+	height:35px ;
+	line-height: 35px;
+	border-bottom: solid 1px gainsboro;
+	background: #fcfcfc;
+}
+._show_intro_others p font{
+	margin-left: 20px;
+	font-size: 14px;
+	color: gray;
+}
+._show_intro_others p span{
+	float: right;
+	margin-right: 10px;
+	color: gray;
+	cursor: pointer;
+}
+._show_intro_others p span:hover{
+	color: #FF0000;
+}
+._show_intro_others img{
+	background: gainsboro;	
+	vertical-align: text-top;
+	width: 16px;
+}
+._show_intro_others p span:hover img{
+	background: #FF0000;
+}
+.others{
+	background: white;
+	padding-bottom: 20px;
+}
+.others>div{
+	padding-top: 20px;
+	text-align: center;
+}
+.others img{
+	display: block;
+	width: 120px;
+	margin: 0px auto;
+}
+.others a{
+	color: gray;
+	font-size: 14px;
+}
+.others a:hover{
+	color: #FF0000;
+}
+.others span{
+	color: #FF0000;
+}
+/*--------------------------------------------------------------------------------------------------------产品详细信息*/
+.product_intro_two{
+	float: left;
+	width: 230px;
+	text-align: center;
+	margin-top: 20px;
+	border: solid 1px gainsboro;
+}
+.product_intro_two>h3{
+	background-color: #f7f7f7;
+	height: 35px;
+	line-height: 35px;
+}
+.shop{
+	margin-bottom: 10px;
+}
+.shop p{
+	font-size: 12px;
+	margin: 15px auto;
+	color: gray;
+}
+.shop>input{
+	width: 100px;
+	height: 35px;
+	outline: none;
+	background-color: #ff5c4d;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+.shop>input:hover{
+	background-color:#FF0000 ;
+}
+.intro_product_list{
+	border-top: solid 1px gainsboro;
+}
+.intro_product_list h4{
+	height: 35px;
+	font-size: 15px;
+	font-weight: 300;
+	margin: auto 10px;
+	line-height: 35px;
+}
+.intro_product_list>div{
+	margin: 0px 8px 20px 8px;
+	border-top: solid 1px gainsboro;
+}
+.intro_product_list img{
+	display: block;
+	width: 100px;
+	margin: 30px auto 20px auto;
+}
+.intro_product_list p{
+	text-align: left;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+.intro_product_list span{
+ 	display: block;
+	text-align: left;
+	padding-left:6px ;
+	color: #FF0000;
+	font-size: 12px;
+}
+.intro_product_list input{
+	width: 90px;
+	height: 30px;
+	font-size: 12px;
+}
+/*<!---------------------------------------------------------------------------产品详情块——主块-->*/
+.product_detail_mian{
+	float: left;
+	margin: 20px 10px;
+}
+.pro_ranking_list{
+	width: 940px;
+	border: solid 1px gainsboro;
+}
+.pro_ranking_list h5{
+	margin: 8px;
+	padding-left: 10px;
+	border-left: solid 2px #FF0000;
+}
+.ranking_list{
+	border-top: solid 1px gainsboro;
+	margin: 0px 8px;
+	text-align: center;
+}
+.ranking_list>div{
+	display: inline-block;
+	width: 160px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding:8px;
+	border: solid 1px transparent;
+	position: relative;
+}
+.ranking_list>div:hover{
+	border: solid 1px #FDE5E0;
+	box-shadow: 0px 0px 2px 1px inset #FF6C6C; 
+}
+.ranking_list img{
+	display: block;
+	width: 100px;
+	margin: 30px auto 20px auto;
+}
+.ranking_list p{
+	text-align: left;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+.ranking_list span{
+ 	display: block;
+	text-align: left;
+	padding-left:6px ;
+	color: #FF0000;
+	font-size: 12px;
+}
+.ranking_list input{
+	width: 90px;
+	height: 30px;
+	font-size: 12px;
+}
+.ranking_list_mod{
+	top: 10px;
+	width: 25px;
+	height: 25px;
+	font-weight:bold ;
+	position: absolute;
+}
+.ranking_list_mod font{
+	top: 6px;
+	left: 0px;
+	position: relative;
+}
+.rankinglist_current{
+	background-color: gray;
+	background-size: 15px;
+	color: white;
+	opacity: 0.8;
+}
+.ranking_list_1{
+	background: url(../img/HG_R.png) no-repeat;
+	background-size: 25px;
+	color: red;
+}
+.ranking_list_2{
+	background: url(../img/HG_O.png) no-repeat;
+	background-size: 25px;
+	color: #e77801;
+}
+.ranking_list_3{
+	background: url(../img/HG_H.png) no-repeat;
+	background-size: 25px;
+	color: #e6bd00;
+}
+.product_detail{
+	margin: 10px 0px;
+}
+.product_detail_nav{
+	border: solid 1px gainsboro;
+	background-color:#fafafa ;
+	box-shadow: 0px 1px 0.5px 0.5px gainsboro;
+}
+.product_detail_nav li{
+	float: left;
+	width: 120px;
+	text-align: center;
+	height: 40px;
+	font-size: 14px;
+	line-height: 40px;
+	background-color:#fafafa ;
+	border-right: solid 1px gainsboro;
+}
+.product_detail_nav li>span{
+	color: #FF0000;
+	margin: 0px 6px;
+}
+.product_detail_nav_li_hover{
+	background: #FF0000 !important;
+	color: white;
+	border-color:  #FF0000;
+}
+.product_detail_nav_li_hover>span{
+	color: white !important;
+}
+/*----------------------------------------------------------------------------产品介绍*/
+.product_intro{
+	width: 940px;
+	margin-top: 10px;
+}
+.pro_specification{
+	padding-bottom: 10px;
+	position: relative;
+	background-color:#fafafa ;
+	border: solid 1px gainsboro;
+}
+.pro_specification h4{
+	margin: 10px;
+	font-weight: 300;
+	font-size: 14px;
+}
+.pro_specification>a{
+	position: absolute;
+	right: 30px;
+	top: 10px;
+	color: royalblue;
+}
+.pro_specification li{
+	width: 350px;
+	font-size: 12px;
+	margin: 10px;
+	font-weight: 200;
+	display: inline-block;
+}
+.pro_specification li:nth-child(2){
+	width: 450px;
+}
+.pro_img_intro{
+	margin-top: 20px;
+}
+.pro_promise{
+	width: 940px;
+	padding: 10px;
+	margin-top: 10px;
+	border: solid 1px gainsboro;
+	color: #555555;
+	background-color: #f7f7f7;
+}
+.pro_promise h2{
+	margin: 20px 0px;
+	font-size: 16px;
+}
+.pro_promise span{
+	font-weight: bold;
+}
+/*用户评价*/
+.evaluation_outline{
+	width: 940px;
+	margin-top: 20px;
+	background-color: #fbfbfb;
+	border: solid 1px gainsboro;
+}
+.evaluation_outline>div:first-child{
+	float: left;
+	width: 200px;
+	margin: 20px 0px;
+	background: url(../img/evaluation_outline.png) no-repeat 150px;
+	text-align: center;
+}
+.evaluation_outline>div:first-child h1,.evaluation_outline>div:first-child p:nth-child(2){
+	color: #FF0000;
+	margin: 0px;
+}
+.applause_rate{
+	font-size: 50px;
+	font-weight: bold;
+}
+.evaluation_outline>div:nth-child(2){
+	float: left;
+	width: 400px;
+}
+.evaluation_outline>div:nth-child(2) li{
+	float: left;
+	margin: 20px 10px 0px 10px;
+	padding: 10px;
+	border: solid 1px gainsboro;
+	border-radius: 20%;
+	background: white;
+}
+._eva_nav{
+	width: 940px;
+	margin-top: 20px;
+	border-bottom: solid 1px gainsboro;
+}
+._eva_nav>div{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+._eva_nav input{
+	vertical-align: middle;
+}
+._eva_nav_hover{
+	color: #FF0000;
+	border-bottom: solid 2px #FF0000;
+}
+._evaluation_list{
+	width: 940px;
+	margin: 20px 0px;
+}
+._evaluation_list>div{
+	clear: both;
+	display: none;
+	width: 940px;
+	margin-bottom: 20px;
+}
+.user_info{
+	float: left;
+	width: 80px;
+	margin-top: 20px;
+	text-align: center;
+}
+.user_eval{
+	float: left;
+	width: 800px;
+	margin-left: 20px;
+	border-bottom: solid 1px gainsboro;
+}
+.user_eval p{
+	margin: 10px 0px;
+}
+.user_eval p:nth-child(1){
+	background: url(../img/eval_score.png) no-repeat 40px;
+}
+.user_eval p:nth-child(3) span{
+	vertical-align: top;
+}
+.user_eval p:nth-child(4) span{
+	margin-right: 20px;
+	color: gray;
 }

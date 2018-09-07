@@ -240,4 +240,20 @@ $(document).ready(function(){
 			$(".The_shipping_address input[type=number]").val(parseInt($val)-1);
 		}
 	})
+	//用户评论
+	$("._eva_nav>div").click(function(){
+		var $div = $("._eva_nav>div");
+		var $divs = $("._evaluation_list>div");
+		for(var i=0;i<$div.length;i++){
+			$div.eq(i).removeClass("_eva_nav_hover");
+		}
+		for(var i=0;i<$divs.length;i++){
+			$divs.eq(i).removeClass("_show");
+		}
+		$(this).addClass("_eva_nav_hover");
+//		$divs.eq($(this).index()).removeClass("_hidden");
+		$divs.eq($(this).index()).addClass("_show");
+//		alert($(this).index())
+//		console.log($divs.eq(1))
+	})
 })
