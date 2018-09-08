@@ -143,11 +143,11 @@ $(document).ready(function(){
 	//轮播图效果
 	$(".carousel_btn_left").click(function(){
 		carousel_left(".carousel_content",1000,4,1000);
-		carousel_dot2(".carousel_content",".carousel_list",1000);
+		carousel_dot2(".carousel_content",".carousel_list",1000,"dot_hot");
 	})
 	$(".carousel_btn_right").click(function(){
 		carousel_right(".carousel_content",1000,4,1000);
-		carousel_dot2(".carousel_content",".carousel_list",1000);
+		carousel_dot2(".carousel_content",".carousel_list",1000,"dot_hot");
 	})
 	
 	//地区选项卡
@@ -240,6 +240,73 @@ $(document).ready(function(){
 			$(".The_shipping_address input[type=number]").val(parseInt($val)-1);
 		}
 	})
+	//选择产品
+	$(".category li").click(function(){
+		var $lis = $(".category li");
+		for (var i=0; i<$lis.length;i++) {
+			$lis.eq(i).removeClass("category_hover");
+		}
+		$lis.eq($(this).index()).addClass("category_hover");
+	})
+	//others切换
+		var $chang = 1;
+		
+		$("#again").click(function(){
+			var $divs =$(".others>div");
+			for (var i = 0; i < $divs.length; i++){
+				$divs.eq(i).hide()
+			}
+			var $num1 =  Math.floor(Math.random()*5+1);
+			var $num2 =  Math.floor(Math.random()*5+1);
+			while ($num2 == $num1){
+				var $num2 =  Math.floor(Math.random()*5+1);
+			}
+			var $num3 =  Math.floor(Math.random()*5+1);
+			while ($num3 == $num1||$num3 == $num2){
+				var $num3 =  Math.floor(Math.random()*5+1);
+			}
+			$divs.eq($num1).show();
+			$divs.eq($num2).show();
+			$divs.eq($num3).show();
+		}) 
+//	$("#again").click(function(){
+//		var $divs =$(".others>div");
+//		var a = new Array(-1,-1,-1);
+//		this.status = true;
+//		for (var i = 0; i < 3; i++) {
+//			while(true){
+//				var num = Math.floor(Math.random()*6);
+//				a[i] = num;
+//				console.log(num)
+//				if(num != a[0] && num != a[1] && num != a[2]){
+//						status = false;
+//				}
+//			}
+//			do{
+//			var num = Math.floor(Math.random()*6);
+//			a[i] = num;
+//				if(num != a[0] && num != a[1] && num != a[2]){
+//					status = false;
+//				}
+//			}while(status)
+//			status = true;
+//			console.log(a[i])
+//	}
+
+//	})
+	//产品详情切换
+	$(".product_detail_nav li").click(function(){
+		var $divs = $(".product_detail_content>div");
+		var $lis = $(".product_detail_nav li");
+		for (var i=0; i<$lis.length;i++) {
+			$lis.eq(i).removeClass("product_detail_nav_li_hover");
+		}
+		for (var i=0; i<$divs.length;i++) {
+			$divs.eq(i).removeClass("_show");
+		}
+		$(this).addClass("product_detail_nav_li_hover");
+		$divs.eq($(this).index()).addClass("_show");
+	})
 	//用户评论
 	$("._eva_nav>div").click(function(){
 		var $div = $("._eva_nav>div");
@@ -251,9 +318,52 @@ $(document).ready(function(){
 			$divs.eq(i).removeClass("_show");
 		}
 		$(this).addClass("_eva_nav_hover");
-//		$divs.eq($(this).index()).removeClass("_hidden");
 		$divs.eq($(this).index()).addClass("_show");
-//		alert($(this).index())
-//		console.log($divs.eq(1))
+	})
+	
+	//首页轮播图一
+	$(".lunbo_one").hover(function(){
+		$(".lunbo_btn").show();
+	},function(){
+		$(".lunbo_btn").hide();
+	})
+	$(".lunbo_one_left").click(function(){
+		carousel_left(".lunbo_one>ul",982,4,1000);
+		carousel_dot2(".lunbo_one>ul",".lunbo_one_dot",982,"lunbo_dot_hover");
+	})
+	$(".lunbo_one_right").click(function(){
+		carousel_right(".lunbo_one>ul",982,4,1000);
+		carousel_dot2(".lunbo_one>ul",".lunbo_one_dot",982,"lunbo_dot_hover");
+	})
+//	首页轮播图二
+	$(".lunbo_tow").hover(function(){
+		$(".lunbo_btn").show();
+	},function(){
+		$(".lunbo_btn").hide();
+	})
+	$(".lunbo_tow_left").click(function(){
+		carousel_left(".lunbo_tow>ul",982,2,1000);
+	})
+	$(".lunbo_tow_right").click(function(){
+		carousel_right(".lunbo_tow>ul",982,2,1000);
+	})
+
+	$(".img_am img").hover(function(){
+		$(this).animate({"margin-left":"-10px"});
+	},function(){
+		$(this).animate({"margin-left":"0px"});
+	})
+	
+	$(".model_right_nav li").mouseover(function(){
+		var $lis = $(".model_right_nav li");
+		var $divs = $("._model_right_list>div");
+		for (var i = 0; i<$lis.length; i++) {
+			$lis.eq(i).removeClass("right_nav_li_hover")
+		}
+		for (var i = 0; i<$divs.length; i++) {
+			$divs.eq(i).removeClass("_show")
+		}
+		$(this).addClass("right_nav_li_hover");
+		$divs.eq($(this).index()).addClass("_show");
 	})
 })

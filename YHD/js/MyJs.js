@@ -124,7 +124,7 @@ function carousel_dot(obj,dot_obj,size_pic){
 		}	
 	}
 
-function carousel_dot2(obj,dot_obj,size_pic){
+function carousel_dot2(obj,dot_obj,size_pic,dot_className){
 	var $elem = $(obj);					//获取轮播框架里的第一个需要轮播的子类
 	var $dot = $(dot_obj+">div");
 	var li_num = Math.floor(Math.abs(parseInt($elem.css("margin-left")))/size_pic) ;
@@ -132,26 +132,26 @@ function carousel_dot2(obj,dot_obj,size_pic){
 	for(var i=0;i<$dot.length;i++){
 			$dot[i].className = '';							//赋值前先清空所有点的class
 	}
-	$dot[li_num].className = 'dot_hot';				//对应点设置class	
+	$dot[li_num].className = dot_className;				//对应点设置class	
 }
 
-function  carousel_left(obj,size_pic,num,time_horizon){
+function  carousel_right(obj,size_pic,num,time_horizon){
 		var $elem = $(obj);	
 		var ml = parseInt($elem.css("margin-left"))-size_pic;
 		if( ml >= -size_pic*(num-1)){					//判断一个轮播div是否已近显示完了
 				$elem.animate({marginLeft: ml+'px'},time_horizon); //使用Jquery的动画方法，实现当前的div的滑动
 				$elem.css("margin-left",ml+'px');
-		}	
+			}
 }
 
 
-function  carousel_right(obj,size_pic,num,time_horizon){
+function  carousel_left(obj,size_pic,num,time_horizon){
 		var $elem = $(obj);					//获取轮播框架里的第一个需要轮播的子类		
 		var ml = parseInt($elem.css("margin-left"))+size_pic;
 		if( ml <= 0){		//判断一个轮播div是否已近显示完了
 			$elem.animate({marginLeft: ml+'px'},time_horizon); //使用Jquery的动画方法，实现当前的div的滑动
-			$elem.css("margin-left",ml+'px')
-		}	
+			$elem.css("margin-left",ml+'px');
+		}
 }
 
 
