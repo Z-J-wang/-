@@ -58,6 +58,10 @@ $(document).ready(function(){
 			$(this).parent().css("border-color","red");
 			$(this).parent().find("._warning").show(1000);
 			$(this).parent().find("._info").slideUp(100);
+		}else{
+			$(this).parent().css("border-color","gainsboro");
+			$(this).parent().find("._warning").hide(1000);
+			$(this).parent().find("._info").hide(100);
 		}
 	})
 	//第二个输入框
@@ -70,6 +74,10 @@ $(document).ready(function(){
 			$(this).parent().css("border-color","red");
 			$(this).parent().find("._warning2").show(1000);
 			$(this).parent().find("._info").slideUp(100);
+		}else{
+			$(this).parent().css("border-color","gainsboro");
+			$(this).parent().find("._warning").hide(1000);
+			$(this).parent().find("._info").hide(100);
 		}
 	})
 	//第三个输入框
@@ -82,6 +90,10 @@ $(document).ready(function(){
 			$(this).parent().css("border-color","red");
 			$(this).parent().find("._warning2").show(1000);
 			$(this).parent().find("._info").slideUp(100);
+		}else{
+			$(this).parent().css("border-color","gainsboro");
+			$(this).parent().find("._warning").hide(1000);
+			$(this).parent().find("._info").hide(100);
 		}
 	})
 	//第四个输入框
@@ -94,6 +106,10 @@ $(document).ready(function(){
 			$(this).parent().css("border-color","red");
 			$(this).parent().find("._warning").show(1000);
 			$(this).parent().find("._info").slideUp(100);
+		}else{
+			$(this).parent().css("border-color","gainsboro");
+			$(this).parent().find("._warning").hide(1000);
+			$(this).parent().find("._info").hide(100);
 		}
 	})
 	//第四个输入框
@@ -106,6 +122,10 @@ $(document).ready(function(){
 			$(this).parent().css("border-color","red");
 			$(this).parent().find("._warning").show(1000);
 			$(this).parent().find("._info2").slideUp(100);
+		}else{
+			$(this).parent().css("border-color","gainsboro");
+			$(this).parent().find("._warning").hide(1000);
+			$(this).parent().find("._info").hide(100);
 		}
 	})
 })
@@ -323,9 +343,11 @@ $(document).ready(function(){
 	
 	//首页轮播图一
 	$(".lunbo_one").hover(function(){
-		$(".lunbo_btn").show();
+//		$(".lunbo_btn").show();
+		$(this).find(".lunbo_btn").show();
 	},function(){
-		$(".lunbo_btn").hide();
+//		$(".lunbo_btn").hide();
+		$(this).find(".lunbo_btn").hide();
 	})
 	$(".lunbo_one_left").click(function(){
 		carousel_left(".lunbo_one>ul",982,4,1000);
@@ -337,9 +359,11 @@ $(document).ready(function(){
 	})
 //	首页轮播图二
 	$(".lunbo_tow").hover(function(){
-		$(".lunbo_btn").show();
+//		$(".lunbo_btn").show();
+		$(this).find(".lunbo_btn").show();
 	},function(){
-		$(".lunbo_btn").hide();
+//		$(".lunbo_btn").hide();
+		$(this).find(".lunbo_btn").hide();
 	})
 	$(".lunbo_tow_left").click(function(){
 		carousel_left(".lunbo_tow>ul",982,2,1000);
@@ -366,4 +390,14 @@ $(document).ready(function(){
 		$(this).addClass("right_nav_li_hover");
 		$divs.eq($(this).index()).addClass("_show");
 	})
+	
+	//浮动搜索框
+	$(window).scroll(function(){
+	// 滚动条距离顶部的距离 大于 200px时
+	if($(window).scrollTop() >= 1000){
+		$(".float_search").slideDown();
+	} else{
+	$(".float_search").slideUp()
+		}
+	});
 })

@@ -4,9 +4,13 @@
 		<meta charset="UTF-8">
 		<title>一号店-注册</title>
 		<link rel="stylesheet" href="css/YHD.css" />
+		<script type="text/javascript" src="js/lib/jquery.js"></script>
 		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/dist/jquery.validate.js"></script>
+		<script type="text/javascript" src="js/dist/localization/messages_zh.min.js"></script>
 		<script type="text/javascript" src="js/MyJs.js" ></script>
 		<script type="text/javascript" src="js/YHD.js" ></script>
+		<script type="text/javascript" src="js/JX.js"></script>
 	</head>
 	<body style="background: white;">
 		<header>
@@ -32,7 +36,7 @@
 			</div>
 		</header>
 		<div class="register_main">
-			<form action="" method="get">
+			<form id='register' action="" method="get">
 				<div class="register_container">
 					<h3>1号店注册</h3>
 					<!--第一个输入框-->
@@ -40,10 +44,8 @@
 						<span>
 							用户名
 						</span>
-						<input type="text" />
-						<div class="_info">
-							<p>4-20位字符，可有中文、英文、数字或者符号“_”组成</p>
-						</div>
+						<input type="text" name="username" id="username"/>
+						<div class="_info"><p>4-20位字符，可有中文、英文、数字或者符号“_”组成</p></div>
 						<div class="_warning">
 							<p>用户名不能为空</p>
 						</div>
@@ -53,7 +55,7 @@
 						<span>
 							手机号
 						</span>
-						<input type="text" />
+						<input type="text" name="phone" id="phone"/>
 						<div class="_info">
 							<p>请填写正确的手机号码，以便接收订单通知，找回密码等</p>
 						</div>
