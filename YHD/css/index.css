@@ -127,6 +127,8 @@ label i{
 input[type="checkbox"]{display:none;}
 input[type="checkbox"]:checked + i{background:orange;}
 
+input[type="button"]{cursor: pointer;}
+
 .clear{
 	clear: both;
 	border: none !important;
@@ -598,7 +600,7 @@ input[type="checkbox"]:checked + i{background:orange;}
 	position: absolute;
 	top: 41px;
 	width: 200px;
-	background: black;
+	background: #434343;
 	opacity: 0.8;
 	text-align: left;
 	display: none;
@@ -659,11 +661,6 @@ input[type="checkbox"]:checked + i{background:orange;}
 	width: 350px;
 	margin-top: 10px;
 	padding: 25px;
-}
-._show_img img{
-	display: block;
-	width: 235px;
-	margin: 0px auto;
 }
 .img_list{
 	margin-top: 20px;

@@ -5,18 +5,58 @@
 		<title>一号店-详情页</title>
 		<link rel="stylesheet" href="css/index.css" />
 		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/jquery.jqzoom-core.js" ></script>
 		<script type="text/javascript" src="js/MyJs.js" ></script>
 		<script type="text/javascript" src="js/YHD.js" ></script>
+		<style type="text/css">
+	/*jQzoom*/
+	.jqzoom{
+	 width: 235px;
+	 /*height: 340px;*/
+	 margin: 0 auto;
+	 position:relative;
+	 cursor:move;
+	}
+	.zoomdiv {
+	  z-index:  999;
+	  position: absolute;
+	  top:0px;
+	  left:0px;
+	  width : 300px;
+	  height: 300px;
+	  background: #ffffff;
+	  border:1px solid #CCCCCC;
+	  display:none;
+	  text-align: center;
+	  overflow: hidden;
+	}
+	.jqZoomPup {
+		z-index         : 999;
+	  visibility       : hidden;
+	  position        : absolute;
+	  top:0px;
+	  left:0px;
+	  width          : 1px;
+	  height         : 1px;
+	  border: 1px solid #aaa;
+	  /*background: #ffffff url(/images/shopping/zoomlens.gif) 50% top no-repeat;*/
+	  background: #ffffff 10%;
+	  opacity: 0.5;
+	  -moz-opacity: 0.5;
+	  -khtml-opacity: 0.5;
+	  filter: alpha(Opacity=50);
+	}
+</style>
 	</head>
 	<body>
 		<header>
 			<div class="head_container a_col_R">
 				<div class="head_left">
-					<a href="#">一号店首页</a>
+					<a href="index.html">一号店首页</a>
 				</div>
 				<div class="head_right">
 					<ul>
-						<li>Hi,请<a href="#">登录</a><a href="#">注册</a></li>
+						<li>Hi,请<a href="login.html">登录</a><a href="register.html">注册</a></li>
 						<li><a href="#">我的订单</a></li>
 						<li>
 							<a href="#">客户服务<img id="tran_img" src="img/t_arrow.gif"/></a>
@@ -65,7 +105,7 @@
 					</p>
 				</div>
 				<div class="current_head_right">
-					<span><a href="#">购物车</a></span>
+					<span><a href="shopping_trolley.html">购物车</a></span>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -76,7 +116,7 @@
 					<div class="_nav_classify">
 						<span>所有商品分类</span>
 						<img src="img/t_arrow.gif" />
-						<div class="_nav_classify_list">
+						<div class="_nav_classify_list nav_img">
 							<p><a href="#">全球进口</a></p>
 							<p><a href="#">食品/酒/生鲜</a></p>
 							<p><a href="#">母婴/玩具/童装</a></p>
@@ -119,12 +159,15 @@
 				</ul>
 			</div>
 			<!--产品内容-->
+			<div class="clear"></div>
 			<div class="main_container_content">
 				<div class="_content_one">
 					<!--产品图片展示块-->
 					<div class="product_img">
 						<div class="_show_img">
-							<img src="img/product_1.png"/>
+							<div class="jqzoom">
+								<img src="img/small.jpg" jqimg="img/big.jpg" id="bigImg"/>
+							</div>
 						</div>
 						<div class="img_list">
 							<div class="img_list_hot"><img src="img/product_1.png" height="70px"/></div>
@@ -275,6 +318,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
 				<!--产品详细信息-->

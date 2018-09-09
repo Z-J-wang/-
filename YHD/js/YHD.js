@@ -7,6 +7,15 @@ $(document).ready(function(){
 	},function(){
 		$(".Hd_menu_list").hide();
 	})
+	
+	$(".jqzoom").jqueryzoom({
+    xzoom: 500, //放大图的宽度(默认是 200)
+    yzoom: 500, //放大图的高度(默认是 200)
+    offset: -70, //离原图的距离(默认是 10)
+    position: "right", //放大图的定位(默认是 "right")
+    preload: 1
+	  });
+	
 	//input获取焦点是样式切换
 	$(".login_container>div>input").focus(function(){
 		$(this).parent().css("border-color","black");
@@ -217,6 +226,14 @@ $(document).ready(function(){
 		$("._nav").removeClass("_nav_hover");
 		$("._nav").addClass("_nav_cur");
 		$("._address").removeClass("_address_hover");
+	})
+	
+	$("#ch_login").click(function(){
+		window.location.href = "login.html";
+	})
+	
+	$("#ch_index").click(function(){
+		window.location.href = "index.html";
 	})
 	
 	$("._nav_classify").hover(function(){
