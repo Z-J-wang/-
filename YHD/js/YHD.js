@@ -8,13 +8,12 @@ $(document).ready(function(){
 		$(".Hd_menu_list").hide();
 	})
 	
-	$(".jqzoom").jqueryzoom({
-    xzoom: 500, //放大图的宽度(默认是 200)
-    yzoom: 500, //放大图的高度(默认是 200)
-    offset: -70, //离原图的距离(默认是 10)
-    position: "right", //放大图的定位(默认是 "right")
-    preload: 1
-	  });
+	if (window.name != "register") {
+		location.reload();
+		window.name = "register";
+	} else{
+		window.name = "";
+	}
 	
 	//input获取焦点是样式切换
 	$(".login_container>div>input").focus(function(){
@@ -137,6 +136,23 @@ $(document).ready(function(){
 			$(this).parent().find("._info").hide(100);
 		}
 	})
+	
+	
+	setInterval(reg_bj,2000);
+	//背景切换效果
+	var num = 0;
+	function reg_bj(){
+		var $bjs = $(".bj>div");
+		$bjs.eq(num).fadeOut(2000);
+		$bjs.eq(num+1).fadeIn(2000);
+		if(num == 4){
+			num =0;
+		}else{
+			num++;
+		}
+	}
+	
+	
 })
 //购物车页面脚本
 $(document).ready(function(){
@@ -293,14 +309,14 @@ $(document).ready(function(){
 			for (var i = 0; i < $divs.length; i++){
 				$divs.eq(i).hide()
 			}
-			var $num1 =  Math.floor(Math.random()*5+1);
-			var $num2 =  Math.floor(Math.random()*5+1);
+			var $num1 =  Math.floor(Math.random()*6);
+			var $num2 =  Math.floor(Math.random()*6);
 			while ($num2 == $num1){
-				var $num2 =  Math.floor(Math.random()*5+1);
+				var $num2 =  Math.floor(Math.random()*6);
 			}
-			var $num3 =  Math.floor(Math.random()*5+1);
+			var $num3 =  Math.floor(Math.random()*6);
 			while ($num3 == $num1||$num3 == $num2){
-				var $num3 =  Math.floor(Math.random()*5+1);
+				var $num3 =  Math.floor(Math.random()*6);
 			}
 			$divs.eq($num1).show();
 			$divs.eq($num2).show();
@@ -332,9 +348,9 @@ $(document).ready(function(){
 
 //	})
 	//产品详情切换
-	$(".product_detail_nav li").click(function(){
+	$(".product_detail>.product_detail_nav li").click(function(){
 		var $divs = $(".product_detail_content>div");
-		var $lis = $(".product_detail_nav li");
+		var $lis = $(".product_detail>.product_detail_nav li");
 		for (var i=0; i<$lis.length;i++) {
 			$lis.eq(i).removeClass("product_detail_nav_li_hover");
 		}
@@ -344,6 +360,20 @@ $(document).ready(function(){
 		$(this).addClass("product_detail_nav_li_hover");
 		$divs.eq($(this).index()).addClass("_show");
 	})
+	
+	$(".float_nav li").click(function(){
+		var $divs = $(".product_detail_content>div");
+		var $lis = $(".float_nav li");
+		for (var i=0; i<$lis.length;i++) {
+			$lis.eq(i).removeClass("product_detail_nav_li_hover");
+		}
+		for (var i=0; i<$divs.length;i++) {
+			$divs.eq(i).removeClass("_show");
+		}
+		$(this).addClass("product_detail_nav_li_hover");
+		$divs.eq($(this).index()).addClass("_show");
+	})
+	
 	//用户评论
 	$("._eva_nav>div").click(function(){
 		var $div = $("._eva_nav>div");
@@ -367,11 +397,11 @@ $(document).ready(function(){
 		$(this).find(".lunbo_btn").hide();
 	})
 	$(".lunbo_one_left").click(function(){
-		carousel_left(".lunbo_one>ul",982,4,1000);
+		carousel_left(".lunbo_one>ul",982,6,1000);
 		carousel_dot2(".lunbo_one>ul",".lunbo_one_dot",982,"lunbo_dot_hover");
 	})
 	$(".lunbo_one_right").click(function(){
-		carousel_right(".lunbo_one>ul",982,4,1000);
+		carousel_right(".lunbo_one>ul",982,6,1000);
 		carousel_dot2(".lunbo_one>ul",".lunbo_one_dot",982,"lunbo_dot_hover");
 	})
 //	首页轮播图二
@@ -388,7 +418,15 @@ $(document).ready(function(){
 	$(".lunbo_tow_right").click(function(){
 		carousel_right(".lunbo_tow>ul",982,2,1000);
 	})
-
+	//个人中心登录注册跳转
+	$("#btn_login").click(function(){
+		window.location.href = "login.html";
+	})
+	$("#btn_reg").click(function(){
+		window.location.href = "register.html";
+	})
+	
+	
 	$(".img_am img").hover(function(){
 		$(this).animate({"margin-left":"-10px"});
 	},function(){
@@ -417,4 +455,28 @@ $(document).ready(function(){
 	$(".float_search").slideUp()
 		}
 	});
+	
+	$(".current_head_middle_search>input").focus(function(){
+		$(this).parent().find(".search_h").show();
+	}).blur(function(){
+		$(this).parent().find(".search_h").hide()
+	})
+	
+	$("._search").click(function(){
+		var $sea_H = $(".current_head_middle_search>input").val();
+		var $par = $("._history");
+		var $new = $("<p>"+$sea_H+"</p>");
+		$par.append($new);
+		$(".current_head_middle_search>input").val("");
+	})
+	
+	$("._clear_h").click(function(){
+		$("._history p").remove();
+	})
+	
+	
+	$(".ad_exit").click(function(){
+		$(".ad_mian").hide();
+	})
+	
 })

@@ -13,6 +13,9 @@
 .a_col_R a:hover{
 	color: #ff3c3c;
 }
+.col_R{
+	color: #EF3639;
+}
 ._show{
 	display: block !important;
 }
@@ -246,8 +249,24 @@ input[type="button"]{cursor: pointer;}
 	background: url(../img/back_QR_code.png) no-repeat;
 	background-size:120px ;
 }
+.div_one{
+	position: relative;
+}
 .main_container{
+	position: relative;
 	background: white;
+}
+.b_l{
+	position: absolute;
+	top: 0px ;
+	left: -400px;
+	z-index: -100;
+}
+.b_R{
+	position: absolute;
+	top: 0px ;
+	right: -380px;
+	z-index: 100;
 }
 .my_commodity{
 	width: 1200px;
@@ -302,11 +321,7 @@ input[type="button"]{cursor: pointer;}
 	cursor: pointer;
 	background: gainsboro;
 }
-.dot_hot{
-	width: 20px !important;
-	background: #ff4040 !important;
-	border-radius: 40% !important;
-}
+
 .carousel_btn_left span{
 	font-size:50px ;
 	font-weight: bold;
@@ -527,6 +542,7 @@ input[type="button"]{cursor: pointer;}
 	line-height: 35px;
 	border: solid 2px #ff4040;
 	margin-top: 40px;
+	position: relative;
 	background: white;
 }
 .current_head_middle_search input{
@@ -938,7 +954,7 @@ input::-webkit-inner-spin-button {
 	float: left;
 	width: 165px;
 	height: 570px;
-	/*overflow: hidden;*/
+	overflow: hidden;
 	border: solid 1px gainsboro;
 }
 ._show_intro_others p{
@@ -1465,24 +1481,24 @@ input::-webkit-inner-spin-button {
 	overflow: hidden;
 }
 .lunbo_one ul{
-	width: 4500px;
+	width: 10000px;
 }
 .lunbo_one li{
 	float: left;
 }
 .lunbo_one_left{
-	position: absolute;
-	top: 35%;
+	top: 40%;
 	left: 20px;
 	cursor: pointer;
 }
 .lunbo_one_right{
-	position: absolute;
-	top: 35%;
-	right: 20px;
+	top: 40%;
+	right: 270px;
 	cursor: pointer;
 }
 .lunbo_btn{
+	position: absolute;
+	z-index: 1000;
 	display: none;
 	cursor: pointer;
 }
@@ -1492,8 +1508,9 @@ input::-webkit-inner-spin-button {
 .lunbo_one_dot{
 	position: absolute;
 	bottom: 20px;
-	width: 940px;
+	/*width: 940px;*/
 	text-align: center;
+	left: 35%;
 }
 .lunbo_one_dot>div{
 	display: inline-block;
@@ -1510,6 +1527,66 @@ input::-webkit-inner-spin-button {
 	margin-top: 0.5px;
 	background: #ea758a;
 	border-radius: 50%;
+}
+/*个人中心*/
+.individual{
+	background: url(../img/vip_bg2.png) no-repeat;
+	background-size: 205px 250px;
+	position: absolute;
+	z-index: 1001;
+	top: 20%;
+	right: 5%;
+	width: 205px;
+	height: 250px;
+	padding-top: 40px;
+}
+.individual p{
+	color: gray;
+	margin: 10px 0px;
+	text-align: center;
+}
+.individual>div>div{
+	margin: 40px 0px;
+	text-align: center;
+}
+.individual>div>div>span{
+	display: inline-block;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+	border: solid 1px orangered;
+	border-radius: 12.5px;
+	cursor: pointer;
+}
+.individual>div>div>span:hover{
+	background: #FB6233;
+	color: white;
+}
+.individual>div>div>span:first-child{
+	margin-right: 20px;
+}
+.individual a{
+	display: inline-block;
+	height: 30px;
+	margin-left: 10px;
+}
+.touxiang{
+	width: 68px;
+	height: 68px;
+	border-radius:50% ;
+	background: gainsboro;
+	opacity: 0.8;
+	position: absolute;
+	top: -25px;
+	left: 35%;
+}
+.touxiang>img{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin: 4px;
+	overflow: hidden;
+	border-radius:50% ;
 }
 /*首页显示抢购*/
 .intro_ad_pro{
@@ -1584,7 +1661,7 @@ input::-webkit-inner-spin-button {
 .lunbo_tow_right{
 	position: absolute;
 	top: 40%;
-	right: 0px;
+	right: 20px;
 }
 .three_div_model{
 	margin-top: 40px;
@@ -1600,6 +1677,7 @@ input::-webkit-inner-spin-button {
 	padding-top: 30px;
 	border-top: solid 1px #fb6233;
 	cursor: pointer;
+	position: relative;
 }
 ._mid_L{
 	width: 250px;
@@ -1631,6 +1709,48 @@ input::-webkit-inner-spin-button {
 	bottom: 0px;
 	right: 0px;
 }
+.head_model{
+	position: absolute;
+	left: 35%;
+	width: 150px;
+	top: -4px ;
+	z-index: 150;
+	background: #fb6233;
+	text-align: center;
+}
+.head_model p{
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0px auto;
+}
+.left_triangle{
+	position: absolute;
+    top: 0;
+    left: -4px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-bottom: 4px solid #c84e4e;
+    border-left: 4px solid transparent;	
+    font-size: 0;
+    line-height: 0;
+}
+.right_triangle{
+	position: absolute;
+    top: 0;
+    right: -4px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-bottom: 4px solid #c84e4e;
+    border-right: 4px solid transparent;	
+    font-size: 0;
+    line-height: 0;
+}
 
 ._mid_R_mod_3{
 	width: 220px;
@@ -1659,6 +1779,7 @@ input::-webkit-inner-spin-button {
 	width: 420px;
 	margin-left: 20px;
 	border-top:solid 1px #ef3639 ;
+	position: relative;
 }
 .model_right_nav{
 	margin-top: 40px;
@@ -1791,5 +1912,58 @@ input::-webkit-inner-spin-button {
 	height: 35px;
 	background: #ff4040 url(../img/search_w.png) no-repeat 8px 4px;
 	background-size:25px ;
+	cursor: pointer;
+}
+.float_nav{
+	padding: 0px !important;
+	margin-top: 10px !important;
+	}
+.search_h{
+	display: none;
+	position: absolute;
+	left: -2px;
+	top: 37px;
+	width: 740px;
+	background-color: white;
+	border: solid 1px gainsboro;
+	z-index: 100;
+}
+.search_h>h2{
+	color: gray;
+}
+.search_h>h2>font:last-child{
+	float: right;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.search_h>h2>font:last-child:hover{
+	color: #FB5C5C;
+}
+.ad_mian{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background: rgba(0,0,0,0.5) ;
+}
+.ad_mian div{
+	width: 500px;
+	position: relative;
+	top: 30%;
+	margin: 0px auto;
+	opacity: n;
+}
+.ad_mian div img{
+	width: 500px;
+	margin: 0px auto;
+	opacity: 1;
+}
+.ad_exit{
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	right: 10px;
 	cursor: pointer;
 }

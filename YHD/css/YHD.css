@@ -298,6 +298,7 @@ input[type="checkbox"]:checked + i{background:orange;}
 	margin-bottom: 10px;
 	height: 50px;
 	line-height: 50px;
+	margin: 20px 0px;
 	position: relative;
 	padding-left: 20px;
 }
@@ -312,6 +313,7 @@ input[type="checkbox"]:checked + i{background:orange;}
 	height: 30px;
 	line-height: 30px;
 	outline: none;
+	background: transparent;
 }
 /*多行弹出信息框*/
 ._info{
@@ -382,7 +384,7 @@ input[type="checkbox"]:checked + i{background:orange;}
 	width: 128px !important;
 	height: 50px !important;
 	left: 200px;
-	background-color: #57565f;
+	background-color: #57565f !important;
 	color: white;
 	font-size: 15px;
 	border-radius:3px ;
@@ -403,4 +405,43 @@ input[type="checkbox"]:checked + i{background:orange;}
 	background: #ff3c3c;
 	color: white;
 	border: none;
+}
+.bj_con{
+	width: 900px;
+	margin: 0px auto;
+	position: relative;
+}
+.bj{
+	position: absolute;
+	z-index: -100;
+	width: 900px;
+	height: 500px;
+	margin:  0px auto;
+	top: 0px;
+}
+.bj>div{
+	width: 900px;
+	height: 500px;
+	position: absolute;
+	z-index: -100;
+}
+.bj_1{
+	
+	background: url(../img/reg_bj_1.png) no-repeat;
+}
+.bj_2{
+	background: url(../img/reg_bj_2.png) no-repeat;
+	display: none;
+}
+.bj_3{
+	background: url(../img/reg_bj_3.png) no-repeat;
+	display: none;
+}
+.bj_4{
+	background: url(../img/reg_bj_4.png) no-repeat;
+	display: none;
+}
+.bj_5{
+	background: url(../img/reg_bj_5.png) no-repeat;
+	display: none;
 }

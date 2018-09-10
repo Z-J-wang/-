@@ -20,7 +20,7 @@
 	.zoomdiv {
 	  z-index:  999;
 	  position: absolute;
-	  top:0px;
+	  top:0px !important;
 	  left:0px;
 	  width : 300px;
 	  height: 300px;
@@ -738,6 +738,25 @@
 				</div>
 			</div>
 		</div>
+		<!--浮动搜索框-->
+		<div class="float_search">
+			<div>
+				<div>
+				 <img src="img/logo_f.jpg" height="50px"/>
+				</div>
+				<div class="product_detail_nav float_nav">
+					<ul>
+						<li class="product_detail_nav_li_hover">产品介绍</li>
+						<li>评价<span id="appraise_quantity">1.3万+</span></li>
+						<li>规格及包装</li>
+						<li>售后服务</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		
+		
 		<div class="clear"></div>
 		<footer>
 			<div class="safe_info">
@@ -832,5 +851,14 @@
 				<a href="#"><img src="img/b_6.gif" /> </a>
 			</div>
 		</footer>
+		<script>
+			$(".jqzoom").jqueryzoom({
+			    xzoom: 500, //放大图的宽度(默认是 200)
+			    yzoom: 500, //放大图的高度(默认是 200)
+			    offset: -70, //离原图的距离(默认是 10)
+			    position: "right", //放大图的定位(默认是 "right")
+			    preload: 1
+			 })
+		</script>
 	</body>
 </html>

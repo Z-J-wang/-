@@ -24,8 +24,7 @@
       var noalt='';
       $(this).hover(function(){
       var imageLeft = $(this).offset().left;
-//    var imageTop = $(this).offset().top;
-	  var imageTop = "0px";  //临时补救
+      var imageTop = $(this).offset().top;
       var imageWidth = $(this).children('img').get(0).offsetWidth;
       var imageHeight = $(this).children('img').get(0).offsetHeight;
       noalt= $(this).children("img").attr("alt");

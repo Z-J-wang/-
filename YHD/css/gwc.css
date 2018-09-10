@@ -290,14 +290,14 @@ input[type="checkbox"]:checked + i{background:orange;}
 	width: 12px;
 	height: 12px;
 	margin:0px 4px ;
-	border-radius: 50%;
+	border-radius: 6px;
 	cursor: pointer;
 	background: gainsboro;
 }
 .dot_hot{
-	width: 20px !important;
+	padding-left: 7px;
+	height: 12px !important;
 	background: #ff4040 !important;
-	border-radius: 40% !important;
 }
 .carousel_btn_left span{
 	font-size:50px ;
