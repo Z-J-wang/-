@@ -474,9 +474,26 @@ $(document).ready(function(){
 		$("._history p").remove();
 	})
 	
-	
+	//全屏广告
 	$(".ad_exit").click(function(){
 		$(".ad_mian").hide();
 	})
-	
+	//顶部广告
+	$(".ad_T").hover(function(){
+//		$(this).find("img").animate({"padding-top":"200px"})
+		$(this).find("img").hide();
+		$(this).find("div").animate({"height":"245px"});
+		$(this).animate({"height":"245px"});
+	},function(){
+		$(this).find("img").show(1000);
+		$(this).find("div").animate({"height":"0px"});
+		$(this).animate({"height":"80px"});
+	})
 })
+//$("#tran_img").animate({
+//			aa:"0"
+//		},{
+//			step:function(now,fx){
+//				$("#tran_img").css({"transform":"rotate("+now+"deg)"})
+//			}
+//		});
