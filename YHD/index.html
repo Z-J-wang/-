@@ -1,40 +1,92 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>一号店-首页</title>
 		<link rel="stylesheet" href="css/index.css" />
-		<script type="text/javascript" src="js/jquery.js" ></script>
-		<script type="text/javascript" src="js/MyJs.js" ></script>
-		<script type="text/javascript" src="js/YHD.js" ></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/MyJs.js"></script>
+		<script type="text/javascript" src="js/YHD.js"></script>
 	</head>
+
 	<body>
+		<!--广告-->
+		<!--首页全屏广告-->
 		<div class="ad_mian">
 			<div>
 				<img src="img/ad_big.png" />
 				<span class="ad_exit"></span>
 			</div>
 		</div>
+
+		<!--顶部广告-->
 		<div class="ad_T">
 			<div>
-				<img src="img/ad_t.jpg"/>
+				<img src="img/ad_t.jpg" />
 			</div>
-				
+			<span class="ad_T_exit">X</span>
 		</div>
+
+		<!--工具栏-->
+		<div class="tool">
+			<div class="titler_img">
+				<img src="img/tool_ad_img.jpg" />
+			</div>
+			<div id="person" class="S_H_div">
+				<img src="img/person.png" />
+				<div>个人中心</div>
+			</div>
+			<div id="shopping_car" class="S_H_div">
+				<img src="img/cars_h.png">
+				<span>购<br />物<br />车</span>
+			</div>
+			<div id="discount_coupon" class="S_H_div">
+				<img src="img/tool_yhq.png" />
+				<div>优惠券</div>
+			</div>
+			<div class="tool_bottom">
+				<div class="yhfk S_H_div">
+					<img src="img/tool_yhfk.png" />
+					<div>用户反馈</div>
+				</div>
+				<div class="VR_code">
+					<img src="img/VR_code.png" />
+					<div id="VR_code">
+						<p>手机购物更优惠</p>
+						<img src="img/er.gif" width="100px" />
+					</div>
+				</div>
+				<div id="return_top" class="S_H_div">
+					<img src="img/fhdb.png" />
+					<div>返回顶部</div>
+				</div>
+			</div>
+		</div>
+
 		<header>
 			<div class="head_container a_col_R">
 				<div class="head_left">
-						<a href="index.html">一号店首页</a>
+					<a href="index.html">一号店首页</a>
 				</div>
 				<div class="head_right">
 					<ul>
-						<li>Hi,请<a href="login.html">登录</a><a href="register.html">注册</a></li>
-						<li><a href="#">我的订单</a></li>
+						<li>Hi,请
+							<a href="login.html">登录</a>
+							<a href="register.html">注册</a>
+						</li>
 						<li>
-							<a href="#">客户服务<img id="tran_img" src="img/t_arrow.gif"/></a>
+							<a href="#">我的订单</a>
+						</li>
+						<li>
+							<a href="#">客户服务<img id="tran_img" src="img/t_arrow.gif" /></a>
 							<div class="customer_service_menu">
-								<p><a href="#">包裹跟踪</a></p>
-								<p><a href="#">在线退换货</a></p>
+								<p>
+									<a href="#">包裹跟踪</a>
+								</p>
+								<p>
+									<a href="#">在线退换货</a>
+								</p>
 							</div>
 						</li>
 						<li>
@@ -42,7 +94,7 @@
 							<div class="QR_code">
 								<p>扫描二维码</p>
 								<p>下载一号店APP</p>
-								<img src="img/er.gif" width="100px"/>
+								<img src="img/er.gif" width="100px" />
 							</div>
 						</li>
 					</ul>
@@ -54,12 +106,12 @@
 			<div class="current_head">
 				<div class="current_head_left">
 					<div class="_logo">
-						<img src="img/logo_g.gif" width="200px"/>
+						<img src="img/logo_g.gif" width="200px" />
 					</div>
 				</div>
 				<div class="current_head_middle">
 					<div class="current_head_middle_search">
-						<input type="text" placeholder="买坚果上一号店"/>
+						<input type="text" placeholder="买坚果上一号店" />
 						<a href="#"><span class="_search"></span></a>
 						<div class="search_h">
 							<h2><font>历史记录</font><font class="_clear_h">清除</font></h2>
@@ -86,20 +138,38 @@
 				</div>
 			</div>
 			<div class="clear"></div>
-			
+
 			<!--导航栏-->
 			<div class="index_mian_nav">
 				<div>
 					<ul class="a_col_R">
-						<li><a href="#">1号抢购</a></li>
-						<li><a href="#">1号团</a></li>
-						<li><a href="#">领券中心</a></li>
-						<li><a href="#">充值中心</a></li>
-						<li><a href="#">全球进口</a></li>
-						<li><a href="#">1号生鲜</a></li>
-						<li><a href="#">美妆个护</a></li>
-						<li><a href="#">家居馆</a></li>
-						<li><a href="#">电器城</a></li>
+						<li>
+							<a href="#">1号抢购</a>
+						</li>
+						<li>
+							<a href="#">1号团</a>
+						</li>
+						<li>
+							<a href="#">领券中心</a>
+						</li>
+						<li>
+							<a href="#">充值中心</a>
+						</li>
+						<li>
+							<a href="#">全球进口</a>
+						</li>
+						<li>
+							<a href="#">1号生鲜</a>
+						</li>
+						<li>
+							<a href="#">美妆个护</a>
+						</li>
+						<li>
+							<a href="#">家居馆</a>
+						</li>
+						<li>
+							<a href="#">电器城</a>
+						</li>
 					</ul>
 				</div>
 				<!--访问路径-->
@@ -108,30 +178,66 @@
 			<!--产品内容-->
 			<div class="main_container_content">
 				<div class="div_one">
-					<div class="b_l"><img src="img/bj_1.jpg" width="400px"/></div>
-					<div class="b_R"><img src="img/bj_2.jpg" width="400px"/></div>
+					<div class="b_l"><img src="img/bj_1.jpg" width="400px" /></div>
+					<div class="b_R"><img src="img/bj_2.jpg" width="400px" /></div>
 					<div class="index_nav nav_img">
-							<p><a href="#" >全球进口</a></p>
-							<p><a href="#">食品/酒/生鲜</a></p>
-							<p><a href="#">母婴/玩具/童装</a></p>
-							<p><a href="#">纸巾/厨卫清洁/宠物</a></p>
-							<p><a href="#">家居家纺/厨具/家具</a></p>
-							<p><a href="#">美妆/个人清洁</a></p>
-							<p><a href="#">女装/男装/内衣/珠宝</a></p>
-							<p><a href="#">鞋靴/箱包/运动户外</a></p>
-							<p><a href="#">手机/数码/电脑办公</a></p>
-							<p><a href="#">家用电器/汽车用品</a></p>
-							<p><a href="#">医药/保健滋补/成人</a></p>
-							<p><a href="#">图书</a></p>
+						<p>
+							<a href="#">全球进口</a>
+						</p>
+						<p>
+							<a href="#">食品/酒/生鲜</a>
+						</p>
+						<p>
+							<a href="#">母婴/玩具/童装</a>
+						</p>
+						<p>
+							<a href="#">纸巾/厨卫清洁/宠物</a>
+						</p>
+						<p>
+							<a href="#">家居家纺/厨具/家具</a>
+						</p>
+						<p>
+							<a href="#">美妆/个人清洁</a>
+						</p>
+						<p>
+							<a href="#">女装/男装/内衣/珠宝</a>
+						</p>
+						<p>
+							<a href="#">鞋靴/箱包/运动户外</a>
+						</p>
+						<p>
+							<a href="#">手机/数码/电脑办公</a>
+						</p>
+						<p>
+							<a href="#">家用电器/汽车用品</a>
+						</p>
+						<p>
+							<a href="#">医药/保健滋补/成人</a>
+						</p>
+						<p>
+							<a href="#">图书</a>
+						</p>
 					</div>
 					<div class="lunbo_one">
 						<ul>
-							<li><a href="#"><img src="img/lunbo_1.jpg" width="982px"/></a></li>
-							<li><a href="#"><img src="img/lunbo_2.jpg" width="982px"/></a></li>
-							<li><a href="#"><img src="img/lunbo_3.jpg" width="982px"/></a></li>
-							<li><a href="#"><img src="img/lunbo_4.jpg" width="982px"/></a></li>
-							<li><a href="#"><img src="img/lunbo_5.jpg" width="982px"/></a></li>
-							<li><a href="#"><img src="img/lunbo_6.jpg" width="982px"/></a></li>
+							<li>
+								<a href="#"><img src="img/lunbo_1.jpg" width="982px" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/lunbo_2.jpg" width="982px" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/lunbo_3.jpg" width="982px" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/lunbo_4.jpg" width="982px" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/lunbo_5.jpg" width="982px" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/lunbo_6.jpg" width="982px" /></a>
+							</li>
 						</ul>
 						<div class="clear"></div>
 						<div class="lunbo_one_left lunbo_btn">
@@ -141,547 +247,601 @@
 							<img src="img/b_right.png" />
 						</div>
 						<div class="lunbo_one_dot">
-							<div class="lunbo_dot_hover"><div></div></div>
-							<div><div></div></div>
-							<div><div></div></div>
-							<div><div></div></div>
-							<div><div></div></div>
-							<div><div></div></div>
+							<div class="lunbo_dot_hover">
+								<div></div>
+							</div>
+							<div>
+								<div></div>
+							</div>
+							<div>
+								<div></div>
+							</div>
+							<div>
+								<div></div>
+							</div>
+							<div>
+								<div></div>
+							</div>
+							<div>
+								<div></div>
+							</div>
 						</div>
 						<!--个人中心-->
 						<div class="individual a_col_R">
 							<div>
 								<p>Hi~你好</p>
 								<div>
-									<span  id="btn_login">登录</span>
+									<span id="btn_login">登录</span>
 									<span id="btn_reg">注册</span>
 								</div>
 								<a href="#"><span class="col_R">【进口】</span>全球进口，夏日新体验</a>
 								<a href="#"><span>【优选】</span>中秋好礼提前购</a>
 							</div>
 							<div id="touxiang" class="touxiang">
-									<img src="img/avatar_default.jpg" width="60px" height="60px" /
+								<img src="img/avatar_default.jpg" width="60px" height="60px" / </div>
 							</div>
-						</div>
-						
-					</div>
-				</div>
-				<div class="clear"></div>
-				<div class="intro_ad_pro">
-					<div class="intro_ad_pro_left">
-						<img src="img/entry_banner@2x.jpg" width="200px"/>
-						<a href="#">查看更多</a>
-					</div>
-					<div class="lunbo_tow">
-						<ul class="img_am">
-							<div>
-								<div class="_tow_pro" title="丹麦进口 Kjeldsens 丹麦蓝罐曲奇 饼干礼盒 908g 曲奇饼">
-									<div>
-										<h2>丹麦进口 Kjeldsens 丹麦</h2>
-										<p>￥118</p>
-										<span>参考价：￥143</span>
-									</div>
-									<div>
-										<img src="img/intro_ad_1.jpg" width="110px"/>
-									</div>
-								</div>
-								
-								<div class="_tow_pro" title="李锦记 锦珍生抽 非转基因酿造酱油 调味调料 1.65L">
-									<div>
-										<h2>李锦记 锦珍生抽 非转基因酿</h2>
-										<p>￥9.9</p>
-										<span>参考价：￥16.9</span>
-									</div>
-									<div>
-										<img src="img/intro_ad_2.jpg" width="110px"/>
-									</div>
-								</div>
-								
-								<div class="_tow_pro" title="泰国进口 珍致(FancyFeast)猫罐头85g*6 5送1尊享装 猫湿粮猫零食">
-									<div>
-										<h2>泰国进口 珍致(FancyFeast)猫</h2>
-										<p>￥41.9</p>
-										<span>参考价：￥49.9</span>
-									</div>
-									<div>
-										<img src="img/intro_ad_3.jpg" width="110px"/>
-									</div>
-								</div>
-								
-								<div class="_tow_pro" title="皇家(royal canin) 猫粮 室内成猫粮 Indoor27－12月龄">
-									<div>
-										<h2>皇家(royal canin) 猫粮 室</h2>
-										<p>￥119</p>
-										<span>参考价：￥127</span>
-									</div>
-									<div>
-										<img src="img/intro_ad_4.jpg" width="110px"/>
-									</div>
-								</div>
-							</div>
-							
-							<div>
-								<div class="_tow_pro" title="美迪惠尔(Mediheal)水润保湿面膜10片水库针">
-									<div>
-										<h2>美迪惠尔(Mediheal)水润</h2>
-										<p>￥109</p>
-										<span>参考价：￥128</span>
-									</div>
-									<div>
-										<img src="img/intro_ad_5.jpg" width="110px"/>
-									</div>
-								</div>
-								
-								<div class="_tow_pro" title="花王（Merries）纸尿裤 XL44片 加大号尿不湿（12-20kg）">
-									<div>
-										<h2>花王（Merries）纸</h2>
-										<p>￥109</p>
-										<span>参考价：￥159</span>
-									</div>
-									<div>
-										<img src="img/intro_ad_6.jpg" width="110px"/>
-									</div>
-								</div>
-								
-								<div class="_tow_pro" title="稚优泉 CHIOTURE 竹炭纤维亮颜黑面膜10片装 （补水保湿 收缩毛孔 深入清洁 亮肤）">
-									<div>
-										<h2>稚优泉 CHIOTURE 竹炭</h2>
-										<p>￥39.9</p>
-										<span>参考价：￥99</span>
-									</div>
-									<div>
-										<img src="img/intro_ad_7.jpg" width="110px"/>
-									</div>
-								</div>
-								
-								<div class="_tow_pro" title="丹麦进口 皇冠（danisa）丹麦曲奇精选礼盒装">
-									<div>
-										<h2>丹麦进口 皇冠（danisa）丹麦</h2>
-										<p>￥103.9</p>
-										<span>参考价：￥216</span>
-									</div>
-									<div>
-										<img src="img/intro_ad_8.jpg" width="110px"/>
-									</div>
-								</div>
-							</div>
-							
-						</ul>
-						<div class="clear"></div>
-						<div class="lunbo_tow_left lunbo_btn">
-							<img src="img/b_left.png" height="30px"/>
-						</div>
-						<div class="lunbo_tow_right lunbo_btn">
-							<img src="img/b_right.png" height="30px"/>
+
 						</div>
 					</div>
-				</div>
-				<div class="clear"></div>
-				
-				<div class="three_div_model img_am">
-					<div class="three_div_model_left">
-						<img src="img/shangou.png" width="250px" height="405px" title="每日上新"/>
-					</div>
-					<div class="three_div_model_mid">
-						<div class="_mid_L">
-							<img src="img/tuangou_l.jpg" width="250px" height="405px" title="中秋好礼"/>
+					<div class="clear"></div>
+					<div class="intro_ad_pro">
+						<div class="intro_ad_pro_left">
+							<img src="img/entry_banner@2x.jpg" width="200px" />
+							<a href="#">查看更多</a>
 						</div>
-						<div class="_mid_R img_am">
-							<div class="_mid_R_mod">
-								<h4>量贩团</h4>
-								<p>爆款直降</p>
-								<img src="img/tuangou_r_1.jpg" width="120px">
-							</div>
-							<div class="_mid_R_mod">
-								<h4>品牌抢购</h4>
-								<p>爆款直降</p>
-								<img src="img/tuangou_r_2.jpg" width="120px">
-							</div>
-						</div>
-						<div class="head_model">
-							<p>团购</p>
-							<u class="left_triangle"></u>
-							<u class="right_triangle"></u>
-						</div>
-					</div>
-					<div class="three_div_model_right">
-						<div class="model_right_nav">
-							<ul>
-								<li class="right_nav_li_hover">休闲食品</li>
-								<li>清洁用品</li>
-								<li>饮料冲调</li>
-								<li>粮油调味</li>
-								<li>生活电器</li>
+						<div class="lunbo_tow">
+							<ul class="img_am">
+								<div>
+									<div class="_tow_pro" title="丹麦进口 Kjeldsens 丹麦蓝罐曲奇 饼干礼盒 908g 曲奇饼">
+										<div>
+											<h2>丹麦进口 Kjeldsens 丹麦</h2>
+											<p>￥118</p>
+											<span>参考价：￥143</span>
+										</div>
+										<div>
+											<img src="img/intro_ad_1.jpg" width="110px" />
+										</div>
+									</div>
+
+									<div class="_tow_pro" title="李锦记 锦珍生抽 非转基因酿造酱油 调味调料 1.65L">
+										<div>
+											<h2>李锦记 锦珍生抽 非转基因酿</h2>
+											<p>￥9.9</p>
+											<span>参考价：￥16.9</span>
+										</div>
+										<div>
+											<img src="img/intro_ad_2.jpg" width="110px" />
+										</div>
+									</div>
+
+									<div class="_tow_pro" title="泰国进口 珍致(FancyFeast)猫罐头85g*6 5送1尊享装 猫湿粮猫零食">
+										<div>
+											<h2>泰国进口 珍致(FancyFeast)猫</h2>
+											<p>￥41.9</p>
+											<span>参考价：￥49.9</span>
+										</div>
+										<div>
+											<img src="img/intro_ad_3.jpg" width="110px" />
+										</div>
+									</div>
+
+									<div class="_tow_pro" title="皇家(royal canin) 猫粮 室内成猫粮 Indoor27－12月龄">
+										<div>
+											<h2>皇家(royal canin) 猫粮 室</h2>
+											<p>￥119</p>
+											<span>参考价：￥127</span>
+										</div>
+										<div>
+											<img src="img/intro_ad_4.jpg" width="110px" />
+										</div>
+									</div>
+								</div>
+
+								<div>
+									<div class="_tow_pro" title="美迪惠尔(Mediheal)水润保湿面膜10片水库针">
+										<div>
+											<h2>美迪惠尔(Mediheal)水润</h2>
+											<p>￥109</p>
+											<span>参考价：￥128</span>
+										</div>
+										<div>
+											<img src="img/intro_ad_5.jpg" width="110px" />
+										</div>
+									</div>
+
+									<div class="_tow_pro" title="花王（Merries）纸尿裤 XL44片 加大号尿不湿（12-20kg）">
+										<div>
+											<h2>花王（Merries）纸</h2>
+											<p>￥109</p>
+											<span>参考价：￥159</span>
+										</div>
+										<div>
+											<img src="img/intro_ad_6.jpg" width="110px" />
+										</div>
+									</div>
+
+									<div class="_tow_pro" title="稚优泉 CHIOTURE 竹炭纤维亮颜黑面膜10片装 （补水保湿 收缩毛孔 深入清洁 亮肤）">
+										<div>
+											<h2>稚优泉 CHIOTURE 竹炭</h2>
+											<p>￥39.9</p>
+											<span>参考价：￥99</span>
+										</div>
+										<div>
+											<img src="img/intro_ad_7.jpg" width="110px" />
+										</div>
+									</div>
+
+									<div class="_tow_pro" title="丹麦进口 皇冠（danisa）丹麦曲奇精选礼盒装">
+										<div>
+											<h2>丹麦进口 皇冠（danisa）丹麦</h2>
+											<p>￥103.9</p>
+											<span>参考价：￥216</span>
+										</div>
+										<div>
+											<img src="img/intro_ad_8.jpg" width="110px" />
+										</div>
+									</div>
+								</div>
+
 							</ul>
 							<div class="clear"></div>
-						</div>
-						<div class="_model_right_list a_col_R">
-							<div class="_show">
-								<div class="pro">
-									<img src="img/XXSP_1.jpg" width="110px"/>
-									<a href="#">楼兰蜜语_新疆和 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_2.jpg" width="110px"/>
-									<a href="#">芝麻官 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110px"/>
-									<a href="#">拍三送一【夏津扶 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_4.jpg" width="110px"/>
-									<a href="#">俏香阁 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_5.jpg" width="110px"/>
-									<a href="#">沃隆 每日坚果礼盒</a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_6.jpg" width="110px"/>
-									<a href="#">【神券199减120】 </a>
-								</div>
+							<div class="lunbo_tow_left lunbo_btn">
+								<img src="img/b_left.png" height="30px" />
 							</div>
-							
-							<div>
-								<div class="pro">
-									<img src="img/XXSP_2.jpg" width="110px"/>
-									<a href="#">楼兰蜜语_新疆和 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_2.jpg" width="110px"/>
-									<a href="#">芝麻官 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110px"/>
-									<a href="#">拍三送一【夏津扶 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110px"/>
-									<a href="#">俏香阁 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_5.jpg" width="110px"/>
-									<a href="#">沃隆 每日坚果礼盒</a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_6.jpg" width="110px"/>
-									<a href="#">【神券199减120】 </a>
-								</div>
-							</div>
-							
-							<div>
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110px"/>
-									<a href="#">楼兰蜜语_新疆和 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110px"/>
-									<a href="#">芝麻官 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110px"/>
-									<a href="#">拍三送一【夏津扶 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110px"/>
-									<a href="#">俏香阁 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_5.jpg" width="110px"/>
-									<a href="#">沃隆 每日坚果礼盒</a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_6.jpg" width="110px"/>
-									<a href="#">【神券199减120】 </a>
-								</div>
-							</div>
-							
-							<div>
-								<div class="pro">
-									<img src="img/XXSP_4.jpg" width="110px"/>
-									<a href="#">楼兰蜜语_新疆和 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_4.jpg" width="110px" />
-									<a href="#">芝麻官 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110px"/>
-									<a href="#">拍三送一【夏津扶 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110px"/>
-									<a href="#">俏香阁 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_5.jpg" width="110px"/>
-									<a href="#">沃隆 每日坚果礼盒</a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_6.jpg" width="110px"/>
-									<a href="#">【神券199减120】 </a>
-								</div>
-							</div>
-							
-							<div>
-								<div class="pro">
-									<img src="img/XXSP_5.jpg" width="110PX"/>
-									<a href="#">楼兰蜜语_新疆和 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_5.jpg" width="110PX"/>
-									<a href="#">芝麻官 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110PX"/>
-									<a href="#">拍三送一【夏津扶 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_3.jpg" width="110PX"/>
-									<a href="#">俏香阁 休闲零食 </a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_5.jpg" width="110PX"/>
-									<a href="#">沃隆 每日坚果礼盒</a>
-								</div>
-							
-								<div class="pro">
-									<img src="img/XXSP_6.jpg" width="110PX"/>
-									<a href="#">【神券199减120】 </a>
-								</div>
+							<div class="lunbo_tow_right lunbo_btn">
+								<img src="img/b_right.png" height="30px" />
 							</div>
 						</div>
-						<div class="head_model" style="background: #f22e31;">
-							<p>排行榜</p>
-							<u class="left_triangle"></u>
-							<u class="right_triangle"></u>
+					</div>
+					<div class="clear"></div>
+
+					<div class="three_div_model img_am">
+						<div class="three_div_model_left">
+							<img src="img/shangou.png" width="250px" height="405px" title="每日上新" />
 						</div>
+						<div class="three_div_model_mid">
+							<div class="_mid_L">
+								<img src="img/tuangou_l.jpg" width="250px" height="405px" title="中秋好礼" />
+							</div>
+							<div class="_mid_R img_am">
+								<div class="_mid_R_mod">
+									<h4>量贩团</h4>
+									<p>爆款直降</p>
+									<img src="img/tuangou_r_1.jpg" width="120px">
+								</div>
+								<div class="_mid_R_mod">
+									<h4>品牌抢购</h4>
+									<p>爆款直降</p>
+									<img src="img/tuangou_r_2.jpg" width="120px">
+								</div>
+							</div>
+							<div class="head_model">
+								<p>团购</p>
+								<u class="left_triangle"></u>
+								<u class="right_triangle"></u>
+							</div>
+						</div>
+						<div class="three_div_model_right">
+							<div class="model_right_nav">
+								<ul>
+									<li class="right_nav_li_hover">休闲食品</li>
+									<li>清洁用品</li>
+									<li>饮料冲调</li>
+									<li>粮油调味</li>
+									<li>生活电器</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+							<div class="_model_right_list a_col_R">
+								<div class="_show">
+									<div class="pro">
+										<img src="img/XXSP_1.jpg" width="110px" />
+										<a href="#">楼兰蜜语_新疆和 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_2.jpg" width="110px" />
+										<a href="#">芝麻官 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110px" />
+										<a href="#">拍三送一【夏津扶 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_4.jpg" width="110px" />
+										<a href="#">俏香阁 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_5.jpg" width="110px" />
+										<a href="#">沃隆 每日坚果礼盒</a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_6.jpg" width="110px" />
+										<a href="#">【神券199减120】 </a>
+									</div>
+								</div>
+
+								<div>
+									<div class="pro">
+										<img src="img/XXSP_2.jpg" width="110px" />
+										<a href="#">楼兰蜜语_新疆和 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_2.jpg" width="110px" />
+										<a href="#">芝麻官 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110px" />
+										<a href="#">拍三送一【夏津扶 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110px" />
+										<a href="#">俏香阁 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_5.jpg" width="110px" />
+										<a href="#">沃隆 每日坚果礼盒</a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_6.jpg" width="110px" />
+										<a href="#">【神券199减120】 </a>
+									</div>
+								</div>
+
+								<div>
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110px" />
+										<a href="#">楼兰蜜语_新疆和 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110px" />
+										<a href="#">芝麻官 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110px" />
+										<a href="#">拍三送一【夏津扶 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110px" />
+										<a href="#">俏香阁 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_5.jpg" width="110px" />
+										<a href="#">沃隆 每日坚果礼盒</a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_6.jpg" width="110px" />
+										<a href="#">【神券199减120】 </a>
+									</div>
+								</div>
+
+								<div>
+									<div class="pro">
+										<img src="img/XXSP_4.jpg" width="110px" />
+										<a href="#">楼兰蜜语_新疆和 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_4.jpg" width="110px" />
+										<a href="#">芝麻官 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110px" />
+										<a href="#">拍三送一【夏津扶 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110px" />
+										<a href="#">俏香阁 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_5.jpg" width="110px" />
+										<a href="#">沃隆 每日坚果礼盒</a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_6.jpg" width="110px" />
+										<a href="#">【神券199减120】 </a>
+									</div>
+								</div>
+
+								<div>
+									<div class="pro">
+										<img src="img/XXSP_5.jpg" width="110PX" />
+										<a href="#">楼兰蜜语_新疆和 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_5.jpg" width="110PX" />
+										<a href="#">芝麻官 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110PX" />
+										<a href="#">拍三送一【夏津扶 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_3.jpg" width="110PX" />
+										<a href="#">俏香阁 休闲零食 </a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_5.jpg" width="110PX" />
+										<a href="#">沃隆 每日坚果礼盒</a>
+									</div>
+
+									<div class="pro">
+										<img src="img/XXSP_6.jpg" width="110PX" />
+										<a href="#">【神券199减120】 </a>
+									</div>
+								</div>
+							</div>
+							<div class="head_model" style="background: #f22e31;">
+								<p>排行榜</p>
+								<u class="left_triangle"></u>
+								<u class="right_triangle"></u>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="three_div_model img_am">
+						<div class="three_div_model_left">
+							<img src="img/asx.jpg" width="250px" height="405px" title="爱上新" />
+						</div>
+						<div class="three_div_model_mid img_am">
+							<div class="_mid_L">
+								<img src="img/hlqk.jpg" width="250px" height="375px" title="个人护理" />
+							</div>
+							<div class="_mid_R a_col_R">
+								<div class="_mid_R_mod_2">
+									<div>
+										<h4>洗发护发专场</h4>
+										<p>爆款直降</p>
+									</div>
+									<img src="img/xfhxzc.jpg" width="120px">
+								</div>
+								<div class="_mid_R_mod_2">
+									<div>
+										<h4>身体沐浴</h4>
+										<p>单品低至9.9</p>
+									</div>
+									<img src="img/stmuzc.jpg" width="120px">
+								</div>
+								<div class="_mid_R_mod_2">
+									<div>
+										<h4>口腔女性专场</h4>
+										<p>超级爆款</p>
+									</div>
+									<img src="img/kqnxzc.jpg" width="120px">
+								</div>
+							</div>
+							<div class="head_model" style="background: #dfa747;">
+								<p>个人护理</p>
+								<u class="left_triangle"></u>
+								<u class="right_triangle"></u>
+							</div>
+						</div>
+
+						<div class="three_div_model_mid img_am">
+							<div class="_mid_L">
+								<div class="_mid_R_mod_3">
+									<h4>一号匠造</h4>
+									<p>京造品质好物</p>
+									<img src="img/1hjz.jpg" width="200px">
+								</div>
+								<div class="_mid_R_mod_4">
+									<div>
+										<h4>萌宝福利社</h4>
+										<p>GO></p>
+									</div>
+									<img src="img/mbfls.jpg">
+								</div>
+							</div>
+							<div class="_mid_R a_col_R">
+								<div class="_mid_R_mod_2">
+									<div>
+										<h4>品质厨房</h4>
+										<p>蒙牛特仑苏</p>
+									</div>
+									<img src="img/pzcf.png" width="120px">
+								</div>
+								<div class="_mid_R_mod_2">
+									<div>
+										<h4>魔幻城堡</h4>
+										<p>萌趣玩具来袭</p>
+									</div>
+									<img src="img/mhcb.jpg" width="120px">
+								</div>
+								<div class="clear"></div>
+								<div class="_mid_R_mod_4">
+									<div>
+										<h4>深夜食堂</h4>
+										<p>GO></p>
+									</div>
+									<img src="img/syst.jpg">
+								</div>
+							</div>
+							<div class="head_model" style="background: #f39156;">
+								<p>生活派</p>
+								<u class="left_triangle"></u>
+								<u class="right_triangle"></u>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<!--浮动搜索框-->
+			<div class="float_search">
+				<div>
+					<div>
+						<img src="img/logo_f.jpg" height="50px" />
+					</div>
+					<div>
+						<div class="current_head_middle_search_2">
+							<input type="text" placeholder="买坚果上一号店" />
+							<a href="#"><span></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+			<footer>
+				<div class="safe_info">
+					<ul>
+						<li>
+							<img src="img/b1.png" />
+							<div>
+								<h6>正品保障</h6>
+								<p>正品行货 放心选购</p>
+							</div>
+						</li>
+						<li>
+							<img src="img/b2.png" />
+							<div>
+								<h6>满86包邮</h6>
+								<p>满86元 免运费</p>
+							</div>
+						</li>
+						<li>
+							<img src="img/b3.png" />
+							<div>
+								<h6>售后无忧</h6>
+								<p>7天无理由退货</p>
+							</div>
+						</li>
+						<li>
+							<img src="img/b4.png" />
+							<div>
+								<h6>准时送达</h6>
+								<p>收货时间由你做主</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="help_way a_col_R">
+					<div>
+						<h2>新手入门</h2>
+						<p>
+							<a href="#">购物流程</a>
+						</p>
+						<p>
+							<a href="#">会员制度</a>
+						</p>
+						<p>
+							<a href="#">订单查询</a>
+						</p>
+						<p>
+							<a href="#">发票制度</a>
+						</p>
+						<p>
+							<a href="#">网站地图</a>
+						</p>
+					</div>
+					<div>
+						<h2>支付方式</h2>
+						<p>
+							<a href="#">货到付款</a>
+						</p>
+						<p>
+							<a href="#">网上支付</a>
+						</p>
+						<p>
+							<a href="#">订单查询</a>
+						</p>
+						<p>
+							<a href="#">礼品卡支付</a>
+						</p>
+						<p>
+							<a href="#">其它支付</a>
+						</p>
+					</div>
+					<div>
+						<h2>配送服务</h2>
+						<p>
+							<a href="#">配送进度查询</a>
+						</p>
+						<p>
+							<a href="#">商品验货与签收</a>
+						</p>
+					</div>
+					<div>
+						<h2>售后保障</h2>
+						<p>
+							<a href="#">退换货政策</a>
+						</p>
+						<p>
+							<a href="#">联系客服</a>
+						</p>
+					</div>
+					<div>
+						<h2>APP更优惠</h2>
+						<img src="img/QR_code_2.PNG" width="90px" />
+					</div>
+					<div>
+						<h2>加微信查订单</h2>
+						<a href="#">
+							<img src="img/QR_code_wx.PNG" width="90px" />
+						</a>
 					</div>
 				</div>
 				<div class="clear"></div>
-				<div class="three_div_model img_am">
-					<div class="three_div_model_left">
-						<img src="img/asx.jpg" width="250px" height="405px" title="爱上新"/>
-					</div>
-					<div class="three_div_model_mid img_am">
-						<div class="_mid_L">
-							<img src="img/hlqk.jpg" width="250px" height="375px" title="个人护理"/>
-						</div>
-						<div class="_mid_R a_col_R">
-							<div class="_mid_R_mod_2">
-								<div>
-									<h4>洗发护发专场</h4>
-									<p>爆款直降</p>
-								</div>
-								<img src="img/xfhxzc.jpg" width="120px">
-							</div>
-							<div class="_mid_R_mod_2">
-								<div>
-									<h4>身体沐浴</h4>
-									<p>单品低至9.9</p>
-								</div>
-								<img src="img/stmuzc.jpg" width="120px">
-							</div>
-							<div class="_mid_R_mod_2">
-								<div>
-									<h4>口腔女性专场</h4>
-									<p>超级爆款</p>
-								</div>
-								<img src="img/kqnxzc.jpg" width="120px">
-							</div>
-						</div>
-						<div class="head_model" style="background: #dfa747;">
-							<p>个人护理</p>
-							<u class="left_triangle"></u>
-							<u class="right_triangle"></u>
-						</div>
-					</div>
-					
-					<div class="three_div_model_mid img_am">
-						<div class="_mid_L">
-							<div class="_mid_R_mod_3">
-								<h4>一号匠造</h4>
-								<p>京造品质好物</p>
-								<img src="img/1hjz.jpg" width="200px">
-							</div>	
-							<div class="_mid_R_mod_4">
-								<div>
-									<h4>萌宝福利社</h4>
-									<p>GO></p>
-								</div>
-								<img src="img/mbfls.jpg">
-							</div>
-						</div>
-						<div class="_mid_R a_col_R">
-							<div class="_mid_R_mod_2">
-								<div>
-									<h4>品质厨房</h4>
-									<p>蒙牛特仑苏</p>
-								</div>
-								<img src="img/pzcf.png" width="120px">
-							</div>
-							<div class="_mid_R_mod_2">
-								<div>
-									<h4>魔幻城堡</h4>
-									<p>萌趣玩具来袭</p>
-								</div>
-								<img src="img/mhcb.jpg" width="120px">
-							</div>
-							<div class="clear"></div>
-							<div class="_mid_R_mod_4">
-								<div>
-									<h4>深夜食堂</h4>
-									<p>GO></p>
-								</div>
-								<img src="img/syst.jpg">
-							</div>
-						</div>
-						<div class="head_model" style="background: #f39156;">
-							<p>生活派</p>
-							<u class="left_triangle"></u>
-							<u class="right_triangle"></u>
-						</div>
-					</div>
-				</div>
-				<div class="clear"></div>			
-			</div>
-		</div>
-		
-		<!--浮动搜索框-->
-		<div class="float_search">
-			<div>
-				<div>
-				 <img src="img/logo_f.jpg" height="50px"/>
-				</div>
-				<div>
-					<div class="current_head_middle_search_2">
-						<input type="text" placeholder="买坚果上一号店"/>
-						<a href="#"><span></span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		
-		
-		<div class="clear"></div>
-		<footer>
-			<div class="safe_info">
 				<ul>
 					<li>
-						<img src="img/b1.png"/>
-						<div>
-							<h6>正品保障</h6>
-							<p>正品行货 放心选购</p>
-						</div>
-					</li>
+						<a href="#">沪ICP备16050468号</a>
+					</li><span>|</span>
 					<li>
-						<img src="img/b2.png"/>
-						<div>
-							<h6>满86包邮</h6>
-							<p>满86元 免运费</p>
-						</div>
-					</li>
+						<a href="#">经营证照</a>
+					</li><span>|</span>
 					<li>
-						<img src="img/b3.png"/>
-						<div>
-							<h6>售后无忧</h6>
-							<p>7天无理由退货</p>
-						</div>
-					</li>
+						<a href="#">互联网药品信息服务资格证</a>
+					</li><span>|</span>
 					<li>
-						<img src="img/b4.png"/>
-						<div>
-							<h6>准时送达</h6>
-							<p>收货时间由你做主</p>
-						</div>
+						<a href="#">违法和不良信息举报电话：0527-88100253</a>
+					</li><span>|</span>
+					<li>
+						<a href="#">沪B2-20170039</a>
+					</li><span>|</span>
+					<li>
+						<a href="#">沪公网安备 31010502002939号</a>
+					</li><span>|</span>
+					<li>
+						<a href="#">友情链接</a>
+					</li><span>|</span>
+					<li>
+						<a href="#">出版物经营许可证</a>
 					</li>
 				</ul>
-			</div>
-			<div class="help_way a_col_R">
-				<div>
-					<h2>新手入门</h2>
-					<p><a href="#">购物流程</a></p>
-					<p><a href="#">会员制度</a></p>
-					<p><a href="#">订单查询</a></p>
-					<p><a href="#">发票制度</a></p>
-					<p><a href="#">网站地图</a></p>
+				<p>Copyright © 1号店网上超市 2007-2017，All Rights Reserved</p>
+				<div class="clear"></div>
+				<div class="safe_img">
+					<a href="#"><img src="img/b_1.gif" /> </a>
+					<a href="#"><img src="img/b_2.gif" /> </a>
+					<a href="#"><img src="img/b_3.gif" /> </a>
+					<a href="#"><img src="img/b_4.gif" /> </a>
+					<a href="#"><img src="img/b_5.gif" /> </a>
+					<a href="#"><img src="img/b_6.gif" /> </a>
 				</div>
-				<div>
-					<h2>支付方式</h2>
-					<p><a href="#">货到付款</a></p>
-					<p><a href="#">网上支付</a></p>
-					<p><a href="#">订单查询</a></p>
-					<p><a href="#">礼品卡支付</a></p>
-					<p><a href="#">其它支付</a></p>
-				</div>
-				<div>
-					<h2>配送服务</h2>
-					<p><a href="#">配送进度查询</a></p>
-					<p><a href="#">商品验货与签收</a></p>
-				</div>
-				<div>
-					<h2>售后保障</h2>
-					<p><a href="#">退换货政策</a></p>
-					<p><a href="#">联系客服</a></p>
-				</div>
-				<div>
-					<h2>APP更优惠</h2>
-					<img src="img/QR_code_2.PNG" width="90px"/>
-				</div>
-				<div>
-					<h2>加微信查订单</h2>
-					<a href="#">
-						<img src="img/QR_code_wx.PNG" width="90px"/>
-					</a>
-				</div>
-			</div>
-			<div class="clear"></div>
-			<ul>
-				<li><a href="#">沪ICP备16050468号</a></li><span>|</span>
-				<li><a href="#">经营证照</a></li><span>|</span>
-				<li><a href="#">互联网药品信息服务资格证</a></li><span>|</span>
-				<li><a href="#">违法和不良信息举报电话：0527-88100253</a></li><span>|</span>
-				<li><a href="#">沪B2-20170039</a></li><span>|</span>
-				<li><a href="#">沪公网安备 31010502002939号</a></li><span>|</span>
-				<li><a href="#">友情链接</a></li><span>|</span>
-				<li><a href="#">出版物经营许可证</a></li>
-			</ul>
-			<p>Copyright © 1号店网上超市 2007-2017，All Rights Reserved</p>
-			<div class="clear"></div>
-			<div class="safe_img">
-				<a href="#"><img src="img/b_1.gif" /> </a>
-				<a href="#"><img src="img/b_2.gif" /> </a>
-				<a href="#"><img src="img/b_3.gif" /> </a>
-				<a href="#"><img src="img/b_4.gif" /> </a>
-				<a href="#"><img src="img/b_5.gif" /> </a>
-				<a href="#"><img src="img/b_6.gif" /> </a>
-			</div>
-		</footer>
+			</footer>
 	</body>
+
 </html>

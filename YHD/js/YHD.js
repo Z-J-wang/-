@@ -489,6 +489,40 @@ $(document).ready(function(){
 		$(this).find("div").animate({"height":"0px"});
 		$(this).animate({"height":"80px"});
 	})
+	
+	$(".ad_T_exit").click(function(){
+		$(".ad_T").hide(1000);
+	})
+	
+	$(".VR_code").hover(function(){
+		$(this).find("div").show(800);
+	},function(){
+		$(this).find("div").hide();
+	})
+	
+	$(".S_H_div").hover(function(){
+		$(this).find("div").animate({left:"-70px"});
+	},function(){
+		$(this).find("div").animate({left:"0px"});
+	})
+	
+	
+	//首页工具栏--个人中心
+	$("#person").click(function(){
+		window.location.href = "login.html";
+	})
+	//首页工具栏--优惠券
+	$("#discount_coupon").click(function(){
+		window.location.href = "login.html";
+	})
+	//首页工具栏--购物车
+	$("#shopping_car").click(function(){
+		window.location.href = "shopping_trolley.html";
+	})
+	//返回顶部
+	$("#return_top").click(function(){
+$('body,html').animate({scrollTop:0},500);
+	})
 })
 //$("#tran_img").animate({
 //			aa:"0"
