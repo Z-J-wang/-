@@ -49,9 +49,13 @@ $(document).ready(function(){
 	})
 	//点击二维码切换登陆
 	$(".change_model").toggle(function(){
-		
+		$(this).removeClass("change_bg_1").addClass("change_bg_2");
+		$(".login_container").hide();
+		$(".VRCode_login").show();
 	},function(){
-		
+		$(this).removeClass("change_bg_2").addClass("change_bg_1");
+		$(".login_container").show();
+		$(".VRCode_login").hide();
 	})
 })
 //注册界面脚本

@@ -156,6 +156,7 @@ input[type="checkbox"]:checked + i{background:orange;}
 	margin: 0px auto;
 	padding: 40px 0px 0px 0px;
 }
+
 .login_container>p{
 	padding-bottom: 6px;
 }
@@ -228,6 +229,29 @@ input[type="checkbox"]:checked + i{background:orange;}
 	height: 20px;
 	margin-top: 20px;
 }
+.VRCode_login{
+	display: none;
+	width: 340px;
+	height: 360px;
+	margin: 0px auto;
+	padding: 40px 0px 0px 0px;
+}
+.VRCode_login p{
+	width: 180px;
+	font-size: 16px;
+	margin: 20px auto;
+	padding-left: 60px;
+}
+.VRCode_login span{
+	font-size: 16px;
+	color: red;
+	cursor: pointer;
+}
+.VRCode_login img{
+	display: block;
+	width: 180px;
+	margin: 10px auto;
+}
 ._cooperator{
 	margin-top: 15px;
 }
@@ -270,12 +294,28 @@ input[type="checkbox"]:checked + i{background:orange;}
 ._cooperator_sites{
 	display: none;
 }
-.change_model_1{
+.change_model{
 	position: absolute;
+	width: 65px;
+	height: 65px;
 	bottom: -4px;
 	right: 0px;
 	cursor: pointer;
+	background-size:80px ;
 }
+.change_bg_1{
+	background: url(../img/codeSwich_3.png) no-repeat;
+}
+.change_bg_1:hover{
+	background: url(../img/codeSwich_1.png) no-repeat;
+}
+.change_bg_2{
+	background: url(../img/codeSwich_2.png) no-repeat ;
+}
+.change_bg_2:hover{
+	background: url(../img/codeSwich_4.png) no-repeat 1px 0px;
+}
+
 #_show_more{
 	position: relative;
 	z-index: 1000;
