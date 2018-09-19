@@ -2,22 +2,62 @@ body{
 	display: block;
 	width: 100%;
 }
+header{
+	position: relative;
+	z-index: 10;
+}
 header>div:first-child{
 	overflow: hidden;
 }
 .bg_color{
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	display: none;
 	background-color: black;
 	opacity: .6;
-	z-index: 0;
+	z-index: 2;
 }
 
 h1,h2,h3,h4,h5,h6{
 	font-weight: bold;
 }
+
+/*覆盖bootstrap轮播按钮控件样式*/
+.mycarousel-control{
+	position: absolute;
+	top: 30%;
+	display: block;
+	width: 50px;
+	height: 100px;
+}
+.carousel_long_content_2::-webkit-scrollbar,
+.carousel_long_content::-webkit-scrollbar
+{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+.carousel_long_content_2::-webkit-scrollbar-track,
+.carousel_long_content::-webkit-scrollbar-track
+{
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    border-radius: 10px;
+    background-color: white;
+}
+/*定义滑块 内阴影+圆角*/
+.carousel_long_content_2::-webkit-scrollbar-thumb,
+.carousel_long_content::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: gainsboro;
+}
+
+
+
+
 .head_img{
 	width: 1730px;
 }
@@ -440,10 +480,15 @@ h1,h2,h3,h4,h5,h6{
     top: -20px;
     margin-top: -11px;
 }
+/*.mycontainer{
+	margin-bottom: 20px;
+}*/
 .mycontainer>div{
 	background-color: gainsboro;
-	width: 1500px;
 	margin: 0 auto;
+}
+.mycontainer>div:first-child{
+	width: 1500px;
 }
 #myCarousel img{
 	/*width: 100%;*/
@@ -504,7 +549,9 @@ h1,h2,h3,h4,h5,h6{
 	background-color:white ;
 }
 .carousel_long_model{
+	display: block;
 	padding: 10px;
+	margin: 0 auto;
 }
 .carousel_long_model>div{
 	background-color: white;
@@ -523,6 +570,18 @@ h1,h2,h3,h4,h5,h6{
 .carousel_long_title a{
 	display: inline-block;
 	margin-right: 20px;
+}
+.carousel_long_content{
+	overflow-x: scroll;
+}
+.carousel_long_content>div{
+	width: 2965px;
+	/*margin-left: -1000px;*/
+}
+.carousel_long_content ul{
+	display: inline-block;
+	margin: 0 40px;
+	width: 1400px;
 }
 .carousel_long_content p{
 	font-weight: bold;
@@ -547,4 +606,144 @@ h1,h2,h3,h4,h5,h6{
 }
 .pro_img{
 	height: 200px;
+}
+.carousel_long_content_2{
+	overflow-x: scroll;
+}
+.carousel_long_content_2 ul{
+	width: 2940px;
+}
+
+.Game_Book{
+	position: relative;
+	box-sizing: border-box;
+	height: 270px;
+	padding: 20px 0;
+	cursor: pointer;
+}
+.Game_Book button{
+	position: absolute;
+	bottom: 30%;
+	left: 20%;
+	display: none;
+	width: 60%;
+	height: 30px;
+	
+}
+.Game_Book:hover button{
+	display: block;
+}
+/*<!--两栏板块-->*/
+
+.tow_big_column>div{
+	width: 49.5%;
+	display: inline-block;
+	background-color: white ;
+}
+.tow_big_column img{
+	display: block;
+	width: 450px;
+	margin: 20px auto;
+}
+/*<!--一栏大板块-->*/
+.one_big_column>div{
+	background-color: white !important;
+	margin-top: 10px;
+	padding: 20px;
+}
+.one_big_column img{
+	display: block;
+	margin: 0 auto;
+}
+/*建议栏*/
+.suggest{
+	margin-top: 30px;
+	border-top: solid 1px gainsboro ;
+	border-bottom: solid 1px gainsboro;
+}
+.suggest>div{
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+.suggest h4{
+	font-size: 20px;
+	margin-top: 40px;
+}
+.suggest button{
+	width: 250px;
+	height: 35px;
+	margin-bottom: 20px;
+}
+/*回到顶部*/
+.return_top{
+	margin-top: 20px;
+}
+.return_top button{
+	width: 100%;
+	height: 50px;
+	background-color: #37475a;
+	color: white;
+	outline: none;
+	border: none;
+}
+.return_top button:hover{
+	background-color: #37494d;
+}
+
+/*底部*/
+footer{
+	background-color: #232f3e;
+	padding: 40px 0;
+}
+.help_list{
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+.help_list h4{
+	color: white;
+	font-size: 16px;
+}
+.help_list ul{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0;
+	padding-right: 80px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: left;
+}
+.help_list a{
+	color: white;
+	line-height: 30px;
+}
+.foot_tool{
+	border-top: solid 1px gainsboro;
+	margin-top: 40px;
+	padding-top: 40px;
+	text-align: center;
+	cursor: pointer;
+}
+.foot_logo{
+	display: inline-block;
+	width: 150px;
+	height: 35px;
+	background: url(../img/756494620238629717.png) no-repeat 10px -48px;
+}
+.foot_tool>div:nth-child(2){
+	display: inline-block;
+	color: white;
+	vertical-align: top;
+}
+.foot_tool span{
+	display: inline-block;
+	width: 120px;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 20px;
+	border: solid 1px whitesmoke;
+	vertical-align:  middle;
+	font-size: 16px;
+	cursor: pointer;
 }
