@@ -4,12 +4,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<title>亚马——逊首页</title>
+		<title>亚马逊--首页</title>
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" href="css/mystyle.css">
 		<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/myJS.js"></script>
+		<script type="text/javascript" src="js/Downtime.js" ></script>
 	</head>
 
 	<body>
@@ -23,7 +24,8 @@
 					<div class="row head_main_one">
 						<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 head_main_one_left">
 							<div class="a_p">
-								<a href="#" title="使用Amazon Prime快速免费送货">尝试prine</a>
+								<a href="#" data-toggle="popover" data-placement="right">尝试prine</a>
+
 								<div class="prime_info">
 									<h4>使用Amazon Prime快速免费送货</h4>
 									<p>prime会员享受两日的免费送货服务，并可独家使用音乐、电影、电视节目，原创音乐系列和kindle电子书。
@@ -36,7 +38,7 @@
 						<div class="col-lg-8 col-md-6 col-sm-4 head_main_one_mid">
 							<form action="" method="get">
 								<div class="input-group">
-									<span class="btn btn-default input-group-addon dropdown change_text" data-toggle="dropdown">所有<span class="caret"></span></span>
+									<span class="btn btn-default input-group-addon dropdown" data-toggle="dropdown"> <span class="change_text">所有</span><font class="caret"></font></span>
 									<ul class="dropdown-menu dropdown-menu1" role="menu" aria-labelledby="dropdownMenu1">
 										<li role="presentation">
 											<a role="menuitem" tabindex="-1" href="#">所有部门</a>
@@ -84,7 +86,7 @@
 											<a role="menuitem" tabindex="-1" href="#"> 女孩</a>
 										</li>
 									</ul>
-									<input type="search" class="form-control" />
+									<input type="search" class="form-control Search" />
 									<span class="btn btn-primary input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
 								</div>
 
@@ -107,36 +109,41 @@
 						<div class="col-lg-8 col-md-6 col-sm-4 head_main_one_mid">
 							<div class="dropdown">
 								<div class="A_branch" data-toggle="dropdown">部门<span class="caret"></span></div>
-								<ul class="dropdown-menu dropdown_menu_2">
-									<li>Prime Video</li>
-									<li>亚马逊音乐</li>
-									<li>Appstore for Android</li>
-									<li>Echo和Alexa</li>
-									<li>fire TV</li>
-									<li>Kindle电子阅读器和书籍</li>
-									<li> </li>
-									<li> </li>
-									<li> </li>
-									<li class="divider"></li>
-									<li>书籍和声音</li>
-									<li>电影、音乐和游戏</li>
-									<li>电子产品、电脑和办公室</li>
-									<li>家居、花园、宠物及工具</li>
-									<li>食品杂货</li>
-									<li>美容与健康</li>
-									<li>玩具、童装和婴儿</li>
-									<li>服装、鞋类与珠宝</li>
-									<li>手工制作</li>
-									<li>运动与户外</li>
-									<li>汽车与工业</li>
-									<li> </li>
-									<li> </li>
-									<li> </li>
-									<li class="divider"></li>
-									<li>家庭服务</li>
-									<li>信用与支付产品</li>
-									<li>完成商店目录</li>
-								</ul>
+								<div class="dropdown-menu dropdown_menu_2">
+									<ul>
+										<li>Prime Video <span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>亚马逊音乐<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>Appstore for Android<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>Echo和Alexa<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>fire TV<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>Kindle电子阅读器和书籍<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li> <span class="glyphicon glyphicon-ok pull-right"></span></li>
+										<li> <span class="glyphicon glyphicon-ok pull-right"></span></li>
+										<li> <span class="glyphicon glyphicon-ok pull-right"></span></li>
+										<li class="divider"></li>
+										<li>书籍和声音<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>电影、音乐和游戏<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>电子产品、电脑和办公室<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>家居、花园、宠物及工具<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>食品杂货<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>美容与健康<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>玩具、童装和婴儿<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>服装、鞋类与珠宝<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>手工制作<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>运动与户外<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>汽车与工业<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li> <span class="glyphicon glyphicon-ok pull-right"></span></li>
+										<li> <span class="glyphicon glyphicon-ok pull-right"></span></li>
+										<li> <span class="glyphicon glyphicon-ok pull-right"></span></li>
+										<li class="divider"></li>
+										<li>家庭服务<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>信用与支付产品<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+										<li>完成商店目录<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+									</ul>
+									<div class="dropdown_meun_list">
+										事实上
+									</div>
+								</div>
 							</div>
 
 							<ul class="nav nav-pills nav_am">
@@ -168,38 +175,274 @@
 						</div>
 						<div class="col-lg-1 head_main_one_right">
 							<ul class="user_nav">
-								<li>
+								<li class="lan_bar">
 									<a href="#">
 										<div class="dropdown dropdown_language">
 											<p id="language">EN </span><span class="caret"></p>
 										</div>
 									</a>
-								</li>
-								<li>
-									<a href="#">
-										<p>你好。登陆</p>
-										<p>账户和列表<span class="caret"></span></p>
-									</a>
-								</li>
-								<li>
-									<a href="#">命令</a>
-								</li>
-								<li>
-									<a href="#">试试Prime<span class="caret"></span></a>
-									<div class="prime_way">
-										<img src="img/Prime_Logo._CB508339849_.png"/>
-										<p>当您开始30天免费试用时，享受超过1亿件物品的快速免费送货服务</p>
-									</div>
-								</li>
-							</ul>
-							<div class="shop_car">
-								<span class="pro_num">0</span>
-								<span>大车</span>
+									<div class="change_lan">
+										<div><input type="radio" value="en" checked="checked"><span>英语--en</span></div>
+										<div><input type="radio" value="ch"><span>中文--ch</span></div>
+										<a href="#">了解更多</a>
+						</div>
+						</li>
+						<li class="user_bar">
+							<a href="#">
+								<p>你好。登陆</p>
+								<p>账户和列表<span class="caret"></span></p>
+							</a>
+							<div class="user_interface">
+								<button type="button" class="btn">签到</button>
+								<p>新客户？
+									<a href="#">从这里开始。</a>
+								</p>
+								<div>
+									<ul>
+										<h2>你的名单</h2>
+										<li>
+											<a href="#">创建列表</a>
+										</li>
+										<li>
+											<a href="#">查找列表或注册表</a>
+										</li>
+										<li>
+											<a href="#">查找礼品</a>
+										</li>
+										<li>
+											<a href="#">从Web</a>
+										</li>
+										<li>
+											<a href="#">婚礼注册表中</a>
+										</li>
+										<li>
+											<a href="#">婴儿注册表</a>
+										</li>
+										<li>
+											<a href="#">朋友和家庭</a>
+										</li>
+										<li>
+											<a href="#">礼品</a>
+										</li>
+										<li>
+											<a href="#">餐具列表</a>
+										</li>
+										<li>
+											<a href="#">您的心灵</a>
+										</li>
+										<li>
+											<a href="#">探索创意列表</a>
+										</li>
+										<li>
+											<a href="#">探索展厅</a>
+										</li>
+										<li>
+											<a href="#">童军| Style Explorer</a>
+										</li>
+									</ul>
+
+									<ul>
+										<h2>你的帐户</h2>
+										<li>
+											<a href="#">您的</a>
+										</li>
+										<li>
+											<a href="#">您的建议</a>
+										</li>
+										<li>
+											<a href="#">您的订阅和储存物品</a>
+										</li>
+										<li>
+											<a href="#">会员资格和订阅</a>
+										</li>
+										<li>
+											<a href="#">您的服务请求</a>
+										</li>
+										<li>
+											<a href="#">您的Prime会员</a>
+										</li>
+										<li>
+											<a href="#">注册商业帐户</a>
+										</li>
+										<li>
+											<a href="#">您的亚马逊信用卡</a>
+										</li>
+										<li>
+											<a href="#">您的亚马逊照片</a>
+										</li>
+										<li>
+											<a href="#">您的亚马逊驱动器</a>
+										</li>
+										<li>
+											<a href="#">您的Prime视频</a>
+										</li>
+										<li>
+											<a href="#">您的Kindle Unlimited</a>
+										</li>
+										<li>
+											<a href="#">您的监视列表</a>
+										</li>
+										<li>
+											<a href="#">您的视频库</a>
+										</li>
+										<li>
+											<a href="#">您的Android应用程序和设备 </a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#">命令</a>
+						</li>
+						<li class="try_prime">
+							<a href="#">试试Prime<span class="caret"></span></a>
+							<div class="prime_way">
+								<img src="img/Prime_Logo._CB508339849_.png" />
+								<p>当您开始30天免费试用时，享受超过1亿件物品的快速免费送货服务</p>
+								<button type="button" class="btn">试试Prime</button>
+								<img src="img/30.1_Acquistion_2x_420x300._CB530825804_.png" />
+							</div>
+						</li>
+						</ul>
+						<div class="shop_car">
+							<span class="pro_num">0</span>
+							<span>大车</span>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="bg_color"></div>
+			<div class="container-fluid mycontainer">
+				<!--轮播图-->
+				<div id="myCarousel" class="carousel slide">
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="img/Amazon_GW_DesktopHero_AVD_12924_Emmys_wins_1500x300._CB483536901_.jpg" alt="First slide">
+						</div>
+						<div class="item">
+							<img src="img/Blink_GW_DesktopHero_Evergreen_1500x300_v1._CB499532366_.jpg" alt="Second slide">
+						</div>
+						<div class="item">
+							<img src="img/GW_hero_3_1500x300._CB470359140_.jpg" alt="Third slide">
+						</div>
+					</div>
+					<!-- 轮播（Carousel）导航 -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				<!--推荐栏-->
+				<!--<div style="clear: both;"></div>-->
+				<div class="intro_div">
+					<div class="container-fluid">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-7">
+							<div>
+								<h4>回到学校必需品</h4>
+								<img class="img-responsive" src="img/XCM_Manual_1135311.jpg" alt="回到学校必需品" />
+								<span><a href="#">全部购买</a></span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-7">
+							<div>
+								<div>
+									<h4>今日特卖</h4>
+									<img class="img-responsive" src="img/41rB4q7ZB5L._SY260_.jpg" alt="回到学校必需品" />
+									<span><a href="#">查看更多优惠</a></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-7">
+							<div>
+								<div>
+									<h4>亚马逊时尚</h4>
+									<img class="img-responsive" src="img/CCDUALGENDER.jpg" alt="回到学校必需品" />
+									<span><a href="#">购买最新款式</a></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-7">
+							<div class="donation">
+								<div>
+									<h4>回到学校必需品</h4>
+									<p>帮助受飓风佛罗伦萨影响的人们</p>
+									<span><a href="#">现在捐款</a></span>
+								</div>
+							</div>
+							
+							<div class="ad_img">
+								<img class="img-responsive" src="img/gc-bday-300x250.jpg" height="245px"/>
 							</div>
 						</div>
 					</div>
-			</header>
+				</div>
+				
+				
+				<!--今日优惠-->
+				<div class="carousel_long_model discount_today">
+					<div class="container-fluid">
+						<div class="carousel_long_title">
+							<h4>今日优惠</h4>
+							<a href="#">查看所有优惠</a>
+						</div>
+						<div class="carousel_long_content">
+							<ul>
+								<li>
+									<div class="pro_img">
+										<img src="img/51ZIdvZqg5L.__AC_SY200_.jpg" />
+									</div>
+									<p class="now_price">$ 11.92 - $ 13.00</p>
+								</li>
+								<li>
+									<div class="pro_img">
+										<img src="img/31NsSOWrR8L.__AC_SY200_.jpg" />
+									</div>
+									<p class="now_price">$22.90</p>
+									<p class="old_price">$39.99</p>
+								</li>
+								<li>
+									<div class="pro_img">
+										<img src="img/41TTdJ7tOQL.__AC_SY200_.jpg"/>
+									</div>
+									<p class="now_price">$6.30</p>
+									<p class="old_price">$7.01</p>
+								</li>
+								<li>
+									<div class="pro_img">
+										<img src="img/31Kr.jpg" width="260px"/>
+									</div>
+									<p class="now_price">$29.99</p>
+									<p class="old_price">$34.99</p>
+									<p class="rush_to_purchase">End<span class="downTim" data-difftime="3600" data-goingtime='6000'></span></p>
+								</li>
+								<li>
+									<div class="pro_img">
+										<img src="img/419b.jpg" width="260px"/>
+									</div>
+									<p class="now_price">$14.99</p>
+									<p class="now_price">$19.99</p>
+								</li>
+								<li>
+									<div class="pro_img">
+										<img src="img/51YHTHvHapL.__AC_SY200_.jpg" height="200px"/>
+									</div>
+									<p class="now_price">$129.99</p>
+									<p class="old_price">$229.99</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
+
+		</div>
+
 	</body>
 
 </html>
