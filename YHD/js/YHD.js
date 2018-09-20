@@ -525,7 +525,7 @@ $(document).ready(function(){
 	})
 	//返回顶部
 	$("#return_top").click(function(){
-$('body,html').animate({scrollTop:0},500);
+		$('body,html').animate({scrollTop:0},500);
 	})
 })
 //$("#tran_img").animate({
