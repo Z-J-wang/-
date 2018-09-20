@@ -72,4 +72,65 @@ $(document).ready(function(){
 	$("#return_top").click(function(){
 		$('body,html').animate({scrollTop:0},500);
 	})	
+	
+	
+	
+//	登录
+	//按钮点击变色
+	$(".login_input>button").click(function(){
+		$(this).addClass("change_btn");
+	})
+	$(".btn_create_new_acount").click(function(){
+		$(this).addClass("change_btn");
+	})
+	
+//	搜索记录框
+	$(".login_input input").focus(function(){
+		$(this).parent().find(".tip_user").slideDown();
+	}).blur(function(){
+		$(this).parent().find(".tip_user").slideUp();
+	})
+	
+	
+	//下三角旋轉
+	var tro_status = 0;
+	$(".help_login").click(function(){
+		if(tro_status == 0){
+			$(this).find(".tro").css({"transform":"rotate(0deg)","transition":"transform .5s"});
+			$(this).find("div").slideDown();
+			tro_status =1;
+		}else if(tro_status == 1){
+			$(this).find(".tro").css({"transform":"rotate(-90deg)","transition":"transform .5s"});
+			$(this).find("div").slideUp();
+			tro_status =0;
+		}
+		
+	})
+	
+	
+	//------------------------------------------购物车
+	   //选择购物的数量
+	   
+	 $(".choose_num>li").click(function(){
+	 	var $num = $(this).text();
+	 	var $product_price = $(".product_price");
+	 	var $all_price = $(".all_price");
+	 	var $elem = $(this).parent().prev().find(".pro_count");
+	 	var $tatol = 0;
+	    var $product_prices = $(".product_price");
+	 	$elem.text($num);
+	 	for(var i = 0; i< $product_prices.length; i++) {
+	 		var $nums = $product_prices.eq(i).parent().next().find(".pro_count").text();
+	 		var $price = $product_prices.eq(i).text().substring(1);
+	 		$tatol += $price*$nums;
+	 	}
+	 	$all_price.text("$"+$tatol.toFixed(2));
+	 })
+	 
+	 
+	 //删除商品
+	 $(".del_product").click(function(){
+	 	$(this).parent().parent().parent().parent().remove();
+	 })
+	 
 })
