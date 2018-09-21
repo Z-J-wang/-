@@ -133,4 +133,14 @@ $(document).ready(function(){
 	 	$(this).parent().parent().parent().parent().remove();
 	 })
 	 
+	 
+//	 --------------------------------------------------------------------------详情页
+//	点击换图片
+	$(".img_list li").click(function(){
+		var $src = $(this).find("img").attr("src");
+		$(".pro_big_img").attr("src",$src);
+		$(".pro_big_img").attr("jqimg",$src);
+	})
+
+
 })

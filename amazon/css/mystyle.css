@@ -11,7 +11,10 @@ header {
 header>div:first-child {
 	overflow: hidden;
 }
-
+.myactive,
+.myactive a{
+	font-weight: bold !important;
+}
 .bg_color {
 	position: fixed;
 	width: 100%;
@@ -37,11 +40,11 @@ h6 {
 }
 
 
-/*@media screen and (max-width: 1250px){
+@media screen and (min-width: 1600px){
 	.big_mian{
-		width: 100% !important;
+		width: 1500px !important;
 	}
-}*/
+}
 
 
 /*覆盖bootstrap轮播按钮控件样式*/
@@ -1163,14 +1166,17 @@ footer {
 	float: left;
 }
 
-@media screen and (max-width: 1060px) {
-	.sc_container {
+@media screen and (max-width: 1070px) {
+	.sc_container,
+	.detail_container{
 		width: 1080px;
 	}
-	.sc_container_main {
+	.sc_container_main,
+	.detail_container_main {
 		width: 710px;
 	}
-	.sc_container_right {
+	.sc_container_right,
+	.detail_container_right{
 		width: 340px;
 	}
 	.A_birthday_card>div:first-child {
@@ -1181,6 +1187,14 @@ footer {
 	}
 	.A_birthday_card>div:nth-child(3) {
 		width: 140px;
+	}
+	
+	/*详情页*/
+	.D_pro_detail img{
+		width: 366px;
+	}
+	.D_body {
+		width: 254px;
 	}
 }
 
@@ -1451,4 +1465,212 @@ footer {
 	height:20px;
 	/*16像素一颗星*/
 	background: url(../img/AmazonUIBaseCSS.png) no-repeat -174px -365px;  
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------详情页面*/
+.mynav{
+	width: 100%;
+	height: 30px;
+	font-size: 12px;
+	border-bottom: solid 1px gainsboro;
+}
+@media screen and (min-width: 1500px ) {
+	.mynav{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1500px ) {
+	.mynav{
+		width: 1500px;
+	}
+}
+.mynav ul {
+	list-style: none;
+	padding-left: 20px;
+}
+.mynav li{
+	box-sizing: border-box;
+	float: left;
+	height: 30px;
+	padding-right: 15px;
+	padding-left: 15px;
+	text-align: center;
+}
+.mynav li:hover{
+	border-bottom: solid 3px orange;
+}
+.mynav a{
+	text-decoration: none;
+	color: black;
+	font-weight: 200;
+}
+.detail_container_main {
+	margin-top: 20px;
+}
+.locate_nav ul{
+	list-style: none;
+	padding-left: 20px;
+}
+.locate_nav li{
+	float: left;
+	text-align: center;
+	font-size: 12px;
+}
+.locate_nav a{
+	color: gray;
+}
+.locate_nav span{
+	padding-left: 6px;
+	padding-right: 6px;
+}
+/*.detail_container_main{
+	height: 500px;
+	background: greenyellow;
+}*/
+.pro_big_img{
+	margin-left: 25px;
+}
+.D_pro_detail .D_left{
+	position: relative;
+}
+.D_pro_detail .D_left p{
+	font-size: 12px;
+}
+.img_list{
+	position: absolute;
+	top: 10px;
+	left: -20px;
+}
+.img_list ul{
+	padding: 0;
+}
+.img_list li{
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	margin: 10px 0;
+	border: solid 1px gray;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.img_list img{
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+}
+.img_list li:hover{
+	box-shadow: 0px 0px 10px 1px orange !important;
+}
+.D_user_evaluation span:first-child{
+	vertical-align: bottom;
+}
+.D_user_evaluation span[class='caret']{
+	display: inline-block;
+	margin-left: 0px;
+}
+.D_user_evaluation a{
+	margin: 0 10px;
+}
+.hotSale{
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	color: white;
+	padding-left: 10px;
+	margin-right: 10px;
+	background: #e47911;
+}
+.hotSale:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-right-color: #FFFFFF;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	margin-top: -10px;
+}
+.E_report{
+	padding-bottom: 10px;
+	border-bottom: solid 1px gainsboro;
+}
+.E_report>span{
+	display: inline-block;
+	width: 14px;
+	height: 10px;
+	background: url(../img/mess.png) no-repeat 0 0;
+}
+.E_report:hover span,
+.E_report>span:hover{
+	background: url(../img/mess.png) no-repeat -14px 0;
+}
+
+.detail_container_right{
+	margin-top: 30px;
+}
+.pay_fram{
+	width: 300px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: solid 1px gainsboro;
+	margin-left: 30px;
+}
+.share_pro{
+	margin-left: 40px;
+}
+.share_pro a{
+	margin: 0 5px;
+}
+.inventory_status{
+	color: green;
+	font-size: 16px;
+}
+.D_choose_num{
+	overflow-y: scroll;
+	width: 60px;
+	height: 25px;
+	border-radius: 5px;
+	padding-left: 6px;
+}
+.add_to_sc{
+	display: block;
+	width: 80%;
+	height: 30px;
+	margin: 30px auto;
+	
+	border-radius: 5px;
+}
+.add_to_sc span{
+	display: inline-block;
+	width: 21px;
+	height: 20px;
+	border-radius: 2px;
+	vertical-align: middle;
+	background: url(../img/AmazonUIBaseCSS.png) no-repeat -37px -8px;
+}
+.open_Brow{
+	border-top: solid 1px gainsboro;
+	border-bottom: solid 1px gainsboro;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 12px;
+}
+.D_address{
+	padding-top: 15px;
+	padding-bottom: 5px;
+	border-bottom: solid 1px gainsboro;
+}
+.D_address>span:first-child{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+	background: url(../img/DeliveryStaticPackard.png) no-repeat;
 }
