@@ -165,30 +165,20 @@ function  carousel_right(obj,size_pic,num,time_horizon){
 
 function  carousel_srcoll_left(obj,size_pic,num,time_horizon){
 		var $elem = $(obj);	
-		var ml = parseInt($elem.css("margin-left"))-size_pic;
-		$elem.animate({scrollLeft: ml+'px'},time_horizon);
-		if( ml >= -size_pic*(num-1)){	//判断一个轮播div是否已近显示完了
-				if(ml%size_pic == 0){
-//					$elem.animate({marginLeft: ml+'px'},time_horizon); //使用Jquery的动画方法，实现当前的div的滑动
-//					$elem.animate({scrollLeft: ml+'px'},time_horizon);
-//					$elem.css("margin-left",ml+'px');
-				}
-				
-			}
+		var $extent = $elem.scrollLeft();
+		if( $extent > 0){	//判断一个轮播div是否已近显示完了
+				$elem.animate({scrollLeft:$extent-size_pic},time_horizon);
+		}	
+		console.log($extent);
 }
 
 function  carousel_scroll_right(obj,size_pic,num,time_horizon){
 		var $elem = $(obj);					//获取轮播框架里的第一个需要轮播的子类		
-		var ml = parseInt($elem.css("margin-left"))+size_pic;
-		$elem.animate({scrollLeft: ml+'px'},time_horizon);
-		if( ml <= 0){		//判断一个轮播div是否已近显示完了
-			if(ml%size_pic == 0){
-//				$elem.animate({scrollTop: ml+'px'},time_horizon); //使用Jquery的动画方法，实现当前的div的滑动
-//				$elem.animate({scrollLeft: ml+'px'},time_horizon);
-//				$elem.css("margin-left",ml+'px');
-			}
-			
-		}
+		var $extent = $elem.scrollLeft();
+		if( $extent < size_pic*(num-1)){	//判断一个轮播div是否已近显示完了
+				$elem.animate({scrollLeft:$extent+size_pic},time_horizon);
+		}	
+		console.log($extent);
 }
 
 

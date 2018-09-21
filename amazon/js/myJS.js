@@ -62,7 +62,7 @@ $(document).ready(function(){
 	})
 	
 	$("#left_2").click(function(){
-		carousel_srcoll_left(".carousel_long_content_2>",1480,2,1000);
+		carousel_srcoll_left(".carousel_long_content_2",1480,2,1000);
 	})
 	$("#right_2").click(function(){
 		carousel_scroll_right(".carousel_long_content_2",1480,2,1000);
@@ -77,7 +77,7 @@ $(document).ready(function(){
 	
 //	登录
 	//按钮点击变色
-	$(".login_input>button").click(function(){
+	$(".login_input>button,.btn_style").click(function(){
 		$(this).addClass("change_btn");
 	})
 	$(".btn_create_new_acount").click(function(){
