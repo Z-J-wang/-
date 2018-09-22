@@ -11,10 +11,12 @@ header {
 header>div:first-child {
 	overflow: hidden;
 }
+
 .myactive,
-.myactive a{
+.myactive a {
 	font-weight: bold !important;
 }
+
 .bg_color {
 	position: fixed;
 	width: 100%;
@@ -39,9 +41,8 @@ h6 {
 	margin: 0 auto;
 }
 
-
-@media screen and (min-width: 1600px){
-	.big_mian{
+@media screen and (min-width: 1600px) {
+	.big_mian {
 		width: 1500px !important;
 	}
 }
@@ -85,7 +86,7 @@ h6 {
 }
 
 .head_img {
-	width: 1730px;
+	/*width: 1730px;*/
 }
 
 .head_main {
@@ -978,11 +979,11 @@ footer {
 }
 
 .btn_style:focus .login_input input:focus,
+.input_style:focus,
 .change_btn {
 	border: 1px solid orange !important;
 	box-shadow: 0px 0px 10px 1px orange !important;
 }
-
 .login_input>div {
 	position: relative;
 }
@@ -1168,7 +1169,7 @@ footer {
 
 @media screen and (max-width: 1070px) {
 	.sc_container,
-	.detail_container{
+	.detail_container {
 		width: 1080px;
 	}
 	.sc_container_main,
@@ -1176,7 +1177,7 @@ footer {
 		width: 710px;
 	}
 	.sc_container_right,
-	.detail_container_right{
+	.detail_container_right {
 		width: 340px;
 	}
 	.A_birthday_card>div:first-child {
@@ -1188,9 +1189,8 @@ footer {
 	.A_birthday_card>div:nth-child(3) {
 		width: 140px;
 	}
-	
 	/*详情页*/
-	.D_pro_detail img{
+	.D_pro_detail img {
 		width: 344px;
 	}
 	.D_body {
@@ -1417,41 +1417,48 @@ footer {
 	background-color: #F3F3F3;
 	color: gray;
 }
-.browsing_history{
+
+.browsing_history {
 	margin-top: 60px;
-	
 }
+
 .browsing_history>h4 {
 	margin-left: 20px;
 	margin-top: 20px;
 	font-size: 14px;
-	
 }
+
 .browsing_history>div {
 	margin-left: 6px;
 }
+
 .browsing_history .BH_pro_img {
 	float: left;
 	width: 110px;
 }
+
 .BR_pro_detail {
 	float: left;
 	width: 200px;
 	margin-bottom: 20px;
 }
-.BR_pro_detail h5{
+
+.BR_pro_detail h5 {
 	font-size: 14px;
 	margin: 2px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+
 .BR_pro_detail p {
 	margin: 2px;
 }
+
 .BR_pro_detail>p:nth-child(5) {
 	color: firebrick;
 }
+
 .BR_pro_detail .NH_author span {
 	display: inline-block;
 	width: 10px;
@@ -1462,41 +1469,45 @@ footer {
 .BH_user_evaluation {
 	display: inline-block;
 	width: 80px;
-	height:20px;
+	height: 20px;
 	/*16像素一颗星*/
-	background: url(../img/AmazonUIBaseCSS.png) no-repeat -174px -365px;  
+	background: url(../img/AmazonUIBaseCSS.png) no-repeat -174px -365px;
 }
 
-.BH_user_evaluation+a{
+.BH_user_evaluation+a {
 	display: inline-block;
 	vertical-align: top;
 	margin-left: 4px;
 }
 
 
-
 /*--------------------------------------------------------------------------------详情页面*/
-.mynav{
+
+.mynav {
 	width: 100%;
 	height: 30px;
 	font-size: 12px;
 	border-bottom: solid 1px gainsboro;
 }
-@media screen and (min-width: 1500px ) {
-	.mynav{
+
+@media screen and (min-width: 1500px) {
+	.mynav {
 		width: 100%;
 	}
 }
-@media screen and (max-width: 1500px ) {
-	.mynav{
-		width: 1500px;
+
+@media screen and (max-width: 1500px) {
+	.mynav {
+		/*width: 1500px;*/
 	}
 }
+
 .mynav ul {
 	list-style: none;
 	padding-left: 20px;
 }
-.mynav li{
+
+.mynav li {
 	box-sizing: border-box;
 	float: left;
 	height: 30px;
@@ -1504,56 +1515,71 @@ footer {
 	padding-left: 15px;
 	text-align: center;
 }
-.mynav li:hover{
+
+.mynav li:hover {
 	border-bottom: solid 3px orange;
 }
-.mynav a{
+
+.mynav a {
 	text-decoration: none;
 	color: black;
 	font-weight: 200;
 }
+
 .detail_container_main {
 	box-sizing: border-box;
 	margin-top: 20px;
 }
-.locate_nav ul{
+
+.locate_nav ul {
 	list-style: none;
 	padding-left: 20px;
 }
-.locate_nav li{
+
+.locate_nav li {
 	float: left;
 	text-align: center;
 	font-size: 12px;
 }
-.locate_nav a{
+
+.locate_nav a {
 	color: gray;
 }
-.locate_nav span{
+
+.locate_nav span {
 	padding-left: 6px;
 	padding-right: 6px;
 }
+
+
 /*.detail_container_main{
 	height: 500px;
 	background: greenyellow;
 }*/
-.pro_big_img{
+
+.pro_big_img {
 	margin-left: 25px;
 }
-.D_pro_detail .D_left{
+
+.D_pro_detail .D_left {
 	position: relative;
 }
-.D_pro_detail .D_left p{
+
+.D_pro_detail .D_left p {
 	font-size: 12px;
 }
-.img_list{
+
+.img_list {
 	position: absolute;
 	top: 10px;
 	left: -20px;
 }
-.img_list ul{
+
+.img_list ul {
 	padding: 0;
 }
-.img_list li{
+
+.img_list li {
 	display: block;
 	width: 50px;
 	height: 50px;
@@ -1564,25 +1590,31 @@ footer {
 	box-sizing: border-box;
 	cursor: pointer;
 }
-.img_list img{
+
+.img_list img {
 	display: inline-block;
 	vertical-align: middle;
 	width: 40px;
 }
-.img_list li:hover{
+
+.img_list li:hover {
 	box-shadow: 0px 0px 10px 1px orange !important;
 }
-.D_user_evaluation span:first-child{
+
+.D_user_evaluation span:first-child {
 	vertical-align: bottom;
 }
-.D_user_evaluation span[class='caret']{
+
+.D_user_evaluation span[class='caret'] {
 	display: inline-block;
 	margin-left: 0px;
 }
-.D_user_evaluation a{
+
+.D_user_evaluation a {
 	margin: 0 10px;
 }
-.hotSale{
+
+.hotSale {
 	display: inline-block;
 	position: relative;
 	width: 80px;
@@ -1591,6 +1623,7 @@ footer {
 	margin-right: 10px;
 	background: #e47911;
 }
+
 .hotSale:after {
 	content: "";
 	width: 0;
@@ -1602,60 +1635,69 @@ footer {
 	top: 50%;
 	margin-top: -10px;
 }
-.E_report{
+
+.E_report {
 	padding-bottom: 10px;
 	border-bottom: solid 1px gainsboro;
 }
-.E_report>span{
+
+.E_report>span {
 	display: inline-block;
 	width: 14px;
 	height: 10px;
 	background: url(../img/mess.png) no-repeat 0 0;
 }
+
 .E_report:hover span,
-.E_report>span:hover{
+.E_report>span:hover {
 	background: url(../img/mess.png) no-repeat -14px 0;
 }
 
-.detail_container_right{
+.detail_container_right {
 	margin-top: 30px;
 }
+
 .pay_fram,
 .oneself_sell,
 .D_left_ad,
-.others_sellers{
+.others_sellers {
 	width: 300px;
 	padding: 10px 15px;
 	border-radius: 5px;
 	border: solid 1px gainsboro;
 	margin-left: 30px;
 }
-.share_pro{
+
+.share_pro {
 	margin-left: 40px;
 }
-.share_pro a{
+
+.share_pro a {
 	margin: 0 5px;
 }
-.inventory_status{
+
+.inventory_status {
 	color: green;
 	font-size: 16px;
 }
-.D_choose_num{
+
+.D_choose_num {
 	overflow-y: scroll;
 	width: 60px;
 	height: 25px;
 	border-radius: 5px;
 	padding-left: 6px;
 }
-.add_to_sc{
+
+.add_to_sc {
 	display: block;
 	width: 80%;
 	height: 30px;
 	margin: 30px auto;
-	
 	border-radius: 5px;
 }
-.add_to_sc span{
+
+.add_to_sc span {
 	display: inline-block;
 	width: 21px;
 	height: 20px;
@@ -1663,50 +1705,60 @@ footer {
 	vertical-align: middle;
 	background: url(../img/AmazonUIBaseCSS.png) no-repeat -37px -8px;
 }
-.open_Brow{
+
+.open_Brow {
 	border-top: solid 1px gainsboro;
 	border-bottom: solid 1px gainsboro;
 	padding: 15px 0;
 	text-align: center;
 	font-size: 12px;
 }
-.D_address{
+
+.D_address {
 	padding-top: 15px;
 	padding-bottom: 5px;
 	border-bottom: solid 1px gainsboro;
 }
-.D_address>span:first-child{
+
+.D_address>span:first-child {
 	display: inline-block;
 	width: 15px;
 	height: 15px;
 	margin-right: 10px;
 	background: url(../img/DeliveryStaticPackard.png) no-repeat;
 }
-.others_sellers{
+
+.others_sellers {
 	margin-top: 20px;
 	padding: 0;
 }
-.others_sellers h5{
+
+.others_sellers h5 {
 	border-bottom: solid 1px gainsboro;
 	margin: 0;
 	padding: 15px 0;
 	text-align: center;
 }
-.others_sellers p{
+
+.others_sellers p {
 	padding: 15px;
 	margin: 0;
 }
-.oneself_sell{
+
+.oneself_sell {
 	border: none;
 }
-.oneself_sell button{
+
+.oneself_sell button {
 	font-size: 12px;
 	margin-left: 20px;
 }
-.D_left_ad{
+
+.D_left_ad {
 	padding: 5px;
 }
-.D_left_ad .textContainer__text{
+
+.D_left_ad .textContainer__text {
 	margin-top: 10px;
 	padding-right: 14px;
 	text-align: center;
@@ -1714,32 +1766,178 @@ footer {
 	font-style: initial;
 	font-weight: 700;
 }
-.D_left_ad h6{
+
+.D_left_ad h6 {
 	font-size: 14px;
 }
-.D_left_ad p:nth-last-child(2){
+
+.D_left_ad p:nth-last-child(2) {
 	margin: 0;
 }
-.pri_prime_logo{
+
+.pri_prime_logo {
 	display: inline-block;
 	width: 80px;
 	height: 15px;
 	background: url(../img/AmazonUIBaseCSS.png) no-repeat 0px -490px;
 }
+
+.fre_buy{
+	width: 1500px;
+	margin-top:40px ;
+	padding-left: 80px;
+	border-bottom: solid 1px gainsboro;
+}
+.fre_buy>h4{
+	margin-left: 0 !important;
+}
+.fre_buy>div:nth-child(2)>div:nth-child(2){
+	margin-left: 30px;
+}
+.fre_buy>div:nth-child(2) button{
+	display: block;
+	width: 180px;
+	margin-bottom: 15px;
+}
+.fre_buy>h4{
+	font-size: 20px;
+	font-weight: bold;
+	color: #cc6600;
+}
+.pro_show>div{
+	float: left;
+	margin: 10px 0;
+}
+.pro_show>div>span{
+	margin: 15px;
+}
+.buy_tip{
+	display: block;
+}
 .pro_detail_text {
 	border-top: solid 1px gainsboro;
 }
-.pro_tit{
+.fre_buy_list p{
+	margin: 0;
+}
+.pro_tit {
 	color: #cc6600;
 }
-.pro_main_describe{
+
+.pro_main_describe {
 	display: inline-block;
 	width: 1000px;
-	height: 200px;
 }
-.pro_main_describe{
-	/*font-size: 13px;*/
-}
-.pro_main_describe p{
+
+.pro_main_describe p {
 	margin: 20px 0;
+}
+
+.intro_scin div {
+	float: left;
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.intro_scin>div:nth-child(2) {
+	margin: 0 20px;
+}
+
+.pro_info{
+	border-bottom: solid 1px gainsboro;
+}
+
+.pro_parameter>table tr>td:first-child {
+	background: gainsboro;
+}
+.pro_parameter p{
+	margin: 0;
+}
+
+.pro_guarantee h4,
+.pro_guarantee p {
+	padding-left: 20px;
+}
+
+@media screen and (max-width:1070px ) {
+	
+	.pro_info{
+		width: 1070px;
+	}
+	.pro_parameter>table tr>td:first-child{
+		width: 35%;
+	}
+	.pro_parameter>table tr>td:nth-child(2){
+		width: 65%;
+	}
+	.pro_parameter{
+		/*float: left;*/
+		width: 470px !important;
+	}
+	.pro_guarantee {
+		/*float: left;*/
+		width: 490px !important;
+	}
+}
+.big_pic_ad{
+	margin-top: 40px;
+	border-bottom: solid 1px gainsboro;
+}
+
+.big_pic_ad>div{
+	display: inline-block;
+	width: 1000px;
+}
+.cus_question{
+	width: 1500px;
+	padding: 0 15px;
+}
+.cus_question>h3{
+	font-size: 20px;
+}
+.que_container{
+	padding: 20px;
+}
+.que_container>div>div:first-child p{
+	margin: 0px;
+}
+.que_container button{
+	border: none;
+	background: none;
+	outline: none;
+}
+.que_container_tit{
+	float: left;
+	width: 150px;
+}
+.que_container_tit>div {
+	float: left;
+	width: 50px;
+}
+.que_container_tit>div:nth-child(2){
+	padding-top: 10PX;
+	padding-left: 6px;
+	border-left: solid 1px gainsboro;
+}
+.que_container_ans{
+	float: left;
+	width: 1200px;
+	margin-bottom: 20px;
+}
+.ans_info{
+	margin-top: -10px;
+	color: darkgray;
+	font-size: 14px;
+}
+.more_ans>p>a{
+	padding-left: 10px;
+	background: url(../img/more.png) no-repeat 0px 4px;
+}
+.more_ans{
+	cursor: pointer;
+}
+.more_ans a:hover{
+	color: orange;
+	text-decoration: underline;
 }
