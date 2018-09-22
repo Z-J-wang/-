@@ -1191,7 +1191,7 @@ footer {
 	
 	/*详情页*/
 	.D_pro_detail img{
-		width: 366px;
+		width: 344px;
 	}
 	.D_body {
 		width: 254px;
@@ -1467,7 +1467,11 @@ footer {
 	background: url(../img/AmazonUIBaseCSS.png) no-repeat -174px -365px;  
 }
 
-
+.BH_user_evaluation+a{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 4px;
+}
 
 
 
@@ -1509,6 +1513,7 @@ footer {
 	font-weight: 200;
 }
 .detail_container_main {
+	box-sizing: border-box;
 	margin-top: 20px;
 }
 .locate_nav ul{
@@ -1615,7 +1620,10 @@ footer {
 .detail_container_right{
 	margin-top: 30px;
 }
-.pay_fram{
+.pay_fram,
+.oneself_sell,
+.D_left_ad,
+.others_sellers{
 	width: 300px;
 	padding: 10px 15px;
 	border-radius: 5px;
@@ -1673,4 +1681,65 @@ footer {
 	height: 15px;
 	margin-right: 10px;
 	background: url(../img/DeliveryStaticPackard.png) no-repeat;
+}
+.others_sellers{
+	margin-top: 20px;
+	padding: 0;
+}
+.others_sellers h5{
+	border-bottom: solid 1px gainsboro;
+	margin: 0;
+	padding: 15px 0;
+	text-align: center;
+}
+.others_sellers p{
+	padding: 15px;
+	margin: 0;
+}
+.oneself_sell{
+	border: none;
+}
+.oneself_sell button{
+	font-size: 12px;
+	margin-left: 20px;
+}
+.D_left_ad{
+	padding: 5px;
+}
+.D_left_ad .textContainer__text{
+	margin-top: 10px;
+	padding-right: 14px;
+	text-align: center;
+	font-size: 15px;
+	font-style: initial;
+	font-weight: 700;
+}
+.D_left_ad h6{
+	font-size: 14px;
+}
+.D_left_ad p:nth-last-child(2){
+	margin: 0;
+}
+.pri_prime_logo{
+	display: inline-block;
+	width: 80px;
+	height: 15px;
+	background: url(../img/AmazonUIBaseCSS.png) no-repeat 0px -490px;
+}
+.pro_detail_text {
+	border-top: solid 1px gainsboro;
+}
+.pro_tit{
+	color: #cc6600;
+}
+.pro_main_describe{
+	display: inline-block;
+	width: 1000px;
+	height: 200px;
+}
+.pro_main_describe{
+	/*font-size: 13px;*/
+}
+.pro_main_describe p{
+	margin: 20px 0;
 }
