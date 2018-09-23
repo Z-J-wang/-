@@ -67,7 +67,20 @@ $(document).ready(function() {
 	$("#right_2").click(function() {
 		carousel_scroll_right(".carousel_long_content_2", 1480, 2, 1000);
 	})
-
+	
+	$(".Game_Book button").click(function(){
+		var $src = $(this).prev().attr("src");
+		$(".pop_up_img img").attr("src",$src);
+		$(".bg_color").show();
+		$(".pop_up").show();
+	})
+	
+	$(".close_pos").click(function(){
+		$(".bg_color").hide();
+		$(".pop_up").hide();
+	})
+	
+	
 	//返回顶部
 	$("#return_top").click(function() {
 		$('body,html').animate({
@@ -187,10 +200,10 @@ $(document).ready(function() {
 				
 			}
 		}
-//			var $price = $product_prices.eq(i).text().substring(1);
-//		 		$tatol += $price*parseInt(2);
-//			alert($tatol)
-//			$all_price.text("$"+$tatol.tofixed(2));
+			var $price = $product_prices.eq(i).text().substring(1);
+		 		$tatol += $price*parseInt(2);
+			alert($tatol)
+			$all_price.text("$"+$tatol.tofixed(2));
 		})
 
 })

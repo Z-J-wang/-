@@ -984,6 +984,7 @@ footer {
 	border: 1px solid orange !important;
 	box-shadow: 0px 0px 10px 1px orange !important;
 }
+
 .login_input>div {
 	position: relative;
 }
@@ -1782,44 +1783,54 @@ footer {
 	background: url(../img/AmazonUIBaseCSS.png) no-repeat 0px -490px;
 }
 
-.fre_buy{
+.fre_buy {
 	width: 1500px;
-	margin-top:40px ;
+	margin-top: 40px;
 	padding-left: 80px;
 	border-bottom: solid 1px gainsboro;
 }
-.fre_buy>h4{
+
+.fre_buy>h4 {
 	margin-left: 0 !important;
 }
-.fre_buy>div:nth-child(2)>div:nth-child(2){
+
+.fre_buy>div:nth-child(2)>div:nth-child(2) {
 	margin-left: 30px;
 }
-.fre_buy>div:nth-child(2) button{
+
+.fre_buy>div:nth-child(2) button {
 	display: block;
 	width: 180px;
 	margin-bottom: 15px;
 }
-.fre_buy>h4{
+
+.fre_buy>h4 {
 	font-size: 20px;
 	font-weight: bold;
 	color: #cc6600;
 }
-.pro_show>div{
+
+.pro_show>div {
 	float: left;
 	margin: 10px 0;
 }
-.pro_show>div>span{
+
+.pro_show>div>span {
 	margin: 15px;
 }
-.buy_tip{
+
+.buy_tip {
 	display: block;
 }
+
 .pro_detail_text {
 	border-top: solid 1px gainsboro;
 }
-.fre_buy_list p{
+
+.fre_buy_list p {
 	margin: 0;
 }
+
 .pro_tit {
 	color: #cc6600;
 }
@@ -1844,14 +1855,15 @@ footer {
 	margin: 0 20px;
 }
 
-.pro_info{
+.pro_info {
 	border-bottom: solid 1px gainsboro;
 }
 
 .pro_parameter>table tr>td:first-child {
 	background: gainsboro;
 }
-.pro_parameter p{
+
+.pro_parameter p {
 	margin: 0;
 }
 
@@ -1860,18 +1872,17 @@ footer {
 	padding-left: 20px;
 }
 
-@media screen and (max-width:1070px ) {
-	
-	.pro_info{
+@media screen and (max-width:1070px) {
+	.pro_info {
 		width: 1070px;
 	}
-	.pro_parameter>table tr>td:first-child{
+	.pro_parameter>table tr>td:first-child {
 		width: 35%;
 	}
-	.pro_parameter>table tr>td:nth-child(2){
+	.pro_parameter>table tr>td:nth-child(2) {
 		width: 65%;
 	}
-	.pro_parameter{
+	.pro_parameter {
 		/*float: left;*/
 		width: 470px !important;
 	}
@@ -1880,64 +1891,196 @@ footer {
 		width: 490px !important;
 	}
 }
-.big_pic_ad{
+
+.big_pic_ad {
 	margin-top: 40px;
 	border-bottom: solid 1px gainsboro;
 }
 
-.big_pic_ad>div{
+.big_pic_ad>div {
 	display: inline-block;
 	width: 1000px;
 }
-.cus_question{
+
+.cus_question {
 	width: 1500px;
 	padding: 0 15px;
 }
-.cus_question>h3{
+
+.cus_question>h3 {
 	font-size: 20px;
 }
-.que_container{
+
+.que_container {
 	padding: 20px;
 }
-.que_container>div>div:first-child p{
+
+.que_container>div>div:first-child p {
 	margin: 0px;
 }
-.que_container button{
+
+.que_container button {
 	border: none;
 	background: none;
 	outline: none;
 }
-.que_container_tit{
+
+.que_container_tit {
 	float: left;
 	width: 150px;
 }
+
 .que_container_tit>div {
 	float: left;
 	width: 50px;
 }
-.que_container_tit>div:nth-child(2){
+
+.que_container_tit>div:nth-child(2) {
 	padding-top: 10PX;
 	padding-left: 6px;
 	border-left: solid 1px gainsboro;
 }
-.que_container_ans{
+
+.que_container_ans {
 	float: left;
 	width: 1200px;
 	margin-bottom: 20px;
 }
-.ans_info{
+
+.ans_info {
 	margin-top: -10px;
 	color: darkgray;
 	font-size: 14px;
 }
-.more_ans>p>a{
+
+.more_ans>p>a {
 	padding-left: 10px;
 	background: url(../img/more.png) no-repeat 0px 4px;
 }
-.more_ans{
+
+.more_ans {
 	cursor: pointer;
 }
-.more_ans a:hover{
+
+.more_ans a:hover {
 	color: orange;
 	text-decoration: underline;
+}
+
+.pop_up {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.pop_up_content {
+	position: relative;
+	padding-top: 40px;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.pop_up_content>div {
+	background: white;
+}
+
+.pop_up_content>div>div {
+	float: left;
+	padding: 20px;
+	width: 50%;
+}
+
+.pop_up_eva {
+	display: inline-block;
+	width: 100px;
+	height: 25px;
+	/*16像素一颗星*/
+	background: url(../img/AmazonUIBaseCSS.png) no-repeat -200px -389px;
+}
+
+.pop_up_text {
+	text-align: left;
+	margin-top: 60px;
+}
+.pop_up_img{
+	height: 400px;
+	display: table;
+	/*vertical-align:middle;*/
+	text-align:center;
+}
+.pop_up_img>span {
+	display: table-cell;
+	vertical-align:middle;
+	width: 283px;
+}
+.pop_up_eva+span {
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	padding-top: 5px;
+	margin: 0px 5px;
+	vertical-align: top;
+}
+
+.pop_up_text>span:first-child {
+	color: gray;
+	font-size: 20px;
+}
+
+.pop_up_text>h4 {
+	font-size: 25px;
+}
+
+.pop_up_pro_price {
+	font-size: 20px;
+	margin: 20px 0;
+}
+
+.pop_up_text button {
+	width: 250px;
+	height: 30px;
+}
+
+.pop_up_img_list {
+	width: 100%;
+	height: 150px;
+	background-color: gainsboro;
+}
+
+.pop_up_img_list h4 {
+	margin: 0;
+	margin-bottom: 30px;
+	font-weight: 500;
+}
+
+.pop_up_img_list ul {
+	padding-left: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.pop_up_img_list img {
+	height: 100px;
+}
+
+.pop_up_img_list li {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.close_pos {
+	position: absolute;
+	z-index: 1010;
+	top: 50px;
+	right: 10px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	background-color: gainsboro;
+	background: url(../img/AmazonGatewayAuiAssets-gw_sprite_desktop-25075f36f083535bad9a2e0edabbb339435e8e65._V2_.png) no-repeat -95px -45px;
 }
