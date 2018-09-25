@@ -89,6 +89,19 @@ h6 {
 	/*width: 1730px;*/
 }
 
+/*模态框*/
+/*送货地址*/
+.deliver {
+	top: 150px;
+}
+
+.MYmodal_header{
+	padding: 10px;
+	background-color: gainsboro;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
 .head_main {
 	background: #232f3e;
 }
@@ -272,6 +285,7 @@ h6 {
 }
 
 .dropdown_menu_2 {
+	/*position: relative;*/
 	width: auto;
 	padding: 10px;
 	font-size: 13px;
@@ -282,11 +296,6 @@ h6 {
 	display: inline-block;
 	width: 190px;
 	padding: 0;
-}
-
-.dropdown_meun_list {
-	display: inline-block;
-	width: auto;
 }
 
 .dropdown_menu_2 ul li {
@@ -327,6 +336,57 @@ h6 {
 	margin-top: -11px;
 }
 
+.dropdown_meun_list {
+	position: absolute;
+	z-index: 100;
+	top: 0px;
+	left: 210.5px;
+	display: none;
+	width: 600px;
+	height: 590px;
+}
+.dropdown_meun_list_img{
+	position: absolute;
+	z-index: 10;	
+	display: none;	
+	top: 0px;
+	left: 211px;
+	width: 600px;
+	height: 600px;
+}
+.dropdown_meun_list h2{
+	color: #FF4500;
+}
+.dropdown_meun_list ul{
+	float: left;
+	width: 240px;
+	margin-left: 40px;
+}
+.dropdown_meun_list li{
+	display: block;
+	height: 50px !important;
+}
+.dropdown_meun_list ul a{
+	display: block;
+	margin: 5px 0;
+	color: black;
+}
+.dropdown_meun_list ul a:hover{
+	color: #FF4500;
+}
+.dropdown_meun_list p{
+	color: darkgray;
+}
+.dropdown_meun_list img{
+	width: 600px;
+	height: 590px;
+}
+.dropdown_meun_list_last{
+	border-top: solid 1px gainsboro;
+}
+.dropdown_meun_list_last li{
+	height: 25px !important;
+}
 .nav_am {
 	display: inline-block;
 }
@@ -408,24 +468,60 @@ h6 {
 
 .change_lan div {
 	display: block;
-	width: 100px float: left;
-	margin: 10px;
+	padding: 10px;
 	color: black;
 	font-size: 15px;
 	cursor: pointer;
+}
+.change_lan div:first-child{
 	border-bottom: solid 1px gainsboro;
 }
-
+.change_lan img{
+	width: 20px;
+	display: inline-block;
+}
 .change_lan a {
 	display: block;
-	clear: both;
 	color: dodgerblue !important;
 	margin-left: 10px;
+	padding: 10px;
 }
 
 .change_lan a:hover {
 	text-decoration: underline;
 }
+
+.change_lan_2 {
+	display: inline-block;
+	width: 240px;
+	margin-bottom: 10px;
+	background-color: white;
+}
+.change_lan_2 div {
+	display: block;
+	padding: 10px;
+	color: black;
+	font-size: 15px;
+	cursor: pointer;
+}
+.change_lan_2 div:first-child{
+	border-bottom: solid 1px gainsboro;
+}
+.change_lan_2 img{
+	width: 20px;
+	display: inline-block;
+}
+.change_lan_2 a {
+	display: block;
+	color: dodgerblue !important;
+	margin-left: 10px;
+	padding: 10px;
+}
+
+.change_lan_2 a:hover {
+	text-decoration: underline;
+}
+
 
 .shop_car .pro_num {
 	position: absolute;
@@ -902,7 +998,6 @@ footer {
 	height: 35px;
 	background: url(../img/756494620238629717.png) no-repeat 10px -48px;
 }
-
 .foot_tool>div:nth-child(2) {
 	display: inline-block;
 	color: white;
@@ -911,14 +1006,35 @@ footer {
 
 .foot_tool span {
 	display: inline-block;
-	width: 120px;
 	height: 35px;
 	line-height: 35px;
 	margin-right: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 3px;
 	border: solid 1px whitesmoke;
 	vertical-align: middle;
 	font-size: 16px;
 	cursor: pointer;
+}
+.logo_TB{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-top: 3px;
+	background: url(../img/InternationalCustomerPreferencesNavAssets-icp.png) no-repeat -75px -72px;
+}
+.country_logo{
+	display: inline-block;
+	width: 19px;
+	height: 12px;
+	background: url(../img/InternationalCustomerPreferencesNavAssets-icp.png) no-repeat -53px -107px;
+}
+.internet_logo,.internet_logo_2{
+	display: inline-block;
+	width: 19px;
+	height: 15px;
+	background: url(../img/InternationalCustomerPreferencesNavAssets-icp.png) no-repeat -73px -50px;
 }
 
 .help_login {
@@ -1601,7 +1717,58 @@ footer {
 .img_list li:hover {
 	box-shadow: 0px 0px 10px 1px orange !important;
 }
-
+.D_user_evaluation{
+	position: relative;
+}
+.eval_detail{
+	position: absolute;
+	z-index: 10;
+	top: 30px;
+	left: -120px;
+	display: none;
+	width: 300px;
+	padding: 10px;
+	background: white;
+	border: solid 1px gray;
+	border-radius: 5px;
+	text-align: center;
+}
+.eval_detail:before {
+	content: '';
+	width: 0;
+	height: 0;
+	border: 11px solid transparent;
+	border-bottom-color: gray;
+	position: absolute;
+	left: 193px;
+	top: -10px;
+	margin-top: -12px;
+}
+.eval_detail:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color: white;
+	position: absolute;
+	left: 194px;
+	top: -10px;
+	margin-top: -10px;
+}
+.eval_detail>div{
+	width: 220px;
+	margin: 0 auto;
+	padding: 8px 0
+	
+}
+.eval_detail span{
+	float: left;
+}
+.eval_detail .progress{
+	float: left;
+	width: 150px !important;
+	margin: 0 10px;
+}
 .D_user_evaluation span:first-child {
 	vertical-align: bottom;
 }

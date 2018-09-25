@@ -19,7 +19,23 @@ $(document).ready(function() {
 	//	},function(){
 	//		$(".dropdown_menu_2").hide()
 	//	})
-
+	
+	$(".dropdown_menu_2>ul li,.dropdown_meun_list,.dropdown_meun_list_img").hover(function(){
+		$(".dropdown_meun_list_img").show();
+		$(".dropdown_meun_list").show();
+	},function(){
+		$(".dropdown_meun_list_img").hide();
+		$(".dropdown_meun_list").hide();
+	})
+	
+	$(".shop_car").click(function(){
+		window.location.href = "shoppingCar.html";
+	})
+	
+	$("#create_account").click(function(){
+		window.location.href = "reg.html";
+	})
+	
 	$(".user_bar,.user_interface").hover(function() {
 		$(".user_interface").show();
 		$(".bg_color").show();
@@ -43,7 +59,21 @@ $(document).ready(function() {
 		$(".change_lan").hide();
 		$(".bg_color").hide();
 	})
-
+	
+	$(".change_lan>div").click(function(){
+		var $divs = $(".change_lan>div");
+		for (var i = 0; i<$divs.length;i++) {
+			$divs.eq(i).find("img").attr("src","img/lan_1.png");
+		}
+		$(this).find("img").attr("src","img/lan_2.png");
+	})
+	
+	$(".foo_lan").hover(function(){
+		$(this).find(".change_lan").slideDown();
+	},function(){
+		$(this).find(".change_lan").slideUp();
+	})
+	
 	$(".now_price").click(function() {
 		$(this).css("border", "solid 1px dodgerblue");
 	}).blur(function() {
@@ -87,7 +117,15 @@ $(document).ready(function() {
 			scrollTop: 0
 		}, 500);
 	})
-
+	
+	$("#change_pass").click(function(){
+		window.location.href = "Login_pass.html";
+	})
+	
+	$("#login").click(function(){
+		window.location.href = "index.html";
+	})
+	
 	//	登录
 	//按钮点击变色
 	$(".login_input>button,.btn_style").click(function() {
@@ -123,10 +161,35 @@ $(document).ready(function() {
 			tro_status = 0;
 		}
 	})
-
+	
+//	注册界面
+	$(".tip_user li").click(function(){
+		var $login_H_account = $("#login_H_account").text();
+		var $login_H_pwd = "12356822";
+		$(this).parent().parent().find("input").val($login_H_account);
+	})
+	
 	//------------------------------------------购物车
 	//选择购物的数量
+	
+	function SC_total_price(){
+		var $num = $(this).text();
+		var $product_price = $(".shop_car_list .product_price");
+		var $all_price = $(".all_price");
+		var $elem = $(this).parent().prev().find(".pro_count");
+		var $tatol = 0;
+		var $product_prices = $(".shop_car_list .product_price");
+		$elem.text($num);
+		for(var i = 0; i < $product_prices.length; i++) {
+			var $nums = $product_prices.eq(i).parent().next().find(".pro_count").text();
+			var $price = $product_prices.eq(i).text().substring(1);
+			$tatol += $price * $nums;
+		}
+		$all_price.text("$" + $tatol.toFixed(2));
+	}
 
+	SC_total_price();
+	
 	$(".choose_num>li").click(function() {
 		var $num = $(this).text();
 		var $product_price = $(".shop_car_list .product_price");
@@ -141,11 +204,30 @@ $(document).ready(function() {
 			$tatol += $price * $nums;
 		}
 		$all_price.text("$" + $tatol.toFixed(2));
-	})
 
+//		SC_total_price();
+	})
+	
+	$(".BH_user_evaluation").hover(function(){
+		$(".eval_detail").show();
+		$(".progress-bar").each(function(){
+			var $num = parseInt($(this).children("span").text());
+			$(this).animate({"width":$num+"%"},10)
+		})
+	},function(){
+		$(".eval_detail").hide();
+		$(".progress-bar").each(function(){
+			var $num = parseInt($(this).children("span").text());
+			$(this).animate({"width":"0%"},10)
+		})
+	})
+	
+	
+	
 	//删除商品
 	$(".del_product").click(function() {
 		$(this).parent().parent().parent().parent().remove();
+		SC_total_price();
 	})
 
 	//	 --------------------------------------------------------------------------详情页
@@ -179,31 +261,27 @@ $(document).ready(function() {
 	$(".fre_buy_list input").click(function(){
 		var $imgs  = $(".pro_show>div");
 		var $checks = $(".fre_buy_list input");
+		var $a = $(".fre_buy_list a");
 		var $all_price = $(".fre_buy .all_price");
 		var $product_prices = $(".fre_buy_list .product_price");
-		var $tatol = 100.11111;
-//		console.log($checks)
-		if($in_status == 0){
-			$(this).next().css("color","gainsboro");
-			$(this).next();
-			$in_status = 1;
-		}else if($in_status == 1){
-			$(this).next().css("color","#337ab7");
-			$in_status = 0;
-		}
+		var $tatol = 0;
 		for( var i = 0; i < $checks.length; i++){
 			var $s = $checks.eq(i).is(':checked');
 			if($s == false){
 				$imgs.eq(i).hide();
+				console.log($(this).next().text())
+				$a.eq(i).css("color","gainsboro");
 			}else if($s == true){
 				$imgs.eq(i).show();
-				
+				$a.eq(i).css("color","#337ab7");
+				var $price = $product_prices.eq(i).text().substring(1);
+		 		$tatol += $price*1;
 			}
+			$all_price.text("$"+$tatol.toFixed(2));
 		}
-			var $price = $product_prices.eq(i).text().substring(1);
-		 		$tatol += $price*parseInt(2);
-			alert($tatol)
-			$all_price.text("$"+$tatol.tofixed(2));
+			
+//			alert($tatol)
+			
 		})
 
 })

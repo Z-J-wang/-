@@ -15,10 +15,11 @@
 	</head>
 
 	<body>
+
 		<div class="bg_color"></div>
 		<div class="big_mian">
 			<header>
-				<!--				顶部图片-->
+				<!--顶部图片-->
 				<div>
 					<img src="img/head_img.jpg" class="head_img" />
 				</div>
@@ -104,7 +105,8 @@
 					<div class="head_main_two">
 						<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 head_main_one_left">
 							<div class="location_img"></div>
-							<div class="location_text">
+							<a href="#"></a>
+							<div class="location_text" data-toggle="modal" data-target="#deliver">
 								<p>送到</p>
 								<span>中国</span>
 							</div>
@@ -144,8 +146,61 @@
 										<li>信用与支付产品<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
 										<li>完成商店目录<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
 									</ul>
+									<img class="dropdown_meun_list_img" src="img/GNO_Flyout_US_AVD12411_JackRyanS1Launch_519x535_en_US._CB470358021_.png" />
 									<div class="dropdown_meun_list">
-										事实上
+										<ul>
+											<h2>Prime视频</h2>
+											<li>
+												<a>所有视频</a>
+												<p>所有电视节目，电影等更多</p>
+											</li>
+											<li>
+												<a>包括Prime</a>
+												<p>Prime原创、独家和更多</p>
+											</li>
+											<li>
+												<a>Prime视频频道</a>
+												<p>HBC、SHOWTIME、STARZ等</p>
+											</li>
+											<li>
+												<a>租借或购买</a>
+												<p>新版本、最新季节等</p>
+											</li>
+										</ul>
+										<ul>
+											<h2>Prime视频</h2>
+											<li>
+												<a>所有视频</a>
+												<p>所有电视节目，电影等更多</p>
+											</li>
+											<li>
+												<a>包括Prime</a>
+												<p>Prime原创、独家和更多</p>
+											</li>
+											<li>
+												<a>Prime视频频道</a>
+												<p>HBC、SHOWTIME、STARZ等</p>
+											</li>
+											<li>
+												<a>租借或购买</a>
+												<p>新版本、最新季节等</p>
+											</li>
+										</ul>
+										<ul class="dropdown_meun_list_last">
+											<li>
+												<a href="#">您的监视列表</a>
+											</li>
+											<li>
+												<a href="#">您的视频库</a>
+											</li>
+											<li>
+												<a href="#">随处看看</a>
+											</li>
+											<li>
+												<a href="#">入门</a>
+											</li>
+										</ul>
+
 									</div>
 								</div>
 							</div>
@@ -186,8 +241,10 @@
 										</div>
 									</a>
 									<div class="change_lan">
-										<div><input type="radio" value="en" checked="checked"><span>英语--en</span></div>
-										<div><input type="radio" value="ch"><span>中文--ch</span></div>
+										<div>
+											<font> <img src="img/lan_2.png" /> </font><span>英语--en</span></div>
+										<div>
+											<font> <img src="img/lan_1.png" /> </font><span>中文--ch</span></div>
 										<a href="#">了解更多</a>
 									</div>
 								</li>
@@ -197,7 +254,7 @@
 										<p>账户和列表<span class="caret"></span></p>
 									</a>
 									<div class="user_interface">
-										<button type="button" class="btn">签到</button>
+										<a href="Login.html"><button type="button" class="btn">签到</button></a>
 										<p>新客户？
 											<a href="#">从这里开始。</a>
 										</p>
@@ -617,7 +674,8 @@
 			<div class="suggest">
 				<div>
 					<h4>我们为您提供建议</h4>
-					<button type="button">登录以查看个性化推荐</button>
+					<a href="Login.html"><button type="button">登录以查看个性化推荐</button></a>
+
 				</div>
 			</div>
 
@@ -731,12 +789,18 @@
 				<div class="foot_tool">
 					<div class="foot_logo"></div>
 					<div>
-						<span><font></font>English</span>
-						<span>United States</span>
+						<span data-toggle="modal" data-target="#select_lan">
+							<font class="internet_logo"></font>
+							English
+							<font class="logo_TB"></font>
+						</span>
+						<span><font class="country_logo"></font> United States</span>
 					</div>
 				</div>
 			</footer>
 		</div>
+
+		<!--弹出框-->
 		<div class="pop_up clearfix">
 			<div class="pop_up_content">
 				<div class="clearfix">
@@ -759,19 +823,95 @@
 				<div class="pop_up_img_list">
 					<h4>客户也买了</h4>
 					<ul>
-						<li><a href="#"> <img src="img/81I8kBRrJHL._AC_SY200_.jpg"/> </a></li>
-						<li><a href="#"> <img src="img/3uUwyTCRTbmc._UX300_TTW__.jpg"/> </a></li>
-						<li><a href="#"> <img src="img/41rB4q7ZB5L._SY260_.jpg"/> </a></li>
-						<li><a href="#"> <img src="img/81Ch_MAja3L._AC_UL100_SR100,100_.jpg"/> </a></li>
-						<li><a href="#"> <img src="img/9174EVjhONL._AC_UL115_.jpg"/> </a></li>
-						<li><a href="#"> <img src="img/91L30nswRuL._AC_SY200_.jpg"/> </a></li>
-						<li><a href="#"> <img src="img/Zn9o5fZoQNCV._UX300_TTW__.jpg"/> </a></li>
+						<li>
+							<a href="#"> <img src="img/81I8kBRrJHL._AC_SY200_.jpg" /> </a>
+						</li>
+						<li>
+							<a href="#"> <img src="img/3uUwyTCRTbmc._UX300_TTW__.jpg" /> </a>
+						</li>
+						<li>
+							<a href="#"> <img src="img/41rB4q7ZB5L._SY260_.jpg" /> </a>
+						</li>
+						<li>
+							<a href="#"> <img src="img/81Ch_MAja3L._AC_UL100_SR100,100_.jpg" /> </a>
+						</li>
+						<li>
+							<a href="#"> <img src="img/9174EVjhONL._AC_UL115_.jpg" /> </a>
+						</li>
+						<li>
+							<a href="#"> <img src="img/91L30nswRuL._AC_SY200_.jpg" /> </a>
+						</li>
+						<li>
+							<a href="#"> <img src="img/Zn9o5fZoQNCV._UX300_TTW__.jpg" /> </a>
+						</li>
 					</ul>
 				</div>
-				
 				<span class="close_pos"></span>
 			</div>
 		</div>
+
+		<!-- 模态框（Modal） -->
+		<div class="modal fade deliver" id="deliver" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width: 500px;">
+				<div class="modal-content">
+					<div class="modal-header MYmodal_header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+				</button>
+						<h5 class="modal-title" id="myModalLabel">选择你的位置</h5>
+					</div>
+					<div class="modal-body">
+						<p>交付选项和交付速度可能因地点而异</p>
+						<p>
+							<a href="#">管理地址簿</a>
+						</p>
+						<p class="parting_line text-center"> <span>或输入美国邮政编码</span> </p>
+						<div class="">
+							<input type="text" name="" id="" value="" class="form-control input_style" style="display: inline-block; width: 340px;" />
+							<button type="button" class="btn btn-default" style="width: 100px;margin-left: 10px;">应用</button>
+						</div>
+						<p class="parting_line text-center"> <span>要么</span> </p>
+						<button type="button" class="btn btn-default btn-block">运往美国境外</button>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">完成</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+
+		<div class="modal fade deliver" id="select_lan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width: 500px;">
+				<div class="modal-content">
+					<div class="modal-header MYmodal_header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+				</button>
+						<h5 class="modal-title" id="myModalLabel"><span class="internet_logo_2"></span>语言设定</h5>
+					</div>
+					<div class="modal-body">
+						<div class="change_lan_2">
+							<div>
+								<font> <img src="img/lan_2.png" /> </font><span>英语--en</span>
+							</div>
+							<div>
+								<font> <img src="img/lan_1.png" /> </font><span>中文--ch</span>
+							</div>
+							<a href="#">了解更多</a>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">完成</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+
 	</body>
 
 </html>
