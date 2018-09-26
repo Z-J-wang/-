@@ -199,12 +199,15 @@ h6 {
 }
 
 .head_main_one_right {
+	display: inline-block;
+	float: right;
 	position: relative;
+	width: 331px;
 }
-
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1005px) {
+	
 	.head_main {
-		width: 1250px;
+		width: 1000px;
 	}
 	.head_main_one_left {
 		display: inline-block;
@@ -212,11 +215,10 @@ h6 {
 	}
 	.head_main_one_mid {
 		display: inline-block;
-		width: 750px;
+		width: 492px;
 	}
 	.head_main_one_right {
 		display: inline-block;
-		width: 300px;
 	}
 }
 
@@ -228,6 +230,7 @@ h6 {
 .head_main_one_right img {
 	display: block;
 	width: 320px;
+	margin: 0 auto;
 }
 
 .head_main_two {
@@ -388,7 +391,7 @@ h6 {
 	height: 25px !important;
 }
 .nav_am {
-	display: inline-block;
+	overflow: hidden;
 }
 
 .nav_am a,
@@ -410,12 +413,11 @@ h6 {
 .user_nav {
 	display: inline-block;
 	padding: 0;
-	width: 300px;
+	margin-top: -20px;
 	list-style: none;
 }
 
 .user_nav li {
-	margin-right: 10px;
 	position: relative;
 	display: inline-block;
 	padding: 1px 3px;
@@ -433,14 +435,25 @@ h6 {
 }
 
 .shop_car {
-	position: absolute;
-	top: 0;
-	left: 280px;
-	display: block;
+	display: inline-block;
+	vertical-align: bottom;
 	background: url(../img/756494620238629717.png) -5px 50px;
 	width: 60px;
 	height: 45px;
+	margin-bottom: -5px;
 	cursor: pointer;
+}
+.shop_car .pro_num {
+	position: absolute;
+	top: 2px;
+	left: 23px;
+	color: orange;
+}
+
+.shop_car span:last-child {
+	position: absolute;
+	right: 0px;
+	bottom: 1px;
 }
 
 .change_lan {
@@ -527,18 +540,7 @@ h6 {
 }
 
 
-.shop_car .pro_num {
-	position: absolute;
-	top: 2px;
-	left: 23px;
-	color: orange;
-}
 
-.shop_car span:last-child {
-	position: absolute;
-	right: -10px;
-	bottom: 1px;
-}
 
 .user_interface {
 	position: absolute;
@@ -683,14 +685,13 @@ h6 {
 	margin: 0 auto;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1005px) {
 	.mycontainer>div:first-child {
-		width: 1250px;
+		width: 960px;
 	}
 }
 
 .intro_div {
-	/*width: 100%;*/
 	margin: 20px auto;
 }
 
@@ -715,12 +716,23 @@ h6 {
   }
 }*/
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1005px) {
 	.intro_div {
-		width: 800px;
+		width: 960px;
 	}
-	.intro_div>div>div {
-		width: 350px;
+	.carousel_long_model{
+		width: 960px;
+	}
+	.tow_big_column {
+		width: 960px;
+	}
+	.one_big_column{
+		width: 960px;
+	}
+	footer,
+	.suggest,
+	.return_top{
+		width: 960px;
 	}
 }
 
