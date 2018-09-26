@@ -794,7 +794,7 @@
 							English
 							<font class="logo_TB"></font>
 						</span>
-						<span><font class="country_logo"></font> United States</span>
+						<span data-toggle="modal" data-target="#select_country"><font class="country_logo"></font> United States</span>
 					</div>
 				</div>
 			</footer>
@@ -886,11 +886,10 @@
 			<div class="modal-dialog" style="width: 500px;">
 				<div class="modal-content">
 					<div class="modal-header MYmodal_header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
-				</button>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 						<h5 class="modal-title" id="myModalLabel"><span class="internet_logo_2"></span>语言设定</h5>
 					</div>
-					<div class="modal-body">
+					<div class="modal-body clearfix">
 						<div class="change_lan_2">
 							<div>
 								<font> <img src="img/lan_2.png" /> </font><span>英语--en</span>
@@ -898,12 +897,18 @@
 							<div>
 								<font> <img src="img/lan_1.png" /> </font><span>中文--ch</span>
 							</div>
-							<a href="#">了解更多</a>
+							
 						</div>
-
+						<div>
+							<h5>翻译</h5>
+							<p>我们将为您的浏览，购物和通信翻译最重要的信息。我们的翻译是为了您的方便。Amazon.com的英文版，包括我们的使用条款，是最终版本。<a href="#">了解更多</a></p>
+							<h5>其他语言</h5>
+							<p>其他亚马逊网站提供更多语言。</p>
+						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-primary">完成</button>
+						<button type="button" class="btn btn-primary">取消</button>
+						<button type="button" class="btn btn-primary btn_style">保持更改</button>
 					</div>
 				</div>
 				<!-- /.modal-content -->
@@ -911,7 +916,40 @@
 			<!-- /.modal-dialog -->
 		</div>
 		<!-- /.modal -->
-
+		
+		<div class="modal fade deliver" id="select_country" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width: 500px;">
+				<div class="modal-content">
+					<div class="modal-header MYmodal_header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h5 class="modal-title" id="myModalLabel"><span class="internet_logo_2"></span>语言设定</h5>
+					</div>
+					<div class="modal-body clearfix">
+						<div class="change_lan_2">
+							<h5>选择您首选的国家/地区网站：</h5>
+							<select>
+								<option>美国</option>
+								<option>美国</option>
+								<option>美国</option>
+							</select>
+							<p><strong>注意：</strong>新的国家/地区网站选择将在新选项卡中打开。</p>
+						</div>
+						<div>
+							<h5>改变国家/地区网站</h5>
+							<p>更改您购物的国家/地区可能会影响价格，运输选项和产品供应等因素。</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">取消</button>
+						<button type="button" class="btn btn-primary btn_style">保持更改</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		
 	</body>
 
 </html>
