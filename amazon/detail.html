@@ -36,9 +36,14 @@
 				height: 300px;
 				background: #ffffff;
 				border: 1px solid #CCCCCC;
+				border-radius: 5px;
 				display: none;
 				text-align: center;
 				overflow: hidden;
+			}
+			
+			.zoomdiv img {
+				width: 1800px;
 			}
 			
 			.jqZoomPup {
@@ -516,7 +521,7 @@
 									<div class="clearfix">
 										<span>5星</span>
 										<div class="progress">
-											<div class="progress-bar progress-bar-warning" >
+											<div class="progress-bar progress-bar-warning">
 												<span class="sr-only">84%</span>
 											</div>
 										</div>
@@ -525,7 +530,7 @@
 									<div class="clearfix">
 										<span>4星</span>
 										<div class="progress">
-											<div class="progress-bar progress-bar-warning" >
+											<div class="progress-bar progress-bar-warning">
 												<span class="sr-only">4%</span>
 											</div>
 										</div>
@@ -534,7 +539,7 @@
 									<div class="clearfix">
 										<span>3星</span>
 										<div class="progress">
-											<div class="progress-bar progress-bar-warning" >
+											<div class="progress-bar progress-bar-warning">
 												<span class="sr-only">8%</span>
 											</div>
 										</div>
@@ -543,7 +548,7 @@
 									<div class="clearfix">
 										<span>2星</span>
 										<div class="progress">
-											<div class="progress-bar progress-bar-warning" >
+											<div class="progress-bar progress-bar-warning">
 												<span class="sr-only">0%</span>
 											</div>
 										</div>
@@ -552,7 +557,7 @@
 									<div class="clearfix">
 										<span>1星</span>
 										<div class="progress">
-											<div class="progress-bar progress-bar-warning" >
+											<div class="progress-bar progress-bar-warning">
 												<span class="sr-only">4%</span>
 											</div>
 										</div>
@@ -1094,8 +1099,8 @@
 		<script>
 			$(function() {
 				$(".jqzoom").jqueryzoom({
-					xzoom: 500, //放大图的宽度(默认是 200)
-					yzoom: 500, //放大图的高度(默认是 200)
+					xzoom: 800, //放大图的宽度(默认是 200)
+					yzoom: 600, //放大图的高度(默认是 200)
 					offset: 10, //离原图的距离(默认是 10)
 					position: "right", //放大图的定位(默认是 "right")
 					preload: 1
