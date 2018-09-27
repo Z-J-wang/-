@@ -46,7 +46,11 @@ h6 {
 		width: 1500px !important;
 	}
 }
-
+@media screen and (min-width: 1500px) {
+	.mynav {
+		width: 100%;
+	}
+}
 
 /*覆盖bootstrap轮播按钮控件样式*/
 
@@ -822,7 +826,6 @@ h6 {
 .carousel_long_content ul {
 	display: inline-block;
 	margin: 0 40px;
-	width: 1400px;
 }
 
 .carousel_long_content p {
@@ -989,10 +992,11 @@ footer {
 	text-align: left;
 }
 
-.help_list li {
+.help_list li{
 	width: 120px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .help_list a {
@@ -1629,11 +1633,6 @@ footer {
 	}
 }
 
-@media screen and (max-width: 1500px) {
-	.mynav {
-		/*width: 1500px;*/
-	}
-}
 
 .mynav ul {
 	list-style: none;
