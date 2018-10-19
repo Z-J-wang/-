@@ -278,6 +278,7 @@ $(document).ready(function() {
 		 		$tatol += $price*1;
 			}
 			$all_price.text("$"+$tatol.toFixed(2));
+			window.location.h
 		}
 			
 //			alert($tatol)
