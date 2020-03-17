@@ -347,12 +347,15 @@
           copy = options[name];
 
           // Prevent Object.prototype pollution
+          // 跳过原型属性
           // Prevent never-ending loop
+          // 预防无限递归
           if (name === "__proto__" || target === copy) {
             continue;
           }
 
           // Recurse if we're merging plain objects or arrays
+          // 如果是纯数组或对象，则地柜
           if (deep && copy && (jQuery.isPlainObject(copy) ||
               (copyIsArray = Array.isArray(copy)))) {
             src = target[name];
@@ -368,9 +371,11 @@
             copyIsArray = false;
 
             // Never move original objects, clone them
+            // 不要移动源对象，克隆他们
             target[name] = jQuery.extend(deep, clone, copy);
 
             // Don't bring in undefined values
+            // 不要引入undefined
           } else if (copy !== undefined) {
             target[name] = copy;
           }
