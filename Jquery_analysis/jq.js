@@ -390,6 +390,7 @@
   jQuery.extend({
 
     // Unique for each copy of jQuery on the page
+    // 确保页面上每个jQuery副本都是唯一的
     expando: "jQuery" + (version + Math.random()).replace(/\D/g, ""),
 
     // Assume jQuery is ready without the ready module
