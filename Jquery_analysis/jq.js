@@ -131,6 +131,12 @@
     noModule: true
   };
 
+  /**
+   * 脚本自执行
+   * @param {String} code 要执行的脚本
+   * @param {*} node 
+   * @param {DOM} doc 代码挂载的元素，可选参数，不提供则默认为document
+   */
   function DOMEval(code, node, doc) {
     doc = doc || document;
 
@@ -166,7 +172,10 @@
     doc.head.appendChild(script).parentNode.removeChild(script);
   }
 
-
+  /**
+   * 获取参数类型
+   * @param {*} obj 
+   */
   function toType(obj) {
     if (obj == null) {
       return obj + "";
@@ -407,22 +416,28 @@
 
       // Detect obvious negatives
       // Use toString instead of jQuery.type to catch host objects
+      // 使用toString而不是jQuery.type捕获主机对象
       if (!obj || toString.call(obj) !== "[object Object]") {
         return false;
       }
 
+      // 获取原型 var getProto = Object.getPrototypeOf;
       proto = getProto(obj);
 
       // Objects with no prototype (e.g., `Object.create( null )`) are plain
+      // 不存在原型，就是普通对象
       if (!proto) {
         return true;
       }
 
-      // Objects with prototype are plain iff they were constructed by a global Object function
+      // Objects with prototype are plain if they were constructed by a global Object function
+      // 如果对象是由全局对象函数构造的，那么带有prototype的对象就是普通对象
+      // 
       Ctor = hasOwn.call(proto, "constructor") && proto.constructor;
       return typeof Ctor === "function" && fnToString.call(Ctor) === ObjectFunctionString;
     },
 
+    // 判断是否空对象
     isEmptyObject: function (obj) {
       var name;
 
@@ -433,6 +448,7 @@
     },
 
     // Evaluates a script in a global context
+    // 在全局上下文中运行脚本
     globalEval: function (code, options) {
       DOMEval(code, {
         nonce: options && options.nonce
@@ -573,12 +589,14 @@
       class2type["[object " + name + "]"] = name.toLowerCase();
     });
 
+  // 判断是否是Array
   function isArrayLike(obj) {
 
     // Support: real iOS 8.2 only (not reproducible in simulator)
     // `in` check used to prevent JIT error (gh-2145)
     // hasOwn isn't used here due to false negatives
     // regarding Nodelist length in IE
+    // !!obj理解：假设obj={},对应boolean的true。通过!obj将obj转为boolean,但输出的值是取反的也就是false,!!obj就是取回原来的值对应的boolean
     var length = !!obj && "length" in obj && obj.length,
       type = toType(obj);
 

@@ -12,8 +12,13 @@
     <div></div>
     <script src="node_modules/jQuery/tmp/jquery.js"></script>
     <script>
-        let elems = $('div');
-        console.log(elems)
+       let obj = {};
+       obj.fn = function(){
+           return "aa"
+       }
+       let cc =  obj.fn() || true;
+
+       console.log(cc)
     </script>
 </body>
 </html>
